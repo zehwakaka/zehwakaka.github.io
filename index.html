@@ -259,6 +259,223 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2020/04/06/杭电oj-1004/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alice's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/04/06/杭电oj-1004/" itemprop="url">杭电oj-1004</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-06T12:43:21+08:00">
+                2020-04-06
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/" itemprop="url" rel="index">
+                    <span itemprop="name">技术</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/技术/刷题/" itemprop="url" rel="index">
+                    <span itemprop="name">刷题</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><strong>#杭电oj-1004</strong></p>
+<font color="red">杭电oj_1004题 C语言</font>
+
+<pre><code>#include&lt;stdio.h&gt;
+#include&lt;string.h&gt;
+using namespace std;
+
+int max(int a[], int n)
+{
+int max = a[0];
+int k = 0;
+for (int i = 0; i &lt; n; i++)
+{
+    if (a[i] &gt; max)
+    {
+        max = a[i];
+        k = i;
+    }
+
+}
+
+return k;
+}
+
+
+
+int main()
+{
+//freopen(&quot;C:/Users/19856/Desktop/wakaka.txt&quot;,&quot;r&quot;,stdin );
+int n;
+int k;
+while (1)
+{
+
+    char a[1005][17];
+
+    char b[17];
+    int c[1005] = {0};
+    memset(a, 0, sizeof(a));
+    memset(b, 0, sizeof(b));
+    scanf(&quot;%d&quot;, &amp;n);
+    if (n == 0)break;
+    for (int i = 0; i &lt; n; i++)
+    {
+
+        scanf(&quot;%s&quot;, &amp;b);
+        for (int j = 0; (j &lt; n)&amp;&amp;(a[j][0]!=&apos;\0&apos;); j++)
+        {
+            if (!strcmp(a[j], b))c[j]++;
+
+        }
+        if (a[i][0] == &apos;\0&apos;)
+        {
+            strcpy(a[i], b);
+            c[i]++;
+        }
+    }
+    k = max(c, n);
+    printf(&quot;%s\n&quot;, a[k]);
+
+
+}
+
+
+}
+</code></pre>
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2020/04/06/blog写作之旅启程/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -849,7 +1066,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -860,7 +1077,7 @@
               
               <div class="site-state-item site-state-categories">
                 
-                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-count">5</span>
                   <span class="site-state-item-name">categories</span>
                 
               </div>
@@ -871,7 +1088,7 @@
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-count">4</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
