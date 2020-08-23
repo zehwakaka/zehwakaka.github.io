@@ -79,14 +79,19 @@
 
 
 
+<meta name="description" content="版权所有  数据库第一章 绪论数据库系统概述 数据库四个基本概念：数据库系统(DBS)包括 数据库管理系统(DBMA)，数据库管理员(DBA)，数据库(DB)。  数据管理技术的产生和发展：数据管理技术经历了人工管理、文件管理、数据库系统三个阶段。  数据库系统的特点：  数据结构化 数据的共享性高、冗余度低且易扩充 数据独立性高：数据独立性、物理独立性、逻辑独立性 数据由数据库管理系统统一管理和">
 <meta property="og:type" content="article">
 <meta property="og:title" content="数据库概论复习">
 <meta property="og:url" content="http://zehwakaka.github.io/2020/08/22/数据库概论复习/index.html">
 <meta property="og:site_name" content="Alice&#39;s blog">
+<meta property="og:description" content="版权所有  数据库第一章 绪论数据库系统概述 数据库四个基本概念：数据库系统(DBS)包括 数据库管理系统(DBMA)，数据库管理员(DBA)，数据库(DB)。  数据管理技术的产生和发展：数据管理技术经历了人工管理、文件管理、数据库系统三个阶段。  数据库系统的特点：  数据结构化 数据的共享性高、冗余度低且易扩充 数据独立性高：数据独立性、物理独立性、逻辑独立性 数据由数据库管理系统统一管理和">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-08-22T07:10:42.291Z">
+<meta property="og:image" content="http://zehwakaka.github.io/images/数据库系统的三级模式结构.jpg">
+<meta property="og:updated_time" content="2020-08-23T06:25:09.437Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库概论复习">
+<meta name="twitter:description" content="版权所有  数据库第一章 绪论数据库系统概述 数据库四个基本概念：数据库系统(DBS)包括 数据库管理系统(DBMA)，数据库管理员(DBA)，数据库(DB)。  数据管理技术的产生和发展：数据管理技术经历了人工管理、文件管理、数据库系统三个阶段。  数据库系统的特点：  数据结构化 数据的共享性高、冗余度低且易扩充 数据独立性高：数据独立性、物理独立性、逻辑独立性 数据由数据库管理系统统一管理和">
+<meta name="twitter:image" content="http://zehwakaka.github.io/images/数据库系统的三级模式结构.jpg">
 
 
 
@@ -326,7 +331,209 @@
       
 
       
-        
+        <p><em>版权所有</em></p>
+<hr>
+<h1 id="数据库"><a href="#数据库" class="headerlink" title="数据库"></a>数据库</h1><h2 id="第一章-绪论"><a href="#第一章-绪论" class="headerlink" title="第一章 绪论"></a>第一章 绪论</h2><h3 id="数据库系统概述"><a href="#数据库系统概述" class="headerlink" title="数据库系统概述"></a>数据库系统概述</h3><ul>
+<li><p>数据库四个基本概念：数据库系统(DBS)包括 数据库管理系统(DBMA)，数据库管理员(DBA)，数据库(DB)。</p>
+</li>
+<li><p>数据管理技术的产生和发展：数据管理技术经历了人工管理、文件管理、数据库系统三个阶段。</p>
+</li>
+<li><p>数据库系统的特点：</p>
+<ol>
+<li>数据结构化</li>
+<li>数据的共享性高、冗余度低且易扩充</li>
+<li>数据独立性高：数据独立性、物理独立性、逻辑独立性</li>
+<li>数据由数据库管理系统统一管理和控制</li>
+</ol>
+</li>
+</ul>
+<h3 id="数据模型"><a href="#数据模型" class="headerlink" title="数据模型"></a>数据模型</h3><p>数据模型也是一种模型，它是对现实世界数据特征的抽象。数据模型是数据库系统的核心和基础。</p>
+<ul>
+<li><p>两类数据模型：第一类是概念模型，第二类是逻辑模型和物理模型。 首先将现实世界抽象为信息世界，然后将信息世界转换为机器世界。</p>
+</li>
+<li><p>概念模型：概念模型最常用的方法是实体-联系方法，E-R方法也称为E-R模型</p>
+<ol>
+<li><p>实体：客观存在并可互相区别的事物称为实体。</p>
+</li>
+<li><p>属性：实体所具有的某一特性称为属性。</p>
+</li>
+<li><p>码：唯一标识实体的属性集称为码。</p>
+</li>
+<li><p>实体型：用实体名及其属性名集合来抽象和刻画同类实体，称为实体型。</p>
+</li>
+<li><p>实体集：同一类型实体的集合称为实体集</p>
+</li>
+<li><p>联系：实体之间的联系通常是指不同实体集之间的联系。实体之间的联系有一对一、一对多和多对多等多种类型。</p>
+</li>
+</ol>
+</li>
+<li><p>数据模型的组成要素</p>
+<ul>
+<li><p>数据结构：数据结构描述数据库的组成对象以及对象之间的联系。</p>
+</li>
+<li><p>数据操作：数据操作是指对数据库中各种对象（型）的实例（值）允许执行的操作的集合，包括操作及有关的操作规则。</p>
+</li>
+<li><p>数据的完整性约束条件：数据的完整性约束条件是一组完整性规则。</p>
+</li>
+</ul>
+</li>
+<li><p>常用的数据模型</p>
+<ol>
+<li><p>层次模型</p>
+</li>
+<li><p>网状模型</p>
+</li>
+<li><p><strong>关系模型</strong></p>
+<ol>
+<li><p>关系模型的数据结构</p>
+<ul>
+<li><p>关系：一个关系对应通常说的一张表</p>
+</li>
+<li><p>元组：表中的一行即为一个元组</p>
+</li>
+<li><p>属性：表中的一列即为一个属性，给每一个属性起一个名称即属性名</p>
+</li>
+<li><p>码：也称码键。表中的某个属性组，它可以唯一确定一个元组</p>
+</li>
+<li><p>域：域是一组具有相同数据类型的值的集合</p>
+</li>
+<li><p>分量：元组中的一个属性值</p>
+</li>
+</ul>
+<p>关系模型要求关系必须是规范的，关系的每一个分量必须是一个不可分的数据项</p>
+</li>
+<li><p>关系模型的数据操纵与完整性约束</p>
+<p>关系模型中的数据操作是集合操作，操作对象和操作结果都是关系。关系模型把存取路径向用户隐蔽起来</p>
+</li>
+<li><p>关系模型的优缺点</p>
+<ul>
+<li>关系模型与格式化模型不同，他是建立在严格的数学基础上的。</li>
+<li>关系模型的概念单一</li>
+<li>关系模型的存取路径对用户透明</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>面向对象数据模型</p>
+</li>
+<li><p>对象关系数据模型</p>
+</li>
+<li><p>半结构化数据模型</p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="数据库系统的结构"><a href="#数据库系统的结构" class="headerlink" title="数据库系统的结构"></a>数据库系统的结构</h3><ul>
+<li><p>数据库系统模式的概念：在数据模型中有“型”和“值”的概念。型是指对某一类数据的结构和属性的说明，值是型的一个具体赋值。</p>
+<p>​                                          模式是相对稳定的，而实例是相对变动的。</p>
+</li>
+</ul>
+<ul>
+<li><p><strong>数据库系统的三级模式结构图：</strong></p>
+</li>
+<li><p><img src="/images/数据库系统的三级模式结构.jpg" alt="数据库系统的三级模式结构" style="zoom:25%;transform:rotate(-90deg);"></p>
+</li>
+<li><p><strong>三级模式</strong></p>
+<ol>
+<li><p>模式：模式也称逻辑模式，是数据库中全体数据的逻辑结构和特征的描述，是所有用户的公共数据视图。</p>
+</li>
+<li><p>外模式：外模式也称子模式或用户模式，它是数据库用户能够看见和使用的局部数据的逻辑结构和特征的描述，是数据库用户的数据视图，是与某一应用有关的数据的逻辑表示。</p>
+</li>
+<li><p>内模式：内模式也称存储模式，一个数据库只有一个内模式。它是数据物理结构和存储方式的描述，是数据在数据库内部的组织方式。</p>
+</li>
+</ol>
+</li>
+<li><p><strong>数据库的二级映像功能与数据独立性</strong></p>
+<ol>
+<li><p>外模式/模式映像：当模式改变时(例如增加新的关系、新的属性、改变属性的数据类型等)，由数据库管理员对各个外模式/模式的映像作相应改变，可以使外模式保持不变。应用程序是依据数据的外模式编写的，从而应用程序不必修改，<strong>保证了数据与程序的逻辑独立性，简称数据的逻辑独立性。</strong></p>
+</li>
+<li><p>模式/内模式映像：当数据库的存储结构改变时(例如选用了另一种存储结构)，由数据库管理员对模式/内模式映像作相应改变，可以使模式保持不变，从而应用程序也不必改变。<strong>保证了数据与程序的物理独立性，简称数据的物理独立性。</strong></p>
+</li>
+<li><p>数据与程序之间的独立性使得数据的定义和描述可以从应用程序中分离出去。另外，由于数据的存取由数据库管理系统管理，从而简化了应用程序的编制，大大减少了应用程序的维护和修改。</p>
+</li>
+</ol>
+</li>
+<li><p>数据库系统的组成</p>
+<ol>
+<li><p>包括硬件平台及数据库、软件、人员。</p>
+</li>
+<li><p>数据库管理员(DBA)职责：</p>
+<ul>
+<li><p>决定数据库中的信息内容和结构</p>
+</li>
+<li><p>决定数据库的存储结构和存储策略</p>
+</li>
+<li><p>定义数据的安全性要求和完整性约束条件</p>
+</li>
+<li><p>监控数据库的使用和运行</p>
+</li>
+<li><p>数据库的改进和重组、重构</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h1 id="第二章-关系数据库"><a href="#第二章-关系数据库" class="headerlink" title="第二章 关系数据库"></a>第二章 关系数据库</h1><h2 id="关系数据结构及形式化定义"><a href="#关系数据结构及形式化定义" class="headerlink" title="关系数据结构及形式化定义"></a>关系数据结构及形式化定义</h2><ul>
+<li><p>关系</p>
+<ol>
+<li><p>域：域是一组具有相同数据类型的值的集合。</p>
+</li>
+<li><p><strong>笛卡尔积</strong>：笛卡尔积定义，给定一组域D1,D2,…,Dn，允许其中某些域是相同的，D1,D2,…,Dn的笛卡尔积为</p>
+<p>​                                    <em>D1\</em>D2*…*Dn = {(d1,d2,…,dn)|di属于Di,i=1,2,…,n}*</p>
+<p>其中，每一个元素(d1,d2,…,dn)叫作一个n元组，或简称元组。元素中的每一个值di叫作一个分量。</p>
+<p>一个域允许的不同取值个数称为这个域的基数。</p>
+<ol start="3">
+<li><p><strong>关系：</strong>定义： D1*D2*…*Dn的子集叫做在域D1,D2,…,Dn上的关系，表示为R(D1,D2,…,Dn)这里R表示关系的名字,n是关系的<strong>目或度</strong>。当n = 1时，称该关系为一元关系。当n = 2时，称该关系为二元关系。</p>
+<ul>
+<li><p>某一属性组的值能唯一的标识一个元组，而其子集不能，则称该属性组为<strong>候选码</strong>。若一个关系有多个候选码，则选定其中一个为<strong>主码</strong>。候选码的诸属性称为<strong>主属性</strong>。不包含在任何候选码中的属性称为<strong>非主属性或非码属性</strong>。在最简单的情况下，候选码只包含一个属性。在最极端的情况下，关系模式的所有属性是这个关系模式的候选码，称为<strong>全码</strong>。</p>
+</li>
+<li><p>关系可以有三种类型：基本关系(通常又称为基本表或基表)、查询表和视图表。</p>
+</li>
+<li><p>关系的性质：</p>
+</li>
+</ul>
+<ol>
+<li><p>列是同质的，即每一列中的分量是同一类型的数据，来自同一个域。</p>
+</li>
+<li><p>不同的列可出自同一个域，称其中的每一列为一个属性，不同的属性要给予不同的属性名。</p>
+</li>
+<li><p>列的顺序无所谓，即列的次序可以任意交换。</p>
+</li>
+<li><p>任意两个元组的候选码不能取相同的值。</p>
+</li>
+<li><p>行的顺序无所谓，即行的次序可以任意交换。</p>
+</li>
+<li><p>分量必须取原子值，即每一个分量都必须是不可分的数据项。</p>
+</li>
+</ol>
+<p><strong>这些规范条件中最基本的一条就是，关系的每一个分量必须是一个不可分的数据项。规范化的关系简称为范式(NF)。</strong></p>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>关系模式</p>
+<ul>
+<li>关系的描述称为关系模式。它可以形式化的表示为R(U,D,DOM,F)。其中R为关系名，U为组成改关系的属性名集合，D为U中属性所来自的域，DOM为属性向域的映像集合，F为属性间数据的依赖关系集合。</li>
+</ul>
+</li>
+<li><p>关系数据库</p>
+<ul>
+<li>关系数据库也有型和值之分。关系数据库的型也称为关系数据库模式，是对关系数据库的描述。关系数据库的值是这些关系模式在某一时刻对应的关系的集合，通常就称为关系数据库。</li>
+</ul>
+</li>
+</ul>
+<h2 id="关系操作"><a href="#关系操作" class="headerlink" title="关系操作"></a>关系操作</h2><ul>
+<li>基本的关系操作：关系模型中常用的关系操作包括<strong>查询操作</strong>和<strong>插入、删除、修改操作</strong>两大部分。<ul>
+<li>关系的查询表达能力很强，是关系操作中最主要的部分。查询操作又可以分为旋转、投影、连接、除、并、差、交、笛卡尔积等。其中<strong>选择、投影、并、差、笛卡尔积是5种基本操作</strong>。</li>
+<li>关系操作的特点是集合操作方式，即操作的对象和结果都是集合。这种操作方式也称为一次一集合的方式。相应的非</li>
+</ul>
+</li>
+</ul>
+<p>未完待续。。。</p>
+<hr>
+
       
     </div>
     
@@ -414,8 +621,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -475,6 +691,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库"><span class="nav-number">1.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-绪论"><span class="nav-number">1.1.</span> <span class="nav-text">第一章 绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库系统概述"><span class="nav-number">1.1.1.</span> <span class="nav-text">数据库系统概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据模型"><span class="nav-number">1.1.2.</span> <span class="nav-text">数据模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库系统的结构"><span class="nav-number">1.1.3.</span> <span class="nav-text">数据库系统的结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-关系数据库"><span class="nav-number">2.</span> <span class="nav-text">第二章 关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关系数据结构及形式化定义"><span class="nav-number">2.1.</span> <span class="nav-text">关系数据结构及形式化定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系操作"><span class="nav-number">2.2.</span> <span class="nav-text">关系操作</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
