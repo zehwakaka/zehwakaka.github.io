@@ -87,7 +87,13 @@
 <meta property="og:description" content="版权所有  数据库第一章 绪论数据库系统概述 数据库四个基本概念：数据库系统(DBS)包括 数据库管理系统(DBMA)，数据库管理员(DBA)，数据库(DB)。 数据管理技术的产生和发展：数据管理技术经历了人工管理、文件管理、数据库系统三个阶段。      数据库系统的特点   数据结构化 共享性高、冗余度低且易扩充 数据独立性高：数据独立性、物理独立性、逻辑独立性 数据由数据库管理系统统一管理和">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://zehwakaka.github.io/images/数据库系统的三级模式结构.jpg">
-<meta property="og:updated_time" content="2020-08-23T10:05:06.180Z">
+<meta property="og:image" content="http://zehwakaka.github.io/images/参照关系.jpg">
+<meta property="og:image" content="http://zehwakaka.github.io/images/传统集合运算举例.jpg">
+<meta property="og:image" content="http://zehwakaka.github.io/images/连接.jpg">
+<meta property="og:image" content="http://zehwakaka.github.io/images/数据库对象命名机制的层次结构.jpg">
+<meta property="og:image" content="http://zehwakaka.github.io/images/数据类型1.jpg">
+<meta property="og:image" content="http://zehwakaka.github.io/images/数据类型2.jpg">
+<meta property="og:updated_time" content="2020-08-24T13:20:08.179Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="数据库概论复习">
 <meta name="twitter:description" content="版权所有  数据库第一章 绪论数据库系统概述 数据库四个基本概念：数据库系统(DBS)包括 数据库管理系统(DBMA)，数据库管理员(DBA)，数据库(DB)。 数据管理技术的产生和发展：数据管理技术经历了人工管理、文件管理、数据库系统三个阶段。      数据库系统的特点   数据结构化 共享性高、冗余度低且易扩充 数据独立性高：数据独立性、物理独立性、逻辑独立性 数据由数据库管理系统统一管理和">
@@ -457,7 +463,7 @@
 </li>
 </ul>
 <hr>
-<h1 id="第二章-关系数据库"><a href="#第二章-关系数据库" class="headerlink" title="第二章 关系数据库"></a>第二章 关系数据库</h1><h2 id="关系数据结构及形式化定义"><a href="#关系数据结构及形式化定义" class="headerlink" title="关系数据结构及形式化定义"></a>关系数据结构及形式化定义</h2><ul>
+<h2 id="第二章-关系数据库"><a href="#第二章-关系数据库" class="headerlink" title="第二章 关系数据库"></a>第二章 关系数据库</h2><h3 id="关系数据结构及形式化定义"><a href="#关系数据结构及形式化定义" class="headerlink" title="关系数据结构及形式化定义"></a>关系数据结构及形式化定义</h3><ul>
 <li><p>关系</p>
 <ol>
 <li><p>域：域是一组具有相同数据类型的值的集合。</p>
@@ -505,12 +511,263 @@
 </ul>
 </li>
 </ul>
-<h2 id="关系操作"><a href="#关系操作" class="headerlink" title="关系操作"></a>关系操作</h2><ul>
+<h3 id="关系操作"><a href="#关系操作" class="headerlink" title="关系操作"></a>关系操作</h3><ul>
 <li><p>基本的关系操作：关系模型中常用的关系操作包括<strong>查询操作</strong>和<strong>插入、删除、修改操作</strong>两大部分。</p>
 <ul>
-<li>关系的查询表达能力很强，是关系操作中最主要的部分。查询操作又可以分为旋转、投影、连接、除、并、差、交、笛卡尔积等。其中<strong>选择、投影、并、差、笛卡尔积是5种基本操作</strong>。</li>
-<li>关系操作的特点是集合操作方式，即操作的对象和结果都是集合。这种操作方式也称为一次一集合的方式。相应的非</li>
+<li><p>关系的查询表达能力很强，是关系操作中最主要的部分。查询操作又可以分为旋转、投影、连接、除、并、差、交、笛卡尔积等。其中<strong>选择、投影、并、差、笛卡尔积是5种基本操作</strong>。</p>
+</li>
+<li><p>关系操作的特点是集合操作方式，即操作的对象和结果都是集合。这种操作方式也称为一次一集合的方式。相应的非关系数据模型的数据操作方式则为一次一记录的方式。</p>
+</li>
 </ul>
+</li>
+<li><p>关系数据语言的分类</p>
+<ul>
+<li><p>早期的关系操作能力通常用代数方式或逻辑方式来表示，分别称为<strong>关系代数和关系演算</strong>。关系代数用对关系的运算来表达查询要求，关系演算则用谓词来表达查询要求。关系演算又可按谓词变元的基本对象是元组变量还是域变量分为<strong>元组关系演算和域关系演算</strong>。</p>
+</li>
+<li><p>还有一种介于关系代数和关系演算之间的<strong>结构化查询语言(SQL)</strong>。SQL是<strong>集查询、数据定义语言、数据操纵语言和数据控制语言于一体的关系数据语言。</strong></p>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="关系的完整性"><a href="#关系的完整性" class="headerlink" title="关系的完整性"></a>关系的完整性</h3><ul>
+<li><p>关系模型中有三类完整性约束：<strong>实体完整性、参照完整性和用户定义的完整性。</strong>其中实体完整性和参照完整性是关系模型必须满足的完整性约束条件，被称作<strong>关系的两个不变性。</strong></p>
+<ol>
+<li><p>实体完整性：实体完整性规则，若属性(指一个或一组属性)A是基本关系R的主属性，则A不能取空值。所谓空值就是“不知道”或“不存在”或“无意义”的值。</p>
+<p><em>对实体完整性规则说明：</em></p>
+<ul>
+<li><p>实体完整性规则是针对基本关系而言的。一个基本表通常对应现实世界的一个实体集。</p>
+</li>
+<li><p>现实世界中的实体是可区分的，即它们具有某种唯一性标识。例如每个学生都是独立的个体，是不一样的。</p>
+</li>
+<li><p>相应的，关系模型中以主码作为唯一性标识。</p>
+</li>
+<li><p>主码中的属性不能取空值。</p>
+</li>
+</ul>
+</li>
+<li><p>参照完整性：<strong>设F是基本关系R的一个或一组属性，但不是关系R的码，Ks是基本关系S的码。如果F与Ks相对应，则称F是R的外码，并称基本关系R为参照关系，基本关系S为被参照关系或目标关系。</strong></p>
+<p><img src="/images/参照关系.jpg" alt="参照关系与被参照关系"></p>
+<ul>
+<li><p>参照完整性规则：若属性(或属性组)F是基本关系R的外码，它与基本关系S的主码Ks相对应(基本关系R和S不一定是不同的关系)，则对于R中每个元组在F上的值必须：</p>
+<ol>
+<li><p>或者取空值(F的每个属性值均为空值)</p>
+</li>
+<li><p>或者等于S中某个元组的主码值。</p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>用户定义的完整性</p>
+<p><em>用户定义的完整性就是针对某一具体关系数据库的约束条件，它反映某一具体应用所涉及的数据必须满足的语义要求。</em></p>
+</li>
+</ol>
+</li>
+</ul>
+<h3 id="关系代数"><a href="#关系代数" class="headerlink" title="关系代数"></a>关系代数</h3><p>  关系代数是一种抽象的查询语言，它用对关系的运算来表达查询。</p>
+<p>  任何一种运算都是将一定的运算符作用于一定的运算对象上，得到预期的运算结果。所以运算对象、运算符、运算结果是运算的三大要素。</p>
+<p>  关系代数用到的运算符包括两类：集合运算符和专门的关系运算符</p>
+<p>  关系代数的运算按运算符的不同可分为传统的集合运算和专门的关系运算两类。</p>
+<ul>
+<li><p>传统的集合运算</p>
+<p><strong>传统的集合运算是二目运算，包括并、差、交、笛卡尔积四种运算</strong></p>
+<p>定义如下：</p>
+<ol>
+<li><p>并：R∪S ={t|t属于R V t属于S}    其结果仍为n目关系，由属于R或属于S的元组组成。</p>
+</li>
+<li><p>差：R-S = {t|t属于R ∧ t不属于S}  其即结果关系仍为n目关系，由属于R而不属于S的所有元组组成。</p>
+</li>
+<li><p>交：R∩S = {t|t属于R ∧ t属于S}    其结果关系仍为n目关系，由既属于R又属于S的元组组成。关系的交可以用差来表示，即</p>
+<p>R∩S = R - (R - S)</p>
+</li>
+<li><p>笛卡尔积：R*S = {tr 连ts|tr属于R ∧ ts属于S}</p>
+<p><img src="\images\传统集合运算举例.jpg" alt="传统集合运算举例"></p>
+</li>
+</ol>
+</li>
+<li><p>专门的关系运算</p>
+<p><strong>专门的关系运算包括选择、投影、连接、除运算</strong></p>
+<p> 记号：</p>
+<ol>
+<li><p>设关系模式为R(A1,A2,…,An)，它的一个关系设为R。t属于R表示t是R的一个元组。t[Ai]则表示元组t中相应于属性Ai的一个分量。</p>
+</li>
+<li><p>若A = {Ai1,Ai2,…,Aik}，其中Ai1，Ai2，…，Aik是A1，A2，…，An中的一部分，则A称为属性列或属性组。t[A] = (t[Ai1],t[Ai2],…,t[Aik])表示元组t在属性列A上诸分量的集合，A反则表示{A1,A2,…,An}中去掉{Ai1,Ai2,…,Aik}后剩余的属性组。</p>
+</li>
+<li><p>R为n目关系，S为m目关系。tr属于R，ts属于S，tr连接ts称为元组的连接或元组的串接。他是一个n+m列的元组前n个分量为R中的一个n元组，后m个分量为S中的一个m元组。</p>
+</li>
+<li><p>给定一个关系R(X,Z),X和Z为属性组。当t[X] = x时，x在R<strong>象集</strong>定义为</p>
+<p>​    Zx = {t[Z]|t属于R，t[X] = x}</p>
+<p>它表示R中属性组X上值为x的诸元组在Z上分量的集合。</p>
+</li>
+</ol>
+<ul>
+<li><p>选择：选择又称为限制。它是在关系R中选择满足给定条件的诸元组，记作   的塔F(R) = {t|t属于R ∧ F(t)= ‘真’}</p>
+</li>
+<li><p>投影：关系R上的投影是从R中选择出若干属性列组成新的关系。记作   pi A(R) = {t[A]|t属于R} 其中A为R中的属性列。投影是从列的角度进行的运算。</p>
+</li>
+<li><p>连接：连接也称为 θ连接。他是从两个关系的笛卡尔积中选取属性间满足一定条件的元组。记作：</p>
+<p> <img src="/images/连接.jpg" alt="连接"> </p>
+<ul>
+<li><p>连接运算中有两种最为重要也最为常用的连接，一种是等值连接，另一种是自然连接。θ为“=”的连接运算称为<strong>等值连接</strong>是从关系R与S的广义笛卡尔积中选取A、B属性值相等的那些元组。<strong>自然连接</strong>是一种特殊的等值连接，它要求两个关系中进行比较的分量必须是同名的属性组，并且在结果中把重复的属性列去掉。即若R和S中具有相同的属性组B,U为R和S的全体属性集合。一般的连接操作是从行的角度进行运算，但自然连接还需要取消重复列，所以是<strong>同时从行和列的角度进行运算</strong>。</p>
+</li>
+<li><p>两个关系R和S在做自然连接时，选择两个关系在公共属性上值相等的元组构成新的关系。此时，关系R中某些元组有可能在S中不存在公共属性上值相等的元组，从而造成R中这些元组在操作时被舍弃，同样，S中某些元组也可能被舍弃。<strong>这些被舍弃的元组称为悬浮元组</strong>。</p>
+</li>
+<li><p>如果把悬浮元组也保存在结果关系中，而在其他属性上填空值(NULL)，那么这种连接就叫做外连接，记作R =&gt;&lt;= S;如果只保留左边关系R中的悬浮元组就叫做左外连接R=&gt;&lt;S;如果只保留右边关系S中的悬浮元组就叫做右外连接，记作R&gt;&lt;=S</p>
+</li>
+</ul>
+</li>
+<li><p>除运算：设关系R除以关系S的结果为关系T，则<strong>T包含所有在R但不在S中的属性及其值，且T的元组与S的元组的所有组合都在R中。</strong></p>
+<ul>
+<li>下面用象集来定义除法：给定关系R(X,Y)和S(Y,Z)，其中X,Y,Z为属性组。R中的Y与S中的Y可以有不同的属性名，但必须出自相同的域集。</li>
+<li>R与S的除运算得到一个新的关系P(X)，P是R中满足下列条件的元组在X属性列上的投影：元组在X上分量值x的象集Yx包含S在Y上投影的集合。记作：R/S = {Tr[X]|tr属于R ∧ piY(S)包含于Yx} 其中Yx为x在R中的象集，x = tr[X]。除操作是同时从行和列角度进行运算。</li>
+<li>R/S -&gt;投影-&gt;象集-&gt;包含</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>其中并，差，笛卡尔积，选择和投影这五种运算为基本的运算。其他三种运算，即交，连接和除，均可以用这5种基本运算来表达。引进他们并不增加语言的能力，但可以简化表达</p>
+</li>
+<li><p>关系代数中，这些运算经有限次复合后形成的表达式称为关系代数表达式。</p>
+</li>
+</ul>
+<hr>
+<h2 id="第三章-关系数据库标准语言SQL"><a href="#第三章-关系数据库标准语言SQL" class="headerlink" title="第三章 关系数据库标准语言SQL"></a>第三章 关系数据库标准语言SQL</h2><h3 id="SQL-概述"><a href="#SQL-概述" class="headerlink" title="SQL 概述"></a>SQL 概述</h3><ul>
+<li><p>SQL 的产生与发展</p>
+<p>目前，没有一个数据库系统能够支持SQL标准的所有概念和特性。大部分数据库系统能支持SQL/92标准中的大部分功能以及SQL99、SQL2003中的部分新概念。同时，许多软件厂商对SQL基本命令集还进行了不同程度的扩展和修改，又可以支持标准以外的一些功能特性。</p>
+</li>
+<li><p>SQL的特点</p>
+<ol>
+<li><p>综合统一</p>
+</li>
+<li><p>高度非过程化</p>
+<p>只要提出“做什么”，而无须指明“怎么做”，因此无须了解存取路径。存取路径的选择以及SQL的操作过程由系统自动完成。</p>
+</li>
+<li><p>面向集合的操作方式</p>
+</li>
+<li>以同一种语法结构提供多种使用方式</li>
+<li>语言简洁，易学易用 </li>
+</ol>
+</li>
+</ul>
+<h3 id="数据定义"><a href="#数据定义" class="headerlink" title="数据定义"></a>数据定义</h3><p><em>一个关系数据库管理系统的实例中可以建立多个数据库，一个数据库中可以建立多个模式，一个模式下通常包括多个表、视图和索引等数据库对象。</em></p>
+<p><img src="/images/数据库对象命名机制的层次结构.jpg" alt="数据库对象命名机制的层次结构"></p>
+<ul>
+<li><p>模式的定义与删除</p>
+<ul>
+<li><p>定义模式：在SQL中，模式定义语句如下：create schema &lt;模式名&gt; authorization &lt;用户名&gt; </p>
+<p>​                                                     <em>如果没有指定&lt;模式名&gt;，那么&lt;模式名&gt;隐含为&lt;用户名&gt;</em></p>
+<p><em>要创建模式，调用该命令的用户必须拥有数据库管理员权限，或者获得了数据库管理员授予的create schema 的权限</em></p>
+</li>
+<li><p>目前，create chema 中可以接受 create table，create view和grant 子句。也就是说用户可以在创建模式的同时在这个模式定义中进一步创建基本表、视图。定义授权。即：create schema &lt;模式名&gt; authorization &lt;用户名&gt; [&lt;表定义子句&gt;|&lt;视图定义子句&gt;|&lt;授权定义子句&gt;]</p>
+</li>
+<li><p>删除模式：在SQL中，删除模式语句如下，drop schema &lt;模式名&gt;&lt;cascade|restrict&gt; </p>
+<p><em>其中cascade和restrict两者必选其一。选择了cascade(级联)，表示在删除模式的同时把该模式中所有的数据库对象全部删除；选择了restrict(限制)，表示如果该模式中已经定义了下属的数据库对象(如表，视图等)，则拒绝该删除语句的执行。只有当该模式中没有任何下属的对象时才能执行 drop schema语句。</em></p>
+</li>
+</ul>
+</li>
+<li><p>基本表的定义、删除与修改</p>
+<ul>
+<li><p>定义基本表：创建了一个模式就建立了一个数据库的命名空间，一个框架。在这个空间中首先要定义的是该模式包含的数据库基本表。SQL语言使用create table 语句定义基本表，其基本格式如下：</p>
+<p><em>create table &lt;表名&gt;(&lt;列名&gt;&lt;数据类型&gt;[列级完整性约束条件][,&lt;列名&gt;&lt;数据类型&gt;[列级完整性约束条件]][,表级完整性约束条件])</em></p>
+<p><em>参照表和被参照表可以是同一个表</em></p>
+</li>
+<li><p>数据类型：</p>
+<p><img src="\images\数据类型1.jpg" alt="数据类型1"><br><img src="\images\数据类型2.jpg" alt="数据类型1"></p>
+</li>
+<li><p>模式与表</p>
+<p>每一给基本表都属于某一个模式，一个模式包含多个基本表。当定义基本表时一般可以有三种方法定义它所属的模式，现在要在S-T中定义Student、Course、SC等基本表。</p>
+<ol>
+<li><p>方法一：在表名中明显的给出模式名。 create table ”S-T“.Student(…);<em>Student所属的模式是S-T</em></p>
+</li>
+<li><p>方法二：在创建模式语句中同时创建表</p>
+</li>
+<li><p>方法三：设置所属的模式，这样在创建表时表名中不必给出模式名。</p>
+<p>当用户创建基本表(其他数据库对象也一样)时若没有指定模式，系统根据搜索路径来确定该对象所属的模式。</p>
+<p>搜索路径包含一组模式列表，关系数据库管理系统会使用模式列表中第一个存在的模式作为数据库对象的模式名。若搜索路径中的模式名都不存在，系统将给出错误。</p>
+<p><em>使用下面的语句可以显示当前的搜索路径： show search_path</em></p>
+<p><em>搜索路径当前默认值是$user，PUBLIC。其含义是首先搜索与用户名相同的模式名，如果该模式名不存在，则使用PUBLIC模式</em></p>
+<p><em>数据库管理员也可以设置搜索路径，如：SET search_path TO “S-T”,PUBLIC; 然后，定义基本表。实际结果是建立了S-T.Student基本表。因为关系数据库管理系统发现路径中第一个模式名S-T存在，就把该模式作为基本表Studnt所属的模式。</em></p>
+</li>
+</ol>
+</li>
+<li><p>修改基本表</p>
+<p>SQL语言用alter table语句修改基本表，其一般格式为</p>
+<p>alter table &lt;表名&gt;</p>
+<p>[add [column] &lt;新列名&gt;&lt;数据类型&gt;[完整性约束]]</p>
+<p>[add &lt;表级完整性约束&gt;]</p>
+<p>[drop [column] &lt;列名&gt;[cascade|restrict]]</p>
+<p>[drop constraint &lt;完整性约束名&gt; [restrict|cascade]]</p>
+<p>[alter column &lt;列名&gt;&lt;数据类型&gt;]</p>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li><p>删除基本表</p>
+<p>drop table &lt;表名&gt;[restrict|cascade]</p>
+<p>若选择restrict，则该表的删除是有限制条件的。欲删除的基本表不能被其他表的约束所引用(如cheack，foreign key等约束)，不能有视图，不能有触发器，不能有存储过程或函数等。如果存在这些依赖该表的对象，则此表不能被删除。</p>
+<p>若选择cascade，则该表的删除没有限制条件。在删除基本表的同时，相关的依赖对象，例如视图，都将被一起删除。</p>
+<p><em>默认情况是restrict</em></p>
+</li>
+<li><p>索引的建立与删除</p>
+<p>数据库索引有多种类型，常见索引包括顺序文件上的索引、B+树索引、散列索引、位图索引等。<strong>顺序文件上的索引</strong>是针对按指定属性值升序或降序存储的关系，在该属性上建立一个顺序索引文件，索引文件由属性值和相应的元组指针组成。<strong>B+树索引</strong>是将索引属性组织成B+树形式，B+树的叶结点为属性值和相应的元组指针。B+树索引具有动态平衡的优点。<strong>散列索引</strong>是建立若干个桶，将索引属性按照其散列函数值映射到相应桶中，桶中存放索引属性值和相应的元组指针。散列索引具有查找速度快的特点。<strong>位图索引</strong>是用位向量记录所有属性中可能出现的值，每个位向量对于一个可能值。</p>
+<p><em>关系数据库管理系统在执行查询时会自动选择合适的索引作为存取路径，用户不必也不能显式的选择索引。</em></p>
+<ol>
+<li><p>建立索引：在SQL语言中，建立索引使用 create index 语句，一般格式为</p>
+<p>create [unique][cluster] index &lt;索引名&gt;</p>
+<p>on &lt;表名&gt;(&lt;列名&gt;[&lt;次序&gt;][,&lt;列名&gt;[&lt;次序&gt;]]…)</p>
+<p>其中，&lt;表名&gt;是要建索引的基本表的名字。索引可以建立在该表的一列或多列上，各列名之间用逗号分隔。每个&lt;列名&gt;后面还可以用&lt;次序&gt;指定索引值的排列次序，可选ASC(升序)或DESC(降序)，默认值为ASC.</p>
+<p>UNIQUE表明此索引每一个索引值只对应唯一的数据记录。</p>
+<p>CLUSTER 表示要建立的索引是聚簇索引。</p>
+</li>
+<li><p>修改索引</p>
+<p>对于已经建立的索引，如果需要对其重新命名，可以使用ALTER INDEX 语句。其一般格式为：</p>
+<p>ALTER INDEX &lt;旧索引名&gt; RENAME TO &lt;新索引名&gt;</p>
+</li>
+<li><p>删除索引</p>
+<p>在SQL中，删除索引使用DROP INDEX语句，其一般格式为</p>
+<p>DROP INDEX &lt;索引名&gt;</p>
+</li>
+</ol>
+</li>
+</ul>
+<ul>
+<li><p>数据字典</p>
+<p>数据字典是关系数据库管理系统内部的一组系统表，它记录了数据库中所有的定义信息，包括关系模式定义，视图定义，索引定义，完整性约束定义，各类用户对数据库的操作权限，统计信息等。</p>
+</li>
+</ul>
+<h3 id="数据查询"><a href="#数据查询" class="headerlink" title="数据查询"></a>数据查询</h3><ul>
+<li><p>数据查询是数据库的核心操作。SQL提供了SELECT语句进行数据查询，该语句具有灵活的使用方式和丰富的功能。其一般格式为</p>
+<p>select [all|distinct] &lt;目标列表达式&gt;[,&lt;目标列表达式&gt;]…</p>
+<p>from &lt;表名或视图名&gt; [,&lt;表名或视图名&gt;…]|(&lt;select语句&gt;)[AS]&lt;别名&gt;</p>
+<p>[where&lt;条件表达式&gt;]</p>
+<p>[group by &lt;列名1&gt;[having&lt;条件表达式&gt;]]</p>
+<p>[order by&lt;列名2&gt;[asc|desc]]</p>
+<p>整个select语句的含义是，根据where子句的条件表达式从from子句指定的基本表、视图或派生表中找出满足条件的元组，再按select子句中的目标列表达式选出元组中的属性值形成结果表。</p>
+<p>如果由group by 子句，则将结果按&lt;列名1&gt;的值进行分组，该属性列值相等的元组为一组。通常会在每组中作用聚集函数。如果 group by子句带having短语，则只有满足指定条件的组才予以输出。</p>
+<p>如果有order by子句，则结果表还有按&lt;列名2&gt;的值升序或降序排序。</p>
+<p>select语句既可以完成简单的单表查询，也可以完成复杂的连接查询和嵌套查询。</p>
+</li>
+<li><p>单表查询</p>
+<ol>
+<li><p>选择表中的若干列</p>
+<ul>
+<li><p>查询指定列：如select Sno，Sname from Student。各个列的顺序可以与表中的顺序不一致</p>
+</li>
+<li><p>查询全部列：如select * from Student</p>
+</li>
+<li><p>查询经过计算的值：select 子句的&lt;目标列表达式&gt;不仅可以使表中的属性列，也可以是表达式。如：select Sname，‘Year of Birth：’，2014-Sage BIRTHDAY from Student</p>
+</li>
+</ul>
+</li>
+<li><p>选择表中的若干元组</p>
+<ul>
+<li><p>消除取值重复的行</p>
+<p>两个本科并不完全相同的元组在投影到指定的某些列上后，可能会变成相同的行。可以使用distinct消除他们。</p>
+</li>
+</ul>
+</li>
+</ol>
 </li>
 </ul>
 <p>未完待续。。。</p>
@@ -683,7 +940,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库"><span class="nav-number">1.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-绪论"><span class="nav-number">1.1.</span> <span class="nav-text">第一章 绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库系统概述"><span class="nav-number">1.1.1.</span> <span class="nav-text">数据库系统概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据模型"><span class="nav-number">1.1.2.</span> <span class="nav-text">数据模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库系统的结构"><span class="nav-number">1.1.3.</span> <span class="nav-text">数据库系统的结构</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-关系数据库"><span class="nav-number">2.</span> <span class="nav-text">第二章 关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#关系数据结构及形式化定义"><span class="nav-number">2.1.</span> <span class="nav-text">关系数据结构及形式化定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#关系操作"><span class="nav-number">2.2.</span> <span class="nav-text">关系操作</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#数据库"><span class="nav-number">1.</span> <span class="nav-text">数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#第一章-绪论"><span class="nav-number">1.1.</span> <span class="nav-text">第一章 绪论</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库系统概述"><span class="nav-number">1.1.1.</span> <span class="nav-text">数据库系统概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据模型"><span class="nav-number">1.1.2.</span> <span class="nav-text">数据模型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据库系统的结构"><span class="nav-number">1.1.3.</span> <span class="nav-text">数据库系统的结构</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第二章-关系数据库"><span class="nav-number">1.2.</span> <span class="nav-text">第二章 关系数据库</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#关系数据结构及形式化定义"><span class="nav-number">1.2.1.</span> <span class="nav-text">关系数据结构及形式化定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关系操作"><span class="nav-number">1.2.2.</span> <span class="nav-text">关系操作</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关系的完整性"><span class="nav-number">1.2.3.</span> <span class="nav-text">关系的完整性</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#关系代数"><span class="nav-number">1.2.4.</span> <span class="nav-text">关系代数</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#第三章-关系数据库标准语言SQL"><span class="nav-number">1.3.</span> <span class="nav-text">第三章 关系数据库标准语言SQL</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SQL-概述"><span class="nav-number">1.3.1.</span> <span class="nav-text">SQL 概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据定义"><span class="nav-number">1.3.2.</span> <span class="nav-text">数据定义</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#数据查询"><span class="nav-number">1.3.3.</span> <span class="nav-text">数据查询</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
