@@ -1035,15 +1035,109 @@ hexo d -g #生成并上传
 <p><img src="\images\any与all和聚集函数对应关系表.jpg" alt="any与all和聚集函数对应关系表"></p>
 </li>
 <li><p>带有exists谓词的子查询</p>
-<p>exists代表存在量词∃。带有exists谓词的子查询不返回任何数据，只产生逻辑真值”true”或逻辑假值”false”。</p>
+<ul>
+<li><p>exists代表存在量词∃。带有exists谓词的子查询不返回任何数据，只产生逻辑真值”true”或逻辑假值”false”。</p>
 <p>例子：课本P109 例3.60</p>
-<p>使用存在量词exists后，若内层查询结果非空，则外层的where子句返回真值，否则返回假值。</p>
-<p>由exists引出的子查询，其目标列表达式通常都用*，因为带exists的子查询只返回真值或假值，给出列名无实际意义。</p>
-<p>与exists谓词相对应的是not exists谓词。使用存在量词not exists后，若内层查询结果为空，则外层的where子句返回真值，否则返回假值。</p>
+</li>
+<li><p>使用存在量词exists后，若内层查询结果非空，则外层的where子句返回真值，否则返回假值。</p>
+</li>
+<li><p>由exists引出的子查询，其目标列表达式通常都用*，因为带exists的子查询只返回真值或假值，给出列名无实际意义。</p>
+</li>
+<li><p>与exists谓词相对应的是not exists谓词。使用存在量词not exists后，若内层查询结果为空，则外层的where子句返回真值，否则返回假值。</p>
+</li>
+<li><p><strong>一些带exists 或 not exists谓词的子查询不能被其他形式的子查询等价替换，但所有带in谓词、比较运算符、any和all谓词的子查询都能用带exists谓词的子查询等价替换。</strong></p>
+</li>
+<li><p>SQL中没有全称量词，但是可以把带有全称量词的谓词转换为等价的带有存在量词的谓词</p>
+<p>例子：课本P110 例3.62、3.63</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>集合查询</p>
+<p>select 语句的查询结果是元组的集合，所以多个select语句的结果可进行集合操作。<strong>集合操作主要包括并操作union、交操作intersect和差操作except。</strong></p>
+<p><em>使用union将多个查询结果合并起来时，系统会自动去掉重复元组。如果要保留重复元组则用union all操作符。</em></p>
+</li>
+<li><p>基于派生表的查询</p>
+<p>子查询不仅可以出现在where子句中，还可以出现在from子句中，这时子查询生成的临时派生表成为主查询的查询对象。</p>
+<p>select Sno,Cno</p>
+<p>from SC,(select Sno,Avg(Grade) from SC group by Sno) as Avg_sc(avg_sno,avg_grade)</p>
+<p>where SC.Sno = Avg_sc.avg_sno and SC.Grade &gt;= Avg_grade</p>
+<p>这里from子句中的子查询将生成一个派生表Avg_sc。该表由avg_sno和avg_grade两个属性组成，记录了每个学生的学号及平均成绩。主查询将SC表与Avg_sc按学号相等进行连接，选出选修课成绩大于其平均成绩的课程号。</p>
+<p><strong>通过from子句生成派生表时，as关键字可以省略，但必须为派生关系指定一个别名。</strong></p>
+</li>
+<li><p>select 语句的一般格式：</p>
+<p>select [ALL|DISTINCT]&lt;目标列表达式&gt;[别名][,&lt;目标列表达式&gt;[别名]]…</p>
+<p>from &lt;表名或视图名&gt;[别名][,&lt;表名或视图名&gt;[别名]]…|(<select 语句>)[as]&lt;别名&gt;</select></p>
+<p>[where &lt;条件表达式&gt;]</p>
+<p>[group by&lt;列名1&gt;[having1&lt;条件表达式&gt;]]</p>
+<p>[order by&lt;列名2&gt;[asc|desc]]</p>
+<ol>
+<li><p>目标列表达式的可选格式</p>
+<p><img src="\images\目标列表达式的可选格式.jpg" alt="目标列表达式的可选格式"></p>
+</li>
+<li><p>聚集函数的一般格式</p>
+<p><img src="\images\聚集函数的一般格式.jpg" alt="聚集函数的一般格式"></p>
+</li>
+<li><p>where子句的条件表达式的可选格式</p>
+<p><img src="\images\where子句的条件表达式的可选格式.jpg" alt="where子句的条件表达式的可选格式"></p>
 </li>
 </ol>
 </li>
 </ul>
+<h3 id="数据更新"><a href="#数据更新" class="headerlink" title="数据更新"></a>数据更新</h3><p>数据更新操作有三种:向表中添加若干行数据、修改表中的数据和删除表中的若干行数据。</p>
+<ul>
+<li><p>插入数据</p>
+<ol>
+<li><p>插入元组</p>
+<p>insert into &lt;表名&gt;[(&lt;属性列1&gt;[,&lt;属性列2&gt;]…)]values(&lt;常量1&gt;[,常量2]…)</p>
+<p>在into子句中指出了表名Student，并指出了新增加的元组在哪些属性上要赋值，属性的顺序可以与create table中的顺序不一样。values子句对新元组的各属性赋值，字符串常数要用单引号(英文符合)括起来。</p>
+<p>例：</p>
+<p>insert into SC(Sno,Cno) values(‘201215128’,’1’)</p>
+<p><strong>关系数据库管理系统将在新插入记录的Grade列上自动的赋空值。</strong></p>
+<p>或 insert into SC values(‘201215128’,’1’,NULL)</p>
+<p><strong>因为没有指出SC的属性名，在Grade列上要明确给出空值。</strong></p>
+</li>
+<li><p>插入子查询结果</p>
+<p>插入子查询结果的insert 语句格式为</p>
+<p>insert into &lt;表名&gt;[(&lt;属性列1&gt;[,&lt;属性列2&gt;…]） 子查询；</p>
+</li>
+</ol>
+</li>
+<li><p>修改数据</p>
+<p>修改操作又称为更新操作，其语句的一般格式为</p>
+<p>update &lt;表名&gt;</p>
+<p>set &lt;列名&gt;=&lt;表达式&gt;[，&lt;列名&gt;=&lt;表达式&gt;]…</p>
+<p>[where &lt;条件&gt;]</p>
+<p>其功能是修改指定表中满足where子句条件的元组。其中set子句给出&lt;表达式&gt;的值用于取代相应的属性列值。如果省略where子句，则表示要修改表中的所有元组。</p>
+<ol>
+<li><p>修改某一个元组的值</p>
+<p>例3.73 将学生201215121的年龄改为22岁</p>
+<p>update Student set Sage=22 where Sno=’201215121’</p>
+</li>
+<li><p>修改多个元组的值</p>
+<p>例 3.74 将所有学生的年龄增加1岁</p>
+<p>update Student set Sage=Sage+1</p>
+</li>
+<li><p>带子查询的修改语句</p>
+<p>子查询也可以嵌套在update语句中，用以构造修改的条件</p>
+<p>例 3.75 将计算机科学系全体学生的成绩置零。</p>
+<p>update SC set Grade=0</p>
+<p>where Sno in(select Sno from Student where Sdept=’CS’)</p>
+</li>
+</ol>
+</li>
+<li><p>删除数据</p>
+<p>删除语句的一般格式为</p>
+<p>delete from &lt;表名&gt; [where &lt;条件&gt;]；</p>
+<ol>
+<li>删除某一个元组的值</li>
+<li>删除多个元组的值</li>
+<li>带子查询的删除语句</li>
+</ol>
+</li>
+</ul>
+<h3 id="空值的处理"><a href="#空值的处理" class="headerlink" title="空值的处理"></a>空值的处理</h3><p>所谓的空值就是”不知道”或”不存在”或”无意义”的值。 </p>
 <p>未完待续。。。</p>
 <p>—&gt;                    </p>
 
