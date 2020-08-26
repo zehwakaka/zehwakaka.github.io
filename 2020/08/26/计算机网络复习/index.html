@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="第一章 概述1.3 互联网的组成 边缘部分：由所有连接在互联网上的主句组成。 端系统之间的通信方式通常可划分为两大类：  客户-服务器方式(C/S方式)：即Client/Server方式，简称C/S方式。 对等方式(P2P方式)：即Peer-to-Peer方式。   核心部分：由大佬网络和连载在这些完了的路由器组成。这部分是为边缘部分提供服务的(提供连通性和交换)  网络中的核心部分要向网络边缘中">
+<meta property="og:type" content="article">
+<meta property="og:title" content="计算机网络复习">
+<meta property="og:url" content="http://zehwakaka.github.io/2020/08/26/计算机网络复习/index.html">
+<meta property="og:site_name" content="Alice&#39;s blog">
+<meta property="og:description" content="第一章 概述1.3 互联网的组成 边缘部分：由所有连接在互联网上的主句组成。 端系统之间的通信方式通常可划分为两大类：  客户-服务器方式(C/S方式)：即Client/Server方式，简称C/S方式。 对等方式(P2P方式)：即Peer-to-Peer方式。   核心部分：由大佬网络和连载在这些完了的路由器组成。这部分是为边缘部分提供服务的(提供连通性和交换)  网络中的核心部分要向网络边缘中">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://zehwakaka.github.io/images/计算机网络体系结构.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/主机1向主机2发送数据.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/最基本的三种调制方式.png">
+<meta property="og:updated_time" content="2020-08-26T17:32:03.804Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="计算机网络复习">
+<meta name="twitter:description" content="第一章 概述1.3 互联网的组成 边缘部分：由所有连接在互联网上的主句组成。 端系统之间的通信方式通常可划分为两大类：  客户-服务器方式(C/S方式)：即Client/Server方式，简称C/S方式。 对等方式(P2P方式)：即Peer-to-Peer方式。   核心部分：由大佬网络和连载在这些完了的路由器组成。这部分是为边缘部分提供服务的(提供连通性和交换)  网络中的核心部分要向网络边缘中">
+<meta name="twitter:image" content="http://zehwakaka.github.io/images/计算机网络体系结构.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zehwakaka.github.io/2020/08/26/计算机网络复习/">
+
+
+
+
+
+  <title>计算机网络复习 | Alice's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Alice's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">郑</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2020/08/26/计算机网络复习/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alice's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">计算机网络复习</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-08-26T17:09:08+08:00">
+                2020-08-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="第一章-概述"><a href="#第一章-概述" class="headerlink" title="第一章 概述"></a>第一章 概述</h1><h2 id="1-3-互联网的组成"><a href="#1-3-互联网的组成" class="headerlink" title="1.3 互联网的组成"></a>1.3 互联网的组成</h2><ol>
+<li><p>边缘部分：由所有连接在互联网上的主句组成。</p>
+<p>端系统之间的通信方式通常可划分为两大类：</p>
+<ul>
+<li>客户-服务器方式(C/S方式)：即Client/Server方式，简称C/S方式。</li>
+<li>对等方式(P2P方式)：即Peer-to-Peer方式。</li>
+</ul>
+</li>
+<li><p>核心部分：由大佬网络和连载在这些完了的路由器组成。这部分是为边缘部分提供服务的(提供连通性和交换)</p>
+<ul>
+<li>网络中的核心部分要向网络边缘中的大量主机提供连通性。</li>
+<li>在网络核心部分的主要设备是路由器。</li>
+<li>路由器是实现1分组交换的关键构件，其任务是转发收到的分组，这是网络核心部分最重要的功能。</li>
+</ul>
+</li>
+<li><p>分组交换的主要特点</p>
+<ul>
+<li>分组交换则采用<strong>存储转发</strong>技术</li>
+<li>在发送端，先把较长的报文<strong>划分成较短的、固定长度的数据段。</strong></li>
+<li>每一个数据段起那么添加上<strong>首部构成分组</strong></li>
+<li>每个分组在互联中<strong>独立的选择传输路径</strong></li>
+<li>用<strong>存储转发</strong>方式，最后分组到达<strong>最终目的地</strong></li>
+<li>在接收端把收到的数据<strong>恢复为原来的报文</strong></li>
+</ul>
+</li>
+</ol>
+<h2 id="1-6-计算机网络的性能"><a href="#1-6-计算机网络的性能" class="headerlink" title="1.6 计算机网络的性能"></a>1.6 计算机网络的性能</h2><p>计算机网络的性能一般是指他的几个重要的性能指标，主要包括：</p>
+<ol>
+<li><p>速率</p>
+<ul>
+<li>速率是计算机网络中最重要的一个性能指标，指的是数据的传送速率，他也称为数据率或比特率。</li>
+<li>速率的单位是bit/s，或kbit/s、Mbit/s、Gbit/s等。例如4*1010bit/s的数据率就记为40Gbit/s</li>
+<li>速率往往是指额定速率或标称速率，非实际运行速率。</li>
+</ul>
+<ol start="2">
+<li><p>带宽</p>
+<ul>
+<li>带宽本来是指信号具有的频带宽度，其单位是赫(或千赫、兆赫、吉赫等)。</li>
+<li>在计算机网络中，带宽用来表示网络中某通道传送数据的能力。表示在单位时间内网络中的某信道所能通过的“最高数据率”。单位bit/s，即“比特每秒”。</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>吞吐量</p>
+<ul>
+<li>吞吐量表示在单位时间内通过某个网络(或信道、接口)的数据量。</li>
+<li>吞吐量更经常的用于对现实世界的网络的一种测量，以便知道实际上到底有多少数据量能通过网络。</li>
+<li>吞吐量受网络的带宽或网络的额定速率的限制。</li>
+</ul>
+</li>
+<li><p>时延</p>
+<ul>
+<li><p>时延是指数据(一个报文或分组，甚至比特)从网络(或链路)的一端传送到另一端所需的时间。</p>
+</li>
+<li><p>有时也称为延迟或迟延</p>
+</li>
+<li><p>网络中的时延由以下几个不同的部分组成</p>
+<ol>
+<li><p>发送时延</p>
+<ul>
+<li>也称为传输时延。</li>
+<li>发送数据时，数据帧从结点进入到传输媒体所需要的时间。</li>
+<li>也就是从发送数据帧的第一个比特算起，到该帧的最后一个比特发送完毕所需的时间</li>
+<li>发送时延 = 数据帧长度(bit)/发送速率(bit/s)</li>
+</ul>
+</li>
+<li><p>传播时延</p>
+<ul>
+<li>电磁波在信道中需要传播一定的距离而花费的时间</li>
+<li>发送时延与传播时延有本质上的不同</li>
+<li>信号发送速率和信号在信道上的传播速率是完全不同的概念</li>
+<li>传播时延 = 信道长度(米)/信号在信道上的传播速率(米/秒)</li>
+</ul>
+</li>
+<li><p>处理时延</p>
+<p>主机或路由器在收到分组时，为处理分组(例如分析首部、提取数据、差错检验或查找路由)所花费的时间。</p>
+</li>
+<li><p>排队时延</p>
+<ul>
+<li>分组在路由器输入输出队列中排队等待处理所经历的时延。</li>
+<li>排队时延的长短往往取决于网络中当时的通信量。</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>数据在网络中经历的总时延就是发送时延、传播时延、处理时延和排队时延之和。</p>
+<p>总时延 = 发送时延+传播时延+处理时延+排队时延</p>
+<p>必须指出，在总时延中，究竟是哪一种时延占主导地位，必须具体分析。</p>
+</li>
+<li><p>假设从结点A向结点B发送数据：在结点A中产生处理时延和排队时延，在发送器产生发送时延(即传输时延)，在链路上产生传播时延</p>
+</li>
+</ul>
+</li>
+<li><p>往返时间RTT</p>
+<ul>
+<li>互联网上的信息不仅仅单方向传输，而是双向交互的。因此，有时很需要知道双向交互一次所需的时间。</li>
+<li>往返时间表示从发送方发送数据开始，到发送方收到来自接收方的确认，总共经历的时间。</li>
+<li>在互联网中，往返时间还包括各中间结点的处理时延、排队时延以及转发数据时的发送时延</li>
+<li>当使用卫星通信时，往返时间RTT相对较长，是很重要的一个性能指标。</li>
+</ul>
+</li>
+<li><p>利用率</p>
+<ul>
+<li><p>分为信道利用率和网络利用率。</p>
+</li>
+<li><p>信道利用率指出某信道有百分之几的时间是被利用的(有数据通过)。完全空闲的信道的利用率是零。</p>
+</li>
+<li><p>网络利用率则是全网络的信道利用率的加权平均值。</p>
+</li>
+<li><p>信道利用率并非越高越好。当某信道的利用率增大时，该信道引起的时延也就迅速增加。</p>
+<p><em>时延与网络利用率的关系：当信道的利用率增大时，该信道引起的时延迅速增加。</em></p>
+<p>​      </p>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="1-7-计算机网络的体系结构"><a href="#1-7-计算机网络的体系结构" class="headerlink" title="1.7 计算机网络的体系结构"></a>1.7 计算机网络的体系结构</h2><ol>
+<li><p>计算机网络体系结构的形成</p>
+<ul>
+<li>计算机网络是一个非常复杂的系统</li>
+<li>互相通信的两个计算机系统必须高度协调工作才行，而这种”协调”是相当复杂的</li>
+<li>“分层”可将庞大而复杂的问题，转化为若干较小的局部问题，而这些较小的局部问题就比较易于研究和处理。</li>
+<li>计算机网络的各层及其协议的集合就是网络的体系结构</li>
+</ul>
+</li>
+<li><p>协议与划分层次</p>
+<ul>
+<li><p>计算机网络中的数据交换必须遵守事先约定好的规则。</p>
+</li>
+<li><p>这些规则明确规定了所交换的数据的格式以及有关的同步问题(同步含有时序的意思)。</p>
+</li>
+<li><p>网络协议，简称为协议，是为进行网络中的数据交换而建立的规则、标准或约定。</p>
+</li>
+<li><p>网络协议的三个组成要素</p>
+<ol>
+<li><p>语法：数据与控制信息的结构或格式</p>
+</li>
+<li><p>语义：需要发出何种控制信息，完成何种动作以及做出何种响应。</p>
+</li>
+<li><p>同步：事件实现顺序的详细说明。</p>
+<p><em>由此可见，网络协议是计算机网络的不可缺少的组成部分。</em></p>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>具有五层协议的体系结构</p>
+<ul>
+<li>OSI的七层协议体系结构的概念清楚，理论也较完整，但它既复杂又不实用。</li>
+<li>TCP/IP是四层体系结构：应用层、运输层、网际层和网络接口层</li>
+<li>但最下面的网络接口层并没有具体内容</li>
+<li><strong>因此往往采取折中的办法，即OSI和TCP/IP的优点，采用一种只有五层协议的体系。</strong></li>
+</ul>
+<p><img src="/images/计算机网络体系结构.png" alt="计算机网络体系结构"></p>
+<p><img src="/images/主机1向主机2发送数据.png" alt="主机1向主机2发送数据"></p>
+</li>
+</ol>
+<hr>
+<h1 id="第二章-物理层"><a href="#第二章-物理层" class="headerlink" title="第二章 物理层"></a>第二章 物理层</h1><h2 id="2-1-物理层的基本概念"><a href="#2-1-物理层的基本概念" class="headerlink" title="2.1 物理层的基本概念"></a>2.1 物理层的基本概念</h2><ul>
+<li>常用术语<ul>
+<li>数据——运送消息的实体</li>
+<li>信号——数据的电气的或电磁的表现</li>
+<li>模拟信号——代表消息的参数的取值是连续的</li>
+<li>数字信号——代表消息的参数的取值是离散的</li>
+<li>码元——在使用时间域(或简称为时域)的波形表示数字信号时，代表不同离散数值的基本波形</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-2-数据通信的基础知识"><a href="#2-2-数据通信的基础知识" class="headerlink" title="2.2 数据通信的基础知识"></a>2.2 数据通信的基础知识</h2><ol>
+<li><p>有关信道的几个基本概念</p>
+<ul>
+<li>信道——一般来表示向某一个方向传送信息的媒体</li>
+<li>单向通信(单工通信)——只能有一个方向的通信而没有反方向的交互</li>
+<li>双向交替通信(半双工通信)——通信的双方都可以发送信息，当不能双方同时发送(当然也就不能同时接收)。</li>
+<li>双向同时通信(全双工通信)——通信的双方可以同时发送和接收信息。</li>
+</ul>
+</li>
+<li><p>有关信道的几个基本概念</p>
+<ul>
+<li><p>基带信号(即基本频带信号)——来自信源的信号。像计算机输出的代表各种文字或图像文件的数据信号都属于基带信号。</p>
+</li>
+<li><p>基带信号往往包含有较多的低频成分，甚至有直流成分，而许多信道并不能传输这种低频分量或直流分量。因此必须对基带信号进行<strong>调制</strong>。</p>
+</li>
+<li><p>调制分为两大类：</p>
+<ul>
+<li>基带调制：仅对基带信号的波形进行变换，使它能够与信道特征性相适应。变换后的信号仍然是基带信号。把这种过程称为编码。</li>
+<li>带通调制：使用<strong>载波</strong>进行调制，把基带信号的频率范围搬移到较高的频段，并<strong>转换为模拟信号</strong>，这样就能够更好的在模拟信道中传输(即仅在一段频率范围内能够通过信道)。</li>
+<li>带通信号：经过载波调制后的信号。</li>
+</ul>
+</li>
+<li><p>基本的带通调制方法</p>
+<ul>
+<li><p>最基本的二元制调制方法有以下几种：</p>
+<ol>
+<li>调幅(AM)：载波的振幅随基带数字信号而变化。</li>
+<li>调频(FM)：载波的频率随基带数字信号而变化。</li>
+<li>调相(PM)：载波的初始相位随基带数字信号而变化。</li>
+</ol>
+<p><img src="\images\最基本的三种调制方式.png" alt="最基本的三种调制方式"></p>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>信道的极限容量</p>
+<ul>
+<li><p>任何实际的信道都不是理想的，在传输信号时会产生各种失真以及带来多种干扰。</p>
+</li>
+<li><p>码元传输的速率越高，或信号传输的距离越远，或传输媒体质量越差，在信道的输出端的波形的失真就越严重。</p>
+</li>
+<li><p>从概念上讲，限制码元在信道上的传输速率的因素有以下两个：</p>
+<ul>
+<li>信道能够通过的频率范围</li>
+<li>信噪比</li>
+</ul>
+</li>
+<li><p>信噪比</p>
+<ul>
+<li>噪声存在于所有的电子设备和通信信道中</li>
+<li>噪声是随机产生的，它的瞬时值有时会很大。因此噪声会使接收端对码元的判决产生错误。</li>
+<li>但噪声的影响是相对的。如果信号相对较强，那么噪声的影响就相对较小。</li>
+<li>信噪比就是信号的平均功率和噪声的平均功率之比。常记为S/N，并用分贝(dB)作为度量单位。即：信噪比(dB) = 10log10(S/N) （dB）</li>
+<li>例如，当S/N = 10时，信噪比为10dB,而当S/N =1000时，信噪比为30dB。</li>
+</ul>
+</li>
+<li><p>香农公式</p>
+<ul>
+<li><p>奈奎斯特于1924年推导出在理想低通信道下的<strong>最高码元传输速率(波特率)</strong>的公式，公式表示为理想低通信道下的最高码元传输速率=2W Baud</p>
+</li>
+<li><p>1984年，香农用信息论的理论推导出了带宽受限且有高斯白噪声干扰的信道的极限、无差错的信息传输速率(香农公式)</p>
+</li>
+<li><p>信道的极限信息传输速率C可表达为：</p>
+<p>C = Wlog2(1+S/N)  (bit/s)</p>
+<p>其中：W为信道的带宽(以Hz为单位)；</p>
+<p>S为信道内所传信号的平均功率；</p>
+<p>N为信道内部的高斯噪声功率。</p>
+</li>
+</ul>
+</li>
+<li><p>香农公式表明</p>
+<ul>
+<li>信道的带宽或信道中的信噪比越大，则信息的极限传输速率就越高。</li>
+<li>只要信息传输速率低于信道的极限信息传输速率，就一定可以找到某种办法来实现无差错的传输。</li>
+<li>若信道带宽W或信噪比S/N没有上限(当然实际信道不可能是这样的)，则信道的极限信息传输速率C也就没有上限。</li>
+<li>实际信道上能够达到的信息传输速率要比香农的极限传输速率低不少。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="2-3-物理层下面的传输媒体"><a href="#2-3-物理层下面的传输媒体" class="headerlink" title="2.3 物理层下面的传输媒体"></a>2.3 物理层下面的传输媒体</h2><ol>
+<li><p>引导型传输媒体</p>
+<ul>
+<li>双绞线</li>
+<li>同轴电缆</li>
+<li>光缆</li>
+</ul>
+</li>
+<li><p>非引导型传输媒体</p>
+<ul>
+<li>自由空间</li>
+</ul>
+</li>
+</ol>
+<h2 id="2-4-信道复用技术"><a href="#2-4-信道复用技术" class="headerlink" title="2.4 信道复用技术"></a>2.4 信道复用技术</h2><ol>
+<li><p>频分复用、时分复用和统计时分复用</p>
+<ul>
+<li><p>频分复用(FDM)</p>
+<ul>
+<li>将整个宽带分为多份，用户在分配到一定的频带后，在通信过程中自始至终都占用这个频带。</li>
+<li>频分复用的所有用户在同样的时间占用不同的带宽资源(请注意，这里的“带宽”是频率带宽而不是数据的发送速率)。</li>
+</ul>
+</li>
+<li><p>时分复用(TDM)</p>
+<ul>
+<li>时分复用则是将时间划分为一段段等长的时分复用帧(TDM帧)。每一个时分复用的用户在每一个TDM帧中占用固定序号的时隙。</li>
+<li>每一个用户所占用的时隙是周期性的出现(其周期就是TDM帧的长度)。、</li>
+<li>TDM信号也称为等时信号。</li>
+<li>时分复用的所有用户是在不同的时间占用同样的频带宽度。</li>
+</ul>
+</li>
+<li><p>波分复用(WDM)</p>
+<ul>
+<li>波分复用就是光的频分复用。使用一根光纤来同时传输多个光载波信号.</li>
+</ul>
+</li>
+<li><p>码分复用(CDM)</p>
+<ul>
+<li><p>常用的名词是码分多址CDMA</p>
+</li>
+<li><p>各用户使用经过特殊挑选的不同码型，因此彼此不会造成干扰。</p>
+</li>
+<li><p>这种系统发送的信号有很强的抗干扰能力，其频谱类似白噪声，不易被敌人发现。</p>
+<ol>
+<li><p>码片序列</p>
+<ul>
+<li><p>每一个比特时间划分为m个短的间隔，称为码片。</p>
+</li>
+<li><p>每一个站被指派一个唯一的m bit码片序列。</p>
+<p>如发送比特1，则发送自己的 m bit 码片序列。</p>
+<p>如发送比特0，则发送该码片序列的二进制反码。</p>
+</li>
+<li><p>例如，S站的8bit码片序列是00011011</p>
+<p>发送比特1时，就发送序列00011011</p>
+<p>发送比特0时，就发送序列11100100</p>
+</li>
+<li><p>S站的码片序列：(-1 -1 -1 +1 +1 -1 +1 +1)</p>
+</li>
+</ul>
+</li>
+<li><p>CDMA的重要特点</p>
+<ul>
+<li>每个站分配的码片序列不仅必须各不相同，并且还必须相互正交。</li>
+<li>在实用的系统中是使用伪随机码序列</li>
+</ul>
+</li>
+<li><p>码片序列的正交关系</p>
+<ul>
+<li></li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p>​      </p>
+<ol start="2">
+<li><p>波分复用</p>
+</li>
+<li><p>码分复用</p>
+</li>
+</ol>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/08/22/hexo常用命令/" rel="next" title="hexo常用命令">
+                <i class="fa fa-chevron-left"></i> hexo常用命令
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-概述"><span class="nav-number">1.</span> <span class="nav-text">第一章 概述</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-互联网的组成"><span class="nav-number">1.1.</span> <span class="nav-text">1.3 互联网的组成</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-计算机网络的性能"><span class="nav-number">1.2.</span> <span class="nav-text">1.6 计算机网络的性能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-7-计算机网络的体系结构"><span class="nav-number">1.3.</span> <span class="nav-text">1.7 计算机网络的体系结构</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-物理层"><span class="nav-number">2.</span> <span class="nav-text">第二章 物理层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-物理层的基本概念"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 物理层的基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-数据通信的基础知识"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 数据通信的基础知识</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-物理层下面的传输媒体"><span class="nav-number">2.3.</span> <span class="nav-text">2.3 物理层下面的传输媒体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-4-信道复用技术"><span class="nav-number">2.4.</span> <span class="nav-text">2.4 信道复用技术</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
