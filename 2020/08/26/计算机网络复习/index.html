@@ -92,7 +92,9 @@
 <meta property="og:image" content="http://zehwakaka.github.io/images/规格化内积.png">
 <meta property="og:image" content="http://zehwakaka.github.io/images/公式.png">
 <meta property="og:image" content="http://zehwakaka.github.io/images/用帧首部和帧尾部封装成帧.png">
-<meta property="og:updated_time" content="2020-08-27T14:11:08.123Z">
+<meta property="og:image" content="http://zehwakaka.github.io/images/计算机通过适配器和居于网进行通信.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/CSMA协议.png">
+<meta property="og:updated_time" content="2020-08-30T05:07:53.429Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="计算机网络复习">
 <meta name="twitter:description" content="第一章 概述1.3 互联网的组成 边缘部分：由所有连接在互联网上的主句组成。 端系统之间的通信方式通常可划分为两大类：  客户-服务器方式(C/S方式)：即Client/Server方式，简称C/S方式。 对等方式(P2P方式)：即Peer-to-Peer方式。   核心部分：由大佬网络和连载在这些完了的路由器组成。这部分是为边缘部分提供服务的(提供连通性和交换)  网络中的核心部分要向网络边缘中">
@@ -699,13 +701,118 @@
 <li>在一段时间内，传输错误的比特占所传输比特总数的比率称为误码率BER。</li>
 <li>误码率与信噪比有很大的关系。</li>
 <li>为了保证数据传输的可靠性，在计算机网络传输数据时，必须采用各种查错检测措施。</li>
+</ul>
+</li>
+<li>循环冗余检验的原理<ul>
+<li>在数据链路层传送的帧中，广泛使用了循环冗余检验CRC的检错技术。</li>
+</ul>
+</li>
+<li>帧检验序列FCS<ul>
+<li>在数据后面添加上的冗余码称为帧检验序列FCS。</li>
+<li>循环冗余检验CRC和帧检验序列FCS并不等同<ul>
+<li>CRC是一种常用的检错方法，而FCS是添加在数据后面的冗余码</li>
+<li>FCS可以用CRC这种方法得出，但CRC并非用来获得FCS的唯一方法</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="3-3-使用广播信道的数据链路层"><a href="#3-3-使用广播信道的数据链路层" class="headerlink" title="3.3 使用广播信道的数据链路层"></a>3.3 使用广播信道的数据链路层</h2><ol>
+<li><p>局域网的数据链路层</p>
+<ul>
+<li>媒体共享技术<ul>
+<li>静态划分信道：频分复用、时分复用、波分复用、码分复用</li>
+<li>动态媒体接入控制(多点接入)：随机接入、受控接入，如多点线路探询，或轮询</li>
+</ul>
+</li>
+<li>适配器的作用<ul>
+<li>网络接口板又称为通信适配器或网络接口卡NIC或”网卡“。</li>
+<li>适配器的重要功能<ol>
+<li>进行串行/并行转换</li>
+<li>对数据进行缓存</li>
+<li>在计算机的操作系统安装设备驱动程序</li>
+<li>实现以太网协议</li>
+</ol>
+</li>
+<li><img src="/images/计算机通过适配器和居于网进行通信.png" alt="计算机通过适配器和居于网进行通信"></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>CSMA/CD协议</p>
+<ul>
+<li><p>最初的以太网是将许多计算机都连接到一根总线上。当初认为这样的连接方法既简单有可靠，因为总线上没有与源器件。</p>
+</li>
+<li><p><img src="/images/CSMA协议.png" alt="CSMA协议"></p>
+</li>
+<li><p>以太网采用广播方式发送</p>
+<ul>
+<li>总线上的每一个工作的计算机都能检测到B发送的数据信号。</li>
+<li>由于只有计算机D的地址与数据帧首部写入的地址一致，因此只有D才接收这个数据帧。</li>
+<li>其他所有计算机(A,C和E)都检测到不上发送给他们的数据帧，因此就丢弃这个数据帧而不能够收下来。</li>
+<li>在具有广播特性的总线上实现了一对一的通信。</li>
+</ul>
+</li>
+<li><p>以太网采取了两种重要的措施</p>
+<p>为了通信的简便，以太网采取了两种重要的措施：</p>
+<ol>
+<li>采用较为灵活的无连接的工作方式<ul>
+<li>不必先建立连接就可以直接发送数据</li>
+<li>对发送的数据帧不进行编号，也不要求对方发回确认。</li>
+<li>这样做的理由是局域网信道的质量很好，因此信道质量产生差错的概率是很小的</li>
+</ul>
+</li>
+<li>以太网提供的服务<ul>
+<li>以太网提供的服务是不可靠的交付，即尽最大努力的交付。</li>
+<li>当目的站受到有差错的数据帧时就丢弃此帧，其他上面也不做。差错的纠正由高层来决定。</li>
+<li>如果高层发现丢失了一些数据而进行重传，但以太网并不知道这是一个重传的帧，而是当作一个新的数据帧来发送。</li>
+</ul>
+</li>
+<li>CSMA/CD协议<ul>
+<li>CSMA/CD含义：载波监听多点接入/碰撞检测</li>
+<li>”多点接入“表示许多计算机以多点接入的方式连接在一根总线上。</li>
+<li>”载波监听“是指每一个站在发送数据之前先要检测一下总线上是否有其他计算机在发送数据，如果有，则暂时不要发送数据，以免发生碰撞。</li>
+<li>总线上并没有什么”载波“。因此，”载波监听“就是用电子技术检测总线上有没有其他计算机发送的数据信号。</li>
+</ul>
+</li>
+<li>碰撞检测<ul>
+<li>”碰撞检测“就是计算机边发送数据边检测信道上的信号电压大小。</li>
+<li>当几个站同时在总线上发送数据时，总线上的信号电压摆动值将会增大(互相叠加)。</li>
+<li>当一个站检测到的信号电压摆动值超过一端的门限值时，就认为总线上至少有两个站同时在发送数据，表明产生了碰撞。</li>
+<li>所谓”碰撞“就是发生了冲突。因此”碰撞检测“也称为”冲突检测“。</li>
+</ul>
+</li>
+<li>检测到碰撞后<ul>
+<li>在发生碰撞时，总线上传输的信号产生了严重的失真，无法从中恢复出有用的信息来。</li>
+<li>每一个正在发送数据的站，一旦发现总线上出现了碰撞，就要<strong>立即停止发送</strong>，免得继续浪费网络资源，然后<strong>等待一段随机</strong>时间后再次发送。</li>
+</ul>
+</li>
+<li>为什么要进行碰撞检测？<ul>
+<li>由于电磁波在总线上的传播速率是有限的，当某个站监听到总线是空闲时，也可能总线并非真正是空闲的。</li>
+<li>A向B发出的信息，要经过一定的时间后才能传送到B。</li>
+<li>B若在A发送的信息到达B前发送直接的帧(因为这时B的子载波监听检测不到A所发送的信息)，则必然要在某个时间和A发送的帧发生碰撞。</li>
+<li>碰撞的结果是两个帧变得无用。</li>
+<li><strong>所以需要在发送期间进行碰撞检测，以检测冲突。</strong></li>
+</ul>
+</li>
+<li>信号传播时延对载波监听的影响<ul>
 <li></li>
 </ul>
 </li>
 </ol>
 </li>
 </ul>
-<h2 id="3-3-使用广播信道的数据链路层"><a href="#3-3-使用广播信道的数据链路层" class="headerlink" title="3.3 使用广播信道的数据链路层"></a>3.3 使用广播信道的数据链路层</h2><h2 id="3-4-扩展的以太网"><a href="#3-4-扩展的以太网" class="headerlink" title="3.4 扩展的以太网"></a>3.4 扩展的以太网</h2>
+</li>
+<li><p>使用集线器的星形拓扑</p>
+</li>
+<li><p>以太网的信道利用率</p>
+</li>
+<li><p>以太网的MAC层</p>
+</li>
+</ol>
+<h2 id="3-4-扩展的以太网"><a href="#3-4-扩展的以太网" class="headerlink" title="3.4 扩展的以太网"></a>3.4 扩展的以太网</h2>
       
     </div>
     
@@ -738,6 +845,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/09/14/数值计算方法/" rel="prev" title="数值计算方法">
+                数值计算方法 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -814,7 +925,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
