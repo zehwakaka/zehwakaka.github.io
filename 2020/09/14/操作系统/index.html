@@ -1,0 +1,1411 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang>
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform">
+<meta http-equiv="Cache-Control" content="no-siteapp">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css">
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css">
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="复习,">
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="第一章 操作系统引论 操作系统：计算机硬件上的第一层软件；主要作用是管理好计算机硬件，提高利用率和系统吞吐量；为用户和应用程序提供简单接口，方便用户使用。  1.1操作系统的目标和作用操作系统的目标与应用环境有关。例如在查询系统中所用的OS，希望能提供良好的人——机交互性；对于应用于工业控制、武器控制以及多媒体环境下的OS，要求其具有实时性；而对于微机上配置的OS，则更看重的是使用的方便性。  操">
+<meta name="keywords" content="复习">
+<meta property="og:type" content="article">
+<meta property="og:title" content="操作系统">
+<meta property="og:url" content="http://zehwakaka.github.io/2020/09/14/操作系统/index.html">
+<meta property="og:site_name" content="Alice&#39;s blog">
+<meta property="og:description" content="第一章 操作系统引论 操作系统：计算机硬件上的第一层软件；主要作用是管理好计算机硬件，提高利用率和系统吞吐量；为用户和应用程序提供简单接口，方便用户使用。  1.1操作系统的目标和作用操作系统的目标与应用环境有关。例如在查询系统中所用的OS，希望能提供良好的人——机交互性；对于应用于工业控制、武器控制以及多媒体环境下的OS，要求其具有实时性；而对于微机上配置的OS，则更看重的是使用的方便性。  操">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/1.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/2.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/3.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/4.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/5.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/6.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/7.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/8.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/9.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/10.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/11.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/12.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/13.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/14.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/15.png">
+<meta property="og:image" content="http://zehwakaka.github.io/images/操作系统/16.png">
+<meta property="og:updated_time" content="2020-12-26T07:19:22.254Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="操作系统">
+<meta name="twitter:description" content="第一章 操作系统引论 操作系统：计算机硬件上的第一层软件；主要作用是管理好计算机硬件，提高利用率和系统吞吐量；为用户和应用程序提供简单接口，方便用户使用。  1.1操作系统的目标和作用操作系统的目标与应用环境有关。例如在查询系统中所用的OS，希望能提供良好的人——机交互性；对于应用于工业控制、武器控制以及多媒体环境下的OS，要求其具有实时性；而对于微机上配置的OS，则更看重的是使用的方便性。  操">
+<meta name="twitter:image" content="http://zehwakaka.github.io/images/操作系统/1.png">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://zehwakaka.github.io/2020/09/14/操作系统/">
+
+
+
+
+
+  <title>操作系统 | Alice's blog</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Alice's blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle">郑</p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br>
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br>
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br>
+            
+            Tags
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br>
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br>
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2020/09/14/操作系统/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alice's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">操作系统</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-14T21:45:19+08:00">
+                2020-09-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="第一章-操作系统引论"><a href="#第一章-操作系统引论" class="headerlink" title="第一章 操作系统引论"></a>第一章 操作系统引论</h1><ul>
+<li><strong>操作系统：计算机硬件上的第一层软件；主要作用是管理好计算机硬件，提高利用率和系统吞吐量；为用户和应用程序提供简单接口，方便用户使用。</strong></li>
+</ul>
+<h2 id="1-1操作系统的目标和作用"><a href="#1-1操作系统的目标和作用" class="headerlink" title="1.1操作系统的目标和作用"></a>1.1操作系统的目标和作用</h2><p><strong>操作系统的目标与应用环境有关。</strong>例如在查询系统中所用的OS，希望能提供良好的人——机交互性；对于应用于工业控制、武器控制以及多媒体环境下的OS，要求其具有实时性；而对于微机上配置的OS，则更看重的是使用的方便性。</p>
+<ol>
+<li><p>操作系统的目标</p>
+<ol>
+<li><strong>方便性</strong>，用户采用高级语言编写程序，或使用OS提供的命令操作计算机，使计算机变得易学易用。</li>
+<li><strong>有效性</strong>，提高系统资源的利用率，提高系统的吞吐量。</li>
+</ol>
+<p><strong>方便性和有效性是设计OS时最重要的两个目标。</strong></p>
+<ol start="3">
+<li><strong>可扩充性</strong>，令OS能适应计算机硬件、体系结构、计算机应用的发展。</li>
+<li><strong>开放性</strong>，计算机硬件和软件兼容性的需要。</li>
+</ol>
+</li>
+<li><p>操作系统的作用</p>
+<p><strong>用户、资源管理、资源抽象等方面。</strong></p>
+<ul>
+<li><p><strong>OS作为用户与计算机硬件系统之间的接口</strong></p>
+<p>OS处于用户与计算机硬件系统之间，用户通过OS来使用计算机系统。或则说，用户在OS帮助下能够方便、快捷、可靠地操纵计算机硬件和运行自己的程序。</p>
+</li>
+<li><p><strong>OS作为计算机系统资源的管理者</strong></p>
+<p>在一个计算机系统中，通常都含有多种硬件和软件资源。归纳起来可将这些资源分为五类：<strong>处理机、存储器、I/O设备以及文件(数据和程序)、网络与通信管理。</strong></p>
+<p>OS的主要功能正是对这四类资源进行有效的管理。处理机管理是用于分配与回收；存储器管理主要负责内存的分配与回收；I/O设备管理是负责I/O设备的分配(回收)与操纵；文件管理是用于实现对文件的存取、共享和保护。网络与通信管理是用于对网路资源、数据通信、应用服务等管理。</p>
+<p><strong>资源技术管理</strong></p>
+<ol>
+<li>资源复用(解决物理资源数量不足)</li>
+<li>资源虚拟(解决物理资源数量不足，提高服务的能力和水平)</li>
+<li>资源抽象(处理系统的复杂性，解决资源的易用性)</li>
+</ol>
+</li>
+</ul>
+</li>
+</ol>
+<h2 id="2-1-资源管理"><a href="#2-1-资源管理" class="headerlink" title="2.1 资源管理"></a>2.1 资源管理</h2><ol>
+<li><p>复用</p>
+<p><strong>空分复用共享</strong>——该资源可进一步分割成更多和更小的单位供进程使用。</p>
+<p><strong>时分复用共享</strong>——并不把资源进一步分割成更小的单位，进程可在一个时间段内独占使用整个物理资源。</p>
+</li>
+<li><p>虚拟</p>
+<p>对资源进行转化、模拟或整合，把物理上的一个资源变成逻辑上的多个对应物的一类技术。</p>
+<p>空分复用分割实际存在的物理资源，虚拟实现虚构假想的虚拟同类资源。资源虚拟的例子——虚拟设备、虚拟主存、虚拟文件、虚拟屏幕(终端)、虚拟信道。</p>
+</li>
+</ol>
+<h2 id="2-2-OS实现了对计算机资源的抽象"><a href="#2-2-OS实现了对计算机资源的抽象" class="headerlink" title="2.2 OS实现了对计算机资源的抽象"></a>2.2 OS实现了对计算机资源的抽象</h2><p>一台完全无软件的计算机系统(即裸机)，由于它向用户提供的仅是硬件接口(物理接口)，因此，用户必须对物理接口的实现细节有充分的了解，这就致使该物理机器难以广泛使用。</p>
+<p>为了方便用户使用I/O设备，人们在裸机上覆盖上一层I/O设备软件管理软件，如图1-2所示，由它来实现对I/O设备操作的细节，并向上将I/O设备抽象为一组数据结构和操作指令，方便用户实现对I/O操作。</p>
+<p>同理，为了方便用户使用文件系统等计算机硬件资源，可以在计算机硬件上铺设多层软件，对硬件资源进行抽象，方便用户使用，也就构成了OS。</p>
+<p><img src="\images\操作系统\1.png" alt="I/O软件隐藏了I/O操作实现的细节"></p>
+<ul>
+<li><p>推动操作系统发展的主要动力</p>
+<ol>
+<li>不断提高计算机资源利用率</li>
+<li>方便用户</li>
+<li>器件的不断更新换代</li>
+<li>计算机体系结构的不断发展</li>
+<li>不断提出新的应用需求</li>
+</ol>
+</li>
+<li><p>观察和研究操作系统总纲</p>
+<p><img src="\images\操作系统\2.png" alt="观察和研究操作系统总纲"></p>
+</li>
+<li><p>观察和研究操作系统4种观点细化</p>
+<ol>
+<li>服务用户观点——操作系统作为用户接口和公共服务程序</li>
+<li>进程交互观点——操作系统作为进程执行的控制者和协调者</li>
+<li>系统实现观点——操作系统作为扩展机或虚拟机</li>
+<li>资源管理观点——操作系统作为资源的管理者和控制者</li>
+</ol>
+<ul>
+<li><p><strong>操作系统即是”管理员”,又是”服务员”</strong></p>
+<p>对内作为”管理员”,做好软硬件资源的管理、控制与调度,在裸机基础上形成虚拟机供应用程序使用，并对程序执行进行控制和协调，提高系统效率和资源利用率；</p>
+<p>对外作为”服务员”，是用户与硬件的接口和人机界面，为用户提供最友善的运行环境和最佳的服务，操作系统在管理好资源的基础上，向外提供强有力的服务；</p>
+<p>所以，资源管理是操作系统一项主要任务。</p>
+</li>
+<li><p><strong>OS作为用户接口和服务提供者</strong></p>
+<p>操作系统提供友善的人机接口，使得用户能够方便、可靠、安全、高效地使用硬件和运行应用程序；</p>
+<p>操作系统对计算机硬件进行改造和扩充，为用户提供强有力的各种服务。</p>
+</li>
+<li><p><strong>OS作为程序执行的控制者和协调者</strong></p>
+<p>进程是支持程序执行的一种系统机制，进程是执行中的程序，系统以进程方式组织程序在计算机上运行；</p>
+<p>OS需要提供机制，解决并发进程执行时产生的互斥、同步、通信和死锁问题。</p>
+</li>
+<li><p><strong>OS作为扩展机或虚拟机</strong></p>
+<p>把操作系统分为若干层次或模块，逐步添加到裸机上，形成操作系统虚拟机；</p>
+<p>操作系统把硬件的复杂性与用户隔离开来；</p>
+<p>操作系统与硬件组成一台功能显著增强，使用更加方便，安全可靠性更好的扩展机器或虚拟机。</p>
+</li>
+<li><p><strong>OS作为资源管理者和控制者</strong></p>
+<p>对软硬件资源进行资源复用、虚拟和抽象，管理各类资源，记录使用情况，确定分配策略，实施分配和回收，满足用户对资源的需求和申请。</p>
+<p>提供机制协调应用程序对资源的使用冲突，研究资源使用的统一方法，为用户提供简单、有效的资源使用手段，在满足应用程序需求的前提下，最大限度地实现各种资源的共享，提高资源使用率。</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-2-操作系统的发展过程"><a href="#1-2-操作系统的发展过程" class="headerlink" title="1.2 操作系统的发展过程"></a>1.2 操作系统的发展过程</h2><p>在20世纪50年代中期，出现了第一个简单的批处理OS;60年代中期开发出多道批处理系统;不久又推出分时系统，与此同时，用于工业和武器控制的实时OS也相继问世。</p>
+<p>20世纪70到90年代，是VLSI和计算机体系结构大发展的年代，导致了微型机、多处理机和计算机网络的诞生和发展，与此相应地，也相继开发出了微机OS、多处理机OS和网络OS，并得到极为迅猛的发展。</p>
+<p>具体发展历程可以分为以下几个阶段：</p>
+<p><img src="\images\操作系统\3.png" alt="操作系统的发展过程"></p>
+<ul>
+<li><p>未配置操作系统的计算机系统</p>
+<ol>
+<li><p>人工操作方式</p>
+<p>早期的操作方式是由程序员将事先已穿孔的纸带(或卡片)，装入纸带输入机(或卡片输入机)，然后将纸带(或卡片)上的程序和数据输入计算机，进行运行。仅当程序运行完毕并取走计算结果后，才允许下一个用户上机。这种人工操作方式有以下两方面的缺点：</p>
+<ul>
+<li>用户独占全机，即一台计算机的全部资源由上机用户所独占。</li>
+<li>CPU等待人工操作。当用户进行装带(卡)、卸带(卡)等人工操作时，CPU及内存等资源是空闲的。</li>
+</ul>
+</li>
+<li><p>脱机输入/输出(Off-Line I/O)方式</p>
+<p>为了解决人机矛盾及CPU和I/O设备之间速度不匹配的矛盾，20世纪50年代末出现了脱机I/O技术。</p>
+<p>该技术是事先将装有用户程序和数据的纸带1装入纸带输入机，在一台外围机的控制下，把纸带(卡片)上的数据(程序)输入到磁带上。当CPU需要这些程序和数据时，再从磁带上高速地调入内存。</p>
+<p>优点：减少CPU空闲世纪；提高I/O速度。</p>
+<p><img src="\images\操作系统\4.png" alt="脱机I/O示意图"></p>
+</li>
+</ol>
+</li>
+<li><p>单道批处理系统</p>
+<ol>
+<li><p>单道批处理系统(Simple Batch Processing System)</p>
+<p>为了实现对作业的连续处理，需要先把一批作业以脱机方式输入到磁带上，并在系统中配上监督程序(Monitor),在它的控制下，使这批作业能一个接一个地连续处理。</p>
+</li>
+<li><p>单道批处理系统特点</p>
+<p>单道批处理作用：旨在解决人机矛盾、CPU和I/O设备速度之间的矛盾，一定程度上提高系统的利用率和吞吐量。</p>
+<p>最主要的缺点：系统中的资源仍有得不到充分的利用。这是因为在内存中仅有一道程序，每逢该程序在运行中发出I/O请求后，CPU便处于等待状态，必须在其I/O完成后才继续运行。又因I/O设备的低速性，更使CPU的利用率显著降低。图1-5示出了单道程序的运行情况，从图可以看出：在t2~t3、t6~t7时间间隔内CPU空闲。</p>
+<p><img src="\images\操作系统\5.png" alt="单道程序的运行情况"></p>
+</li>
+</ol>
+</li>
+<li><p>多道批处理系统(Multiprogrammed Batch Processing System)</p>
+<ol>
+<li><p>多道程序设计的基本概念</p>
+<p>为了进一步提高资源的利用率和系统吞吐量，在20世纪60年代中期引入了多道程序设计技术，由此形成了多道批处理系统。图1-6示出了四道程序时的运行情况。</p>
+<p><img src="\images\操作系统\6.png" alt="多道程序的运行情况"></p>
+</li>
+<li><p>CPU利用率是主存中多道程序道数的函数</p>
+<p><img src="\images\操作系统\7.png" alt="多道程序设计的道数"></p>
+<p>程序等待I/O操作的时间的比例为p，当主存中有n道程序时，所有程序都等待I/O的概论是p的n次方，那么，</p>
+<p>CPU利用率 = 1-p的n次方</p>
+<p>n称多道程序的道数或度数，可见CPU的利用率是n的函数 </p>
+<ol start="3">
+<li><p>多道批处理系统的优缺点</p>
+<p>多道批处理系统的优点：</p>
+<ul>
+<li>资源利用率高。引入多道批处理能使多道程序交替运行，以保持CPU处于忙碌状态；在内存中装入多道程序可提高内存的利用率；此外还可以提高I/O设备的利用率。</li>
+<li>系统吞吐量大。能提高系统吞吐量的主要原因可归结为：</li>
+</ul>
+<ol>
+<li>CPU和其他资源保持”忙碌”状态；</li>
+<li>仅当作业完成时或运行不下去时才进行切换，系统开销小。</li>
+</ol>
+<p>多道批处理系统的缺点：</p>
+<ul>
+<li>平均周转时间长。由于作业要排队依次进行处理，因而作业的周转时间较长，通常需几个小时，甚至几天。</li>
+<li>无交互能力。用户一旦把作业交给系统后，直至作业完成，用户都不能与自己的作业进行交互，修改和调试程序极为不方便。</li>
+</ul>
+<ol start="4">
+<li>实现多道批处理系统需要解决的问题<ul>
+<li>处理机争用问题。既要能满足各道程序运行的需要，又要能提高处理机的利用率。(处理器的管理和调度)</li>
+<li>内存分配和保护问题。系统应能为每道程序分配必要的内存空间，使他们“各得其所”，且不会因某道程序出现异常情况而破坏其他程序。(存储保护与程序浮动)</li>
+<li>I/O设备分配问题。系统应采取适当的策略来分配系统中的I/O设备，以达到能方便用户对设备的使用，又能提高设备利用率的目的。(系统资源的管理和调度)</li>
+<li>文件的组织和管理问题。系统应能有效地组织存放在系统中的大量的程序和数据，使它们既便1于用户使用，又能保证数据的安全性。</li>
+<li>作业管理问题。系统中存在着各种作业(应用程序)，系统应能对系统中所有的作业进行合理的组织，以满足这些作业用户的不同要求。</li>
+<li>用户与系统的接口问题。为使用户能方便的使用操作系统，OS还应提供与OS之间的接口。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+</ol>
+</li>
+<li><p>分时系统(Time Sharing System)</p>
+<ol>
+<li><p>分时系统的引入</p>
+<p>提高人——机交互的需要，是推动分时系统形成和发展的主要动力。用户的需求具体表现在以下几个方面：</p>
+<ul>
+<li>人——机交互：用户希望能独占计算机。</li>
+<li>共享主机：同时供许多用户使用，又能满足上述人——机交互需要。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<ol start="2">
+<li><p>分时系统实现中的关键问题</p>
+<p>为了能够实现人——机交互，必须解决的问题是：如何使用户能与自己的作业进行交互。如何实现人——机交互的实时性。如何实现多人同时共享一台计算机，感觉不到他人的存在。</p>
+<ul>
+<li>及时接收：配置多路卡和缓存区，实现分时多路复用；用极短的时间接收输入。<ul>
+<li>及时处理：作业直接进入内存中；采用轮转运行方式(引入时间片)。</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li><p>分时系统的特征</p>
+<p>分时系统与多道批处理系统相比，具有非常明显的不同特性，可以归纳成以下四个方面：</p>
+<ul>
+<li>多路性：一台主机，多台中断，分时原则进行服务。</li>
+<li>独立性：终端用户互不干扰。</li>
+<li>及时性：用户的请求能在短时间内得到相应。</li>
+<li>交互性：用户通过终端可以与系统进行广泛的人机对话。</li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<ul>
+<li><p>实时系统(Real Time System)</p>
+<ol>
+<li><p>实时系统的类型</p>
+<p>实时系统以时间作为关键参数，能及时相应外部事件请求。</p>
+<p>随着计算机应用的普及，实时系统的类型也相应增多，下面列出当前常见的几种：</p>
+<ul>
+<li>工业(武器)控制系统。</li>
+<li>信息查询系统。</li>
+<li>多媒体系统。</li>
+<li>嵌入式系统。</li>
+</ul>
+</li>
+<li><p>实时任务的类型</p>
+<ul>
+<li><p>周期性实时任务和非周期性实时任务，都有一个截止时间(Deadline)，可以分为：开始截止时间；完成截止时间。</p>
+</li>
+<li><p>硬实时任务和软实时任务。</p>
+<p>硬实时任务，指系统必须满足任务对截止时间的要求。</p>
+<p>软实时任务，指系统并不需要严格执行截止时间。</p>
+<p><strong>注意分类说明的特征和要点：以某种属性，进行分类</strong></p>
+</li>
+</ul>
+</li>
+<li><p>实时系统与分时系统特征的比较</p>
+<ul>
+<li><p>多路性：分时系统按照分时原则为多路终端提供服务。实时系统多路性指系统周期性地对多个对象进行控制(服务)。</p>
+</li>
+<li><p>独立性：两种系统对于不同用户(终端)均保证彼此互不干扰。</p>
+</li>
+<li><p>及时性：分时系统中依照人的接受程度，实现实时性。实时系统中以截止时间来实现实时性。</p>
+</li>
+<li><p>交互性：分时系统能向终端提供数据处理、资源共享等服务。实时系统只能提供有限的特定操作。</p>
+</li>
+<li><p>可靠性：分时系统要求一般。实时系统要求很高。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>微机操作系统的发展</p>
+<p>微机系统可以按照微机的字长来分：</p>
+<ol>
+<li><p>单用户单任务操作系统</p>
+<ul>
+<li>CP/M：8位微机操作系统</li>
+<li>MS-DOS：16位、32位操作系统</li>
+</ul>
+</li>
+<li><p>单用户多任务操作系统</p>
+<p>单用户多任务操作系统的含义是，只允许一个用户上机，但允许用户把程序分为若干个任务，使它们并发执行，从而有效地改善了系统的性能。</p>
+<p>例如：Windows1.0-3.1，window85/98，/XP/7/Server</p>
+</li>
+<li><p>多用户多任务操作系统</p>
+<p>多用户多任务操作系统的含义是，允许多个用户通过各自的终端，使用同一台极其，共享主机系统中的各种资源，而每个用户程序又可进一步分为几个任务，使它们能并发执行，从而可进一步提高资源利用率和系统吞吐量。在大、中和小型机中所配置的大多是用户多任务操作系统。</p>
+<p>在32位微机上，也有不少配置的是多用户多任务操作系统，其中最有代表性的是UNIX OS，Linux OS。</p>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="1-3-操作系统的基本特征"><a href="#1-3-操作系统的基本特征" class="headerlink" title="1.3 操作系统的基本特征"></a>1.3 操作系统的基本特征</h2><p>多道批处理系统、分时系统和实时系统这三种基本操作系统都具有各自不同的特征，但它们也共同具有并发、共享、虚拟和异步四个基本特征。</p>
+<ul>
+<li><p>并发</p>
+<p>正是系统中的程序能并发执行这一特征，才使得OS能有效地提高系统中的资源利用率，增加系统的吞吐量。</p>
+<ol>
+<li><p>并行与并发</p>
+<p>并行性和并发性是既相似又有区别的两个概念。并行性是指两个或多个事件在同一时刻发生。而并发性是指两个或多个事件在同一时间间隔内发生。</p>
+</li>
+<li><p>引入进程</p>
+<p>在一个未引入进程的系统中，在属于同一个应用程序的计算程序和I/O程序之间只能是顺序执行。</p>
+<p>但在为计算程序和I/O程序分别建立一个进程(Process)后，这两个进程便可并发执行。若对内存中的多个程序都分别建立一个进程，它们就可以并发执行，这样便能极大地提高系统资源的利用率，增加系统的吞吐量。</p>
+<p>进程：指在系统中能独立运行并作为资源分配的基本单位，它是由一组机器指令、数据和堆栈等组成的，是一个能独立运行的活动实体。(进程和并发是现代操作系统中最重要的概念，也是操作系统运行的基础。)</p>
+</li>
+</ol>
+</li>
+<li><p>共享(Sharing)</p>
+<p>OS中的资源共享：指系统中的资源可供内存中多个并发执行的进程共同使用(注：进程在内存中)</p>
+<p>为什么共享这么重要？</p>
+<ol>
+<li>系统中的资源远少于多道程序需求的总和。</li>
+<li>各种资源属性不同，资源复用方式也不同。</li>
+</ol>
+<ul>
+<li><p>互斥共享方式</p>
+<p>系统中的某些资源，如打印机、磁带机等，虽然可以提供给多个进程(线程)使用，但应规定在一段时间内，只允许一个进程访问该资源。为此，需要互斥访问方式。</p>
+<p>互斥共享方式：一个时间段内只允许一个进程访问这一个资源的资源共享方式。这种资源被称为临界资源。</p>
+</li>
+<li><p>同时访问方式</p>
+<p>系统中还有另一类资源，允许在一段时间内由多个进程”同时”对它们进行访问。这里所谓的”同时”，在单处理机环境下是宏观意义上的，而在微观上，这些进程对该资源的访问是交替进行。例如：磁盘。</p>
+</li>
+</ul>
+</li>
+<li><p>虚拟(Virtual)</p>
+<ol>
+<li><p>时分复用技术</p>
+<p>使用某设备为一个用户服务的空闲时间，又转去为其他用户服务，使设备得到最充分的利用。</p>
+<ul>
+<li>虚拟处理机技术：为每一道程序建立至少一个进程，让多道程序并发执行。</li>
+<li>虚拟设备技术：使用分时复用的方法，将一台物理I/O设备虚拟为多台逻辑上的I/O设备。</li>
+</ul>
+</li>
+<li><p>空分复用技术</p>
+<p>它是利用存储器的空闲空间，分区域存放和运行其他的多道程序。把空分复用技术用于对存储空间的管理，可以提高存储空间的利用率。</p>
+<p>进一步引入虚拟存储技术，可以从逻辑上扩大存储器的容量。</p>
+</li>
+</ol>
+</li>
+<li><p>异步(Asynchronism)</p>
+<p>在多道程序环境下，系统允许多个进程并发执行。在单处理机环境下，由于系统中只有一台处理机，因而每次只允许一个进程执行，其余进程只能等待。</p>
+<p>当正在执行的进程提出某种资源要求时，如打印请求，而此时打印机正在为其他进程打印，由于打印机属于临界资源，因此正在执行的进程必须等待，并释放出处理机，直到打印机空闲，并再次获得处理机时，该进程方能继续执行。</p>
+<p>可见，由于资源等因素的限制，使进程的执行通常都不可能”一气呵成”，而是以”停停走走”的方式运行。</p>
+<p><strong>进程的异步性：进程以人们不可预知的速度向前推进。</strong></p>
+</li>
+</ul>
+<h2 id="1-4-操作系统的主要功能"><a href="#1-4-操作系统的主要功能" class="headerlink" title="1.4 操作系统的主要功能"></a>1.4 操作系统的主要功能</h2><p>引入OS的主要目的是，为多道程序的运行提供良好的运行环境，以保证多道程序能有条不紊地、高效地运行，并能最大程序地提高系统中各种资源的利用率，方便用户的使用。</p>
+<p>传统OS中应具有处理机管理、存储器管理、设备管理和文件管理等基本功能。此外，为了方便用户使用OS，还需向用户提供方便的用户接口。</p>
+<ul>
+<li><p>处理机管理功能</p>
+<p>主要功能：创建和撤销进程，对诸进程的运行进行协调，实现进程之间的信息交换，以及按照一定的算法把处理机分配给进程。</p>
+<ol>
+<li>进程控制：为作业创建进程、撤销已结束的进程、控制进程在运行过程中的状态转换。</li>
+<li>进程同步：进程互斥方式、进程同步方式。</li>
+<li>进程通信：实现相互合作进程之间的信息交换。</li>
+<li>调度：第一步 作业调度；第二步 进程调度。</li>
+</ol>
+</li>
+<li><p>存储器管理功能</p>
+<p>功能：内存分配和回收、内存保护、地址映射和内存扩充。</p>
+<ul>
+<li><p>内存分配</p>
+<p>内存分配的主要任务是：</p>
+<ol>
+<li>为每道程序分配内存空间，使它们”各得其所”。</li>
+<li>提高存储器的利用率，尽量减少不可用的内存空间(碎片)。</li>
+<li>允许正在运行的程序申请附加的内存空间，以适应程序和数据动态增长的需要。</li>
+</ol>
+<p>OS在实现内存分配时，可采取静态和动态两种方式：</p>
+<ol>
+<li>静态分配方式。每个作业的内存空间是在作业装入时确定的，在作业装入后的整个运行期间不允许该作业再申请新的内存空间，也不允许作业在内存中”移动”。</li>
+<li>动态分配方式。每个作业所要求的基本内存空间虽然也是在装入时确定的，但允许作业在运行过程中继续申请新的附加内存空间，以适应程序和数据的动态增长，也允许作业在内存中”移动”。</li>
+</ol>
+</li>
+<li><p>内存保护</p>
+<p>内存保护的主要任务是：</p>
+<ol>
+<li>确保每道用户程序都仅在自己的内存空间内运行，彼此互不干扰。</li>
+<li>绝不允许用户访问操作系统的程序和数据，也不允许用户程序转移道非共享的其他用户程序中去执行。</li>
+</ol>
+</li>
+<li><p>地址映射</p>
+<p>在多道程序环境下，由于每道程序经编译和链接后所形成的可装入程序其他地址都是从0开始的，但不可能将它从”0”地址(物理)开始装入内存，致使(各程序段的)地址空间内的逻辑地址与其在内存空间中的物理地址并不相一致。</p>
+<p>为保证程序能正确运行，存储器管理必须提供地址映射功能，即能够将地址空间中的逻辑地址转换为内存空间中与之对应的物理地址。(该功能应在硬件的支持下完成)</p>
+</li>
+<li><p>内存扩充</p>
+<p>内存扩充并非是从物理上去扩大内存的容量，而是借助于虚拟存储技术，从逻辑上扩充内存容量，使用户所感觉到的内存容量比实际内存容量大得多，以便让更多的用户程序能并发运行。</p>
+<p>为了能在逻辑上扩充内存，系统必须设置内存扩充机制(包含少量的硬件)，用于实现下述各功能：</p>
+<ol>
+<li>请求调入功能。</li>
+<li>置换功能。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>设备管理功能</p>
+<p>设备管理的主要任务如下：</p>
+<ol>
+<li>完成用户进程提出的I/O请求，为用户进程分配所需的I/O设备，并完成指定的I/O操作。</li>
+<li><p>提高CPU和I/O设备的利用率，提高I/O速度，方便用户使用I/O设备。</p>
+<p>为实现上述任务，设备管理应具有缓冲管理、设备分配和设备处理以及虚拟设备等功能。</p>
+</li>
+<li><p>缓存管理</p>
+</li>
+<li>设备分配</li>
+<li>设备处理</li>
+</ol>
+</li>
+<li><p>文件管理功能</p>
+<p>对用户文件和系统文件进行管理以方便用户使用，并保证文件的安全性。主要包含以下内容：</p>
+<ol>
+<li>文件存储空间的管理</li>
+<li>目录管理</li>
+<li>文件的读/写管理和保护<ul>
+<li>文件的度/写管理。</li>
+<li>文件保护。</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>操作系统与用户之间的接口</p>
+<ol>
+<li><p>用户接口</p>
+<ul>
+<li>联机用户接口。</li>
+<li>脱机用户接口。</li>
+<li>图形用户接口。</li>
+</ul>
+</li>
+<li><p>程序接口</p>
+<p>程序接口是为用户程序在执行中访问系统资源而设置的，是用户程序取得操作系统服务的唯一途径。</p>
+<p>它是由一组系统调用组成的，每一个系统调用都是一个能完成特定功能的子程序。每当应用程序要求OS提供某种服务(功能)时，便调用具有相应功能的系统调用(子程序)。</p>
+</li>
+</ol>
+</li>
+<li><p>现代操作系统的新功能</p>
+<p>现代操作系统是在传统操作系统基础上发展起来的，它除了具有传统操作系统的功能外，还增加了面向安全、面向网络和面向多媒体等功能。</p>
+<ol>
+<li>系统安全<ul>
+<li>认证技术</li>
+<li>密码技术</li>
+<li>访问控制技术</li>
+<li>反病毒技术</li>
+</ul>
+</li>
+<li>网络的功能和服务<ul>
+<li>网络通信</li>
+<li>资源管理</li>
+<li>应用互操作</li>
+</ul>
+</li>
+<li>支持多媒体<ul>
+<li>接纳控制功能</li>
+<li>实时调度</li>
+<li>多媒体文件的存储</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<h2 id="1-5-OS结构设计"><a href="#1-5-OS结构设计" class="headerlink" title="1.5 OS结构设计"></a>1.5 OS结构设计</h2><p>根据软件工程开发要求(质量、费用)，先后出现多种操作系统的开放方法，如：模块化方法、结构化方法和面向对象的方法等。</p>
+<ul>
+<li><p>传统操作系统结构</p>
+<ol>
+<li><p>无结构操作系统</p>
+<p>早期开发操作系统，注意力主要放在功能的实现和效率上，缺乏首尾一致的设计思想。此时的OS是为一组过程的集合，每个过程可以任意地荷香调用其他过程，致使操作系统内部既复杂又混乱，因此，这种OS是无结构的，也有人把它称为整体系统结构。</p>
+</li>
+<li><p>模块化结构OS</p>
+<ul>
+<li><p>模块化程序设计技术的基本概念</p>
+<p>模块化程序设计技术基于”分解”和“模块化”的原则来控制大型软件的复杂度。按其功能精心地划分为若干个具有一定独立性和大小的模块。每个模块具有某方面的管理功能，如：进程管理模块、存储器管理模块、I/O设备管理模块等。图1-7示出了由模块、子模块等组成的模块化OS结构。</p>
+<p><img src="\images\操作系统\8.png" alt="模块化结构的操作系统"></p>
+</li>
+<li><p>模块独立性</p>
+<p>在模块-接口法中，关键问题是模块的划分和规定好模块之间的接口。如果我们在划分模块时将模块划分得太小，虽然可以降低模块本身的复杂性，但会引起模块之间的联系过多，从而会造成系统比较混乱；如果将模块划分得过大，又会增加模块内部的复杂性，使内部的联系增加，因此在划分模块时，应在二者间进行权衡。</p>
+<p>同时，必须充分注意模块的独立性。衡量模块独立性的标准：低耦合、高内聚。</p>
+</li>
+<li><p>模块接口法的优点</p>
+<p>利用模块-接口法开发的OS，较之无结构OS具有以下明显的优点：</p>
+<ol>
+<li>提高OS设计的正确性、可理解性和可维护性。</li>
+<li>增强OS的可适用性。</li>
+<li>加速OS的开发过程</li>
+</ol>
+<p>模块化结构设计仍存在下述问题：</p>
+<ol>
+<li>在OS设计时，对各模块间的接口规定很难满足在模块设计完成后对接口的实际需求。</li>
+<li>在OS设计阶段，设计者必须做出一系列的决定(决策)，每一个决定必须建立在上一个决定的基础上，但模块化结构设计中，各模块的设计齐头并进，无法寻找一个可靠的决定顺序，造成各种决定的”无序性”，这将使程序人员很难做到”设计中的每一步决定”都是建立在可靠的基础上，因此模块-接口法又被称为”无序模块法”。</li>
+</ol>
+</li>
+</ul>
+</li>
+<li><p>分层式结构OS</p>
+<ul>
+<li><p>分层式结构的基本概念</p>
+<p>为了将模块-接口法中”决定顺序”的无序性变为有序性，引入了有序分层法，分层法的设计任务是，在目标系统An和裸机系统(又称宿主系统)A0之间，铺设若干个层次的软件A1、A2、A3、…、An-1，使An通过An-1、An-2、…、A2、A1层，最终能在A0上运行。在操作系统中，常采用自底向上法来铺设这些中间层。</p>
+</li>
+<li><p>分层结构的优缺点</p>
+<p>分层结构的主要优点：</p>
+<ul>
+<li>易保证系统的正确性。</li>
+<li>易扩充和易维护性。</li>
+</ul>
+<p>分层结构的主要缺点：</p>
+<p>系统效率降低。由于层次结构是分层单向依赖的，必须在每层之间都建立层次间的通信机制，OS每执行一个功能，通常要自上而下地穿越多个层次，这无疑会增加系统的通信开销，从而导致系统效率的降低。</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>客户/服务器模式(Client/Server Model)</p>
+<p>简介</p>
+<ol>
+<li><p>客户/服务器模式的由来、组成和类型</p>
+<p>客户/服务器系统主要由三部分组成</p>
+<ul>
+<li>客户机</li>
+<li>服务器</li>
+<li>网络系统</li>
+</ul>
+</li>
+<li><p>客户/服务器之间的交互</p>
+<ul>
+<li>客户发送请求消息</li>
+<li>服务器接收消息</li>
+<li>服务器回送消息</li>
+<li>客户机接收消息</li>
+</ul>
+</li>
+<li><p>客户/服务器模式的优点</p>
+<ul>
+<li>数据的分布处理和存储</li>
+<li>便于集中管理</li>
+<li>灵活性和可扩充性</li>
+<li>易于改编应用软件</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>1.5.3 面向对象的程序设计(Object-Orientated Programming)技术简介</p>
+<ol>
+<li><p>面向对象技术的基本概念</p>
+<p>面向对象技术是基于”抽象”和”隐蔽”原则来控制大型软件的复杂度。</p>
+<ul>
+<li><p>对象</p>
+<p>在面向对象的技术中，是利用被封装的数据结构(变量)和一组对它进行操作的过程(方法)来表示系统中的某个对象的，如图1-8所示。</p>
+<p><img src="\images\操作系统\9.png" alt="一个对象的示意图"></p>
+<p>对象中的变量(数据)对我是隐蔽的，外界不能直接访问，需要通过该对象中的一组方法对它进行访问。</p>
+<p><img src="\images\操作系统\10.png" alt="类和对象的关系"></p>
+</li>
+<li><p>对象类</p>
+<p>在实践中，有许多对象可能表示的是同一类事物，每一个对象具有自己的变量集合，而它们所具有的方法是相同的。如果为每一个相似的对象都定义一组变量和方法，显然是低效的，由此产生了”对象类”的概念，利用”对象类”来定义一组大体相似的对象。</p>
+<p>一个类同类定义了一组变量和针对该变量的一组方法，用它们来描述一组对象的共同属性和行为。类是在对象上的抽象，对象则是类的实例。对象类中所定义的变量在实例中均有具体的值。</p>
+</li>
+<li><p>继承</p>
+<p>在面向对象的技术中，可以根据已有类来定义一个新的类，新类被称为子类(B),原来的类被称为父类(A),见图1-10所示。</p>
+<p><img src="\images\操作系统\11.png" alt="类的继承关系"></p>
+</li>
+</ul>
+</li>
+<li><p>面向对象技术的优点</p>
+<p>在操作系统设计时，将计算机中的实体作为对象来处理，可带来如下好处：</p>
+<ul>
+<li>通过”重用”提高产品质量和生产率。</li>
+<li>使系统具有更好的易修改性和易扩展性。</li>
+<li>更易于保证系统的”正确性”和”可靠性”。</li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>微内核OS结构</p>
+<p>微内核(MicroKernel),能有效地支持多处理机，如windowsXP/7/8。为了提高操作系统的”正确性”、”灵活性”、”易维护性”、”可扩充性”，大多采用基于客户/服务器模式的微内核结构，将操作系统划分为:微内核和多服务器。微内核操作系统尚无一致定义，本文将从下列四个方面进行阐述。</p>
+<ol>
+<li><p>微内核操作系统的基本概念</p>
+<ul>
+<li><p>足够小的内核</p>
+<p>在微内核操作系统中，内核是能实现现代OS最基本核心功能的小型内核。它只是将操作系统中最基本的部分放入微内核。</p>
+<p>微内核通常包括：</p>
+<ul>
+<li>与硬件处理紧密相关的部分</li>
+<li>一些较基本的功能</li>
+<li>客户和服务器之间的通信</li>
+</ul>
+</li>
+<li><p>基于客户/服务器模式</p>
+<p>单机微内核操作系统中，基本都采用客户/服务器模式，将操作系统中最基本的部分放入内核中，而把操作系统的绝大部分功能都放在微内核外面的一组服务器(进程)中实现。</p>
+<p>例如:用于提供对进程(线程)进行管理的进程(线程)服务器、提供虚拟存储器管理功能的虚拟存储器服务器、提供I/O设备管理的I/O设备管理服务器等，它们都是被作为进程来实现的，运行在用户态。</p>
+<p>客户与服务器之间是借助微内核提供的消息传递机制来实现信息交互的。图1-11示出了在单机环境下的客户/服务器模式。</p>
+<p><img src="\images\操作系统\12.png" alt="在单机环境下的客户/服务器模式"></p>
+</li>
+<li><p>应用”机制与策略分离”原理</p>
+<p>在现在操作系统的结构设计中，经常利用”机制与策略分离”的原理来构造OS结构。</p>
+<p>机制，是指实现某一功能的具体执行机构。(放在:基层，微内核)</p>
+<p>策略，则是在机制的基础上借助于某些参数和算法来实现该功能的优化，或达到不同的功能目标。(放在：高层)</p>
+</li>
+</ul>
+</li>
+</ol>
+</li>
+</ul>
+<pre><code>- 采用面向对象技术
+
+  通过基于面向对象技术中的&quot;抽象&quot;和&quot;隐蔽&quot;原则控制系统的复杂性。
+
+  利用&quot;对象&quot;、&quot;封装&quot;和&quot;继承&quot;等概念来确保操作系统的&quot;正确性&quot;、&quot;可靠性&quot;、&quot;易修改性&quot;、&quot;易扩展性&quot;等，并提高操作系统的设计速度。
+</code></pre><ol start="2">
+<li><p>微内核的基本功能</p>
+<p>微内核一般将机制部分以及与硬件紧密相关的部分放入微内核中。由此可知微内核通常具有如下几方面的功能：</p>
+<ul>
+<li>进程(线程)管理：进程调度属于调度功能的机制部分(内核)；进程分类、优先级设定属于策略部分(微内核外)。</li>
+<li>低级存储器管理：低级存储器管理机制(内核)；虚拟存储器管理策略(微内核外)。</li>
+<li>中断和陷入处理。</li>
+</ul>
+</li>
+<li><p>微内核操作系统的优点</p>
+<p>由于微内核OS结构是建立在模块化、层次化结构的基础上的，并采用了客户/服务器模式和面向对象的程序设计技术，因此，微内核结构的操作系统是集各种技术优点之大成：</p>
+<ol>
+<li>提高了系统的可扩展性。</li>
+<li>增强了系统的可靠性。</li>
+<li>可移植性强。</li>
+<li>提供了对分布式系统的支持。</li>
+<li>融入了面向对象技术。</li>
+</ol>
+</li>
+<li><p>微内核操作系统存在的问题</p>
+<ul>
+<li>较之早期的操作系统，微内核操作系统的运行效率有所降低。</li>
+<li>一次服务请求，需要利用消息实现多次交互。</li>
+<li>频繁出现用户/内核模式与上下文的多次切换。</li>
+</ul>
+<p>如图1-12所示，其中的文件服务器还需要磁盘服务器的帮助，这时就需要进行8次上下文的切换。</p>
+<p><img src="\images\操作系统\13.png" alt="在传统OS和微内核OS中的上下文切换"></p>
+</li>
+</ol>
+<h2 id="1-6-操作系统基本服务和用户接口"><a href="#1-6-操作系统基本服务和用户接口" class="headerlink" title="1.6 操作系统基本服务和用户接口"></a>1.6 操作系统基本服务和用户接口</h2><ul>
+<li><p>1.6.1 基本服务和用户接口</p>
+<ul>
+<li>创建程序</li>
+<li>执行程序</li>
+<li>数据I/O</li>
+<li>信息存取</li>
+<li>通信服务</li>
+<li>错误检测和处理</li>
+</ul>
+<p>还具有其他功能：资源分配，统计，保护。</p>
+<p>用户接口：</p>
+<p><img src="\images\操作系统\14.png" alt="用户接口"></p>
+</li>
+<li><p>程序接口与系统调用</p>
+<p>什么是系统调用？</p>
+<p>系统调用的作用？</p>
+<p>系统调用是应用程序获得操作系统服务的唯一途径。</p>
+<p>内核的主体是系统调用的集合，内核可以看成是特殊的公共子程序。</p>
+<p>操作系统的功能通过一组称为系统调用(system call)的接口呈现给用户，内核提供一系列实现预定功能的内核函数，系统调用把应用程序的请求传达给内核，内核调用对应的内核函数完成请求所需处理后，再将处理结果返回给应用程序。</p>
+</li>
+<li><p>系统调用的作用</p>
+<p>系统调用是一种中介角色，把用户与硬件隔离开来，应用程序通过系统调用才能请求系统服务和使用系统资源，其作用有：</p>
+<ul>
+<li>一是内核可基于权限和规则对资源访问进行裁决，保证系统的安全性；</li>
+<li>二是系统调用封装资源抽象，提供一致性接口，避免用户使用资源时可能发生的错误，且使编程方便效率高。</li>
+</ul>
+</li>
+<li><p>API、库函数、系统调用</p>
+<p>应用程序能直接使用系统调用吗？</p>
+<p>POSIX(Portable Operating System Interface for Computer Environment)标准；</p>
+<p>API和库函数</p>
+<p>库函数和系统调用。</p>
+</li>
+<li><p>API、库函数、系统调用之间的关系</p>
+<p><img src="\images\操作系统\15.png" alt="API、库函数、系统调用之间的关系"></p>
+</li>
+<li><p>Linux系统程序、库函数、系统调用之间的关系</p>
+<p><img src="\images\操作系统\16.png" alt="Linux系统程序、库函数、系统调用之间的关系"></p>
+</li>
+</ul>
+<h1 id="第二章-进程的描述与控制"><a href="#第二章-进程的描述与控制" class="headerlink" title="第二章 进程的描述与控制"></a>第二章 进程的描述与控制</h1><h2 id="2-1-前趋图和程序执行"><a href="#2-1-前趋图和程序执行" class="headerlink" title="2.1 前趋图和程序执行"></a>2.1 前趋图和程序执行</h2><p>  在早期未配置OS的系统和单道批处理系统缺点：程序顺序执行，内存中仅装入一道用户程序，独占系统中的所有资源。</p>
+<p>  解决方法：多道程序系统，同时装入多个程序，进程并发执行，共享系统资源。</p>
+<ul>
+<li><p>2.1.1 前趋图</p>
+<p>为了能更好地描述程序的顺序和并发执行情况，我们先介绍用于描述程序执行先后顺序的前趋图。</p>
+<p>前趋图(Precedence Graph)，是指一个有向无环图，可记为DAG(Directed Acyclic Graph),它用于描述进程之间执行的先后顺序。</p>
+<p>图中的每个结点可用来表示一个进程或程序段，乃至一条语句，结点间的有向边则表示两个结点之间存在的偏序(Partial Order)或前趋关系(Precedence Relation)。</p>
+<p>进程(或程序)之间的前趋关系可用”-&gt;”来表示，如果进程Pi和Pj存在着前趋关系，可表示为(Pi，Pj)属于 -&gt;,也可写成Pi-&gt;Pj,表示在Pj开始执行之前Pi必须完成。</p>
+<p>称Pi是Pj的直接其拿去，而称Pj是Pi的直接后继。在前趋图中把没有前趋的结点称为初始结点(Initail Node),把没有后继的结点称为终止结点(Final Node)。</p>
+<p>每个结点还具有一个重量(Weight),用于表示该结点所含有的程序量或程序的执行时间。</p>
+<p>在图2-1(a)所示的前趋图中，存在着如下前趋关系：</p>
+<p>P1-&gt;P2,P1-&gt;3,P1-&gt;P4,P2-&gt;P5,P3-&gt;P5,P4-&gt;P6,P4-&gt;P7,P5-&gt;P8,P6-&gt;P8</p>
+</li>
+</ul>
+<p>  ​     </p>
+<p>  ​     </p>
+<p>  ​     </p>
+<p>  ​     </p>
+<p>  ​     </p>
+<p>  ​     </p>
+<p>  ​     </p>
+<p>​     </p>
+<p>​     </p>
+<p>​     </p>
+<p>​     </p>
+<p>​     </p>
+<p>  ​    </p>
+<p>  ​    </p>
+<p>  ​    </p>
+<p>​     </p>
+<p>​     </p>
+<p>​     </p>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/复习/" rel="tag"># 复习</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/08/26/计算机网络复习/" rel="next" title="计算机网络复习">
+                <i class="fa fa-chevron-left"></i> 计算机网络复习
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/09/14/数值计算方法/" rel="prev" title="数值计算方法">
+                数值计算方法 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <p class="site-author-name" itemprop="name">John Doe</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-categories">
+                
+                  <span class="site-state-item-count">5</span>
+                  <span class="site-state-item-name">categories</span>
+                
+              </div>
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-操作系统引论"><span class="nav-number">1.</span> <span class="nav-text">第一章 操作系统引论</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1操作系统的目标和作用"><span class="nav-number">1.1.</span> <span class="nav-text">1.1操作系统的目标和作用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-资源管理"><span class="nav-number">1.2.</span> <span class="nav-text">2.1 资源管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-OS实现了对计算机资源的抽象"><span class="nav-number">1.3.</span> <span class="nav-text">2.2 OS实现了对计算机资源的抽象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-操作系统的发展过程"><span class="nav-number">1.4.</span> <span class="nav-text">1.2 操作系统的发展过程</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-操作系统的基本特征"><span class="nav-number">1.5.</span> <span class="nav-text">1.3 操作系统的基本特征</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-操作系统的主要功能"><span class="nav-number">1.6.</span> <span class="nav-text">1.4 操作系统的主要功能</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-5-OS结构设计"><span class="nav-number">1.7.</span> <span class="nav-text">1.5 OS结构设计</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-6-操作系统基本服务和用户接口"><span class="nav-number">1.8.</span> <span class="nav-text">1.6 操作系统基本服务和用户接口</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-进程的描述与控制"><span class="nav-number">2.</span> <span class="nav-text">第二章 进程的描述与控制</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-前趋图和程序执行"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 前趋图和程序执行</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">John Doe</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/assets/z16.model.json"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+</html>
