@@ -259,6 +259,311 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2021/03/15/图形学/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alice's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/03/15/图形学/" itemprop="url">图形学</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-15T09:44:01+08:00">
+                2021-03-15
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="第一章-计算机图形学基本概念"><a href="#第一章-计算机图形学基本概念" class="headerlink" title="第一章 计算机图形学基本概念"></a>第一章 计算机图形学基本概念</h1><hr>
+<h2 id="纲要"><a href="#纲要" class="headerlink" title="纲要"></a>纲要</h2><ul>
+<li>计算机图形学的基本概念</li>
+<li>计算机图形学研究对象与内容</li>
+<li>计算机图形学的发展历史</li>
+<li>计算机图形学的应用与研究动态</li>
+</ul>
+<h2 id="1-1-计算机图形学的基本概念-—定义"><a href="#1-1-计算机图形学的基本概念-—定义" class="headerlink" title="1.1 计算机图形学的基本概念 —定义"></a>1.1 计算机图形学的基本概念 —定义</h2><ul>
+<li><p>wiki百科和百度百科的定义</p>
+<blockquote>
+<p>计算机图形学（CG）是一种使用数学算法把二维或三维图形转化为计算机显示器的栅格形式的科学。简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图形、以及利用计算机进行图形的计算、处理和显示的相关原理与算法。</p>
+</blockquote>
+</li>
+<li><p>IEEE的定义</p>
+<blockquote>
+<p>计算机图形学就是在计算机的帮助下生成图形图像的一门科学或艺术</p>
+</blockquote>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//用计算机表示图形（合适的数据结构）</span></span><br><span class="line"><span class="comment">//点：</span></span><br><span class="line">Point3D&#123;</span><br><span class="line">    <span class="keyword">double</span> x; <span class="keyword">double</span> y;</span><br><span class="line">    <span class="keyword">double</span> z;</span><br><span class="line">&#125;</span><br><span class="line"><span class="comment">//长方体：</span></span><br><span class="line">cuboid&#123;</span><br><span class="line">    LCS3D local;</span><br><span class="line">    <span class="keyword">double</span> x; <span class="keyword">double</span> y;</span><br><span class="line">    <span class="keyword">double</span> z;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li><p>用计算机生成图形：</p>
+<p>将上述数据结构实例化（交互手段。。。）</p>
+</li>
+<li><p>用计算机处理图形：</p>
+<p>图形变换、变形（位置，形状）</p>
+<p>图形A-&gt;图形B</p>
+</li>
+<li><p>用计算机显示图形：将计算机内容存放的图形转化为人眼能否感知的数字图像。</p>
+<p>图像：</p>
+<ul>
+<li>绘制、摄影或印制的形象。</li>
+<li>图形在媒介上的投影。</li>
+</ul>
+<p>照片：镜子中的形象，屏幕上的形象</p>
+</li>
+<li><p>什么是计算机中的图形？</p>
+<p>计算机中的图形是指：</p>
+<ul>
+<li>物体的轮廓、形状或外部的界限；</li>
+<li>客观存在的物体（桌、椅、山、水、人）</li>
+<li>是指由点、线、面、体等几何要素和明暗、灰度（亮度）、色彩等非几何要素构成的，从现实世界中抽象出来的带有灰度、色彩及形状的图或形。</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-1-计算机图形学的基本概念-目标"><a href="#1-1-计算机图形学的基本概念-目标" class="headerlink" title="1.1 计算机图形学的基本概念-目标"></a>1.1 计算机图形学的基本概念-目标</h2><ul>
+<li><p>目标</p>
+<p>核心目标：利用计算机绘画出具有真实感的图形。即实现视觉交流，通过图形或几何的方式来表示或展示一些问题或信息。</p>
+</li>
+<li><p>视觉交流的过程</p>
+<p>观察-&gt;问题：通过观察、思考，明确问题或要传达的信息；</p>
+<p>问题-&gt;几何：通过建立几何模型表达问题；</p>
+<p>几何-&gt;图像：由几何模型生成图像，将问题或信息可视化。</p>
+</li>
+</ul>
+<h2 id="1-1-计算机图形学的基本概念-任务"><a href="#1-1-计算机图形学的基本概念-任务" class="headerlink" title="1.1 计算机图形学的基本概念-任务"></a>1.1 计算机图形学的基本概念-任务</h2><ul>
+<li><p>基本任务</p>
+<p>表示：将客观世界用二维或三维的方式表示。</p>
+<p>绘制：如何将计算机中的对象用一种直观形象的图形图像方式表现出来。</p>
+<p>交互：通过计算机输入、输出设备，以有效的方式实现表示与绘制的技术。</p>
+</li>
+</ul>
+<h2 id="1-1-计算机图形学的基本概念-相关学科"><a href="#1-1-计算机图形学的基本概念-相关学科" class="headerlink" title="1.1 计算机图形学的基本概念-相关学科"></a>1.1 计算机图形学的基本概念-相关学科</h2><ul>
+<li>计算机图形学（CG）试图从非图像形式的数据描述来生成（逼真的）图像。</li>
+<li>数字图像处理旨在对图像进行各种加工以改善图像的视觉效果。主要研究对客观世界中已经存在的物体映像处理成新的数字化图像，如医学图像处理、卫星遥感图像处理、照相图像处理等。</li>
+<li>模式识别：主要研究如何分析和识别各种图像，找出其中图形数据蕴含的内在联系或构建图像的抽象模型。如高速公路上的车辆拍照的识别、人脸部的识别、数字水印等。</li>
+<li>计算几何：研究几何模型和数据处理的学科，探讨几何形体的计算机表示、分析和综合。</li>
+</ul>
+<h2 id="1-2-计算机图形学研究对象与内容-研究对象"><a href="#1-2-计算机图形学研究对象与内容-研究对象" class="headerlink" title="1.2 计算机图形学研究对象与内容-研究对象"></a>1.2 计算机图形学研究对象与内容-研究对象</h2><ul>
+<li><p>图形的要素：</p>
+<p>几何要素和非几何要素</p>
+</li>
+<li><p>计算机图形学中所研究的图形</p>
+<p>从客观世界物体中抽象出来的带有颜色及形状信息的图和形。</p>
+</li>
+</ul>
+<h2 id="1-2-计算机图形学研究对象与内容-图形表示"><a href="#1-2-计算机图形学研究对象与内容-图形表示" class="headerlink" title="1.2 计算机图形学研究对象与内容-图形表示"></a>1.2 计算机图形学研究对象与内容-图形表示</h2><ul>
+<li><p>点阵法是用具有颜色信息的点阵来表示图形的一种方法，它强调图形由哪些点组成，并具有什么灰度或色彩。</p>
+</li>
+<li><p>参数法是以计算机中所记录图形的形状参数与属性参数来表示图形的一种方法。</p>
+</li>
+<li><p>通常把参数法描述的图形叫做图形</p>
+</li>
+<li><p>把点阵法描述的图形叫做图像</p>
+</li>
+<li><p>Pixels（像素）：像素是计算机屏幕用来显示图象的最小单位</p>
+</li>
+<li><p>Resolution：分辨率</p>
+<ul>
+<li>分辨率指屏幕或打印的图像上的点的目睹，分辨率越高，图越清晰。</li>
+<li>分辨率用DPI度量</li>
+</ul>
+</li>
+<li><p>Pixel Depth（像素位数，颜色位数，颜色深度）</p>
+<p>—Pixel Depth（Color Depth）每个像素点的bit数</p>
+</li>
+<li><p>Pixel Depth越大，每个像素点的颜色越丰富</p>
+</li>
+<li><p>彩色图像的效果取决于分辨率</p>
+</li>
+<li><p>Pixel Depth越大，图像文件越大</p>
+</li>
+<li><p>用计算机显示图形：</p>
+<p>计算机：图形————————————————–&gt;图像</p>
+<p>​                                  显示 Display，rendering</p>
+</li>
+<li><p>本质：</p>
+<p>图像：颜色值（RGB），没有物体的概念。</p>
+<p>图形：物体（形状、外表属性、。。。。。）</p>
+<p>客观世界：物体———————————————-&gt;视觉形像</p>
+<p>​                                   光线刺激视网膜-&gt;神经感知</p>
+</li>
+<li><p>基本点：用计算机表示、生成、处理和显示图形。</p>
+</li>
+</ul>
+<h2 id="1-2-计算机图形学研究对象与内容-内容体系"><a href="#1-2-计算机图形学研究对象与内容-内容体系" class="headerlink" title="1.2 计算机图形学研究对象与内容-内容体系"></a>1.2 计算机图形学研究对象与内容-内容体系</h2><ul>
+<li><p>基础模块</p>
+<p>软、硬件基础知识：常见图形API如OpengGL、Direct3D等，图形输出设备与输出技术的简单基础知识，如光栅显示器基本原理、颜色处理与颜色模型等。</p>
+</li>
+<li><p>数学基础：</p>
+<p>微积分、线性代数、矩阵计算、微分几何、数值计算和分析、计算方法、偏微分方程、微分方程数值解、最优化、概率、统计、计算几何等。其中重要的：向量、矩阵、齐次坐标和几何变换等。</p>
+<p>“数学不是没有用，而是不够用！”</p>
+<p>对数学的学习和应用将是“活到老，学到老”。</p>
+</li>
+<li><p>建模与表示模块</p>
+<p>概念：研究如何用图形方式表示现实或虚拟世界中的对象与信息。</p>
+<p>表示：模型在外部显示上通常以点、线、面、体等各种几何元素及它们的组合来表现，而在计算机内部则是通过坐标、连接关系所对应的几何信息与拓扑信息来表示。</p>
+</li>
+<li><p>绘制模块</p>
+<p>概念：将计算机中对象的数字几何模型转换为直观形象的图形或图像形式，是数字几何模型的视觉可视化过程。</p>
+<p>绘制过程:</p>
+<ol>
+<li>应用程序（获得图元信息）</li>
+<li>几何处理（裁剪，坐标变换）</li>
+<li>像素处理</li>
+</ol>
+</li>
+<li><p>交互模块</p>
+<p>概念：针对图形对象，研究合适的输入方法、操作方法，也即友好的人机界面。</p>
+<p>交互技术</p>
+<p>典型的人机交互技术：定位技术、菜单技术、拾取技术、定值技术、橡皮筋技术、拖拽技术、网格与捕捉技术等</p>
+<p>图形用户界面：window窗口，icon图标，menu菜单，pointers指标</p>
+</li>
+<li><p>CG的主要研究内容有：建模、渲染、动画和人机交互</p>
+</li>
+<li><p>建模（modeling）</p>
+<p>要在计算机中表示一个三维物体，首先要有它的几何模型表达。因此，三维模型的建模是计算机图形学的基础，是其他内容的前提。表达一个几何物体可以是用数学上的样条函数或隐式函数来表达；也可以是用光滑曲面上的采样点及其连接关系所表达的三角网格来表达（即连续曲面的分片线性逼近）。</p>
+<p>常用的三维建模方法有：NURBS（非均匀有理B-样条、Bezier曲线曲面）方法（已成为CAD工业领域的标准）、细分曲面造型方法、利用软件的直接手工建模的方法、基于笔划或草图交互方式的三维建模方法、基于语法及规则的过程式建模方法、基于图像或视频的建模方法、基于扫描点云（深度图像如Kinect、结构光扫描、激光扫描、LiDAR扫描等）的建模方法、基于现有模型来合成建模的方法，等等。</p>
+</li>
+<li><p>渲染</p>
+<p>有了三维模型或场景，怎么把这些三维几何模型画出来，产生令人赏心悦目的真实感图像？这就是传统的计算机图形学的核心任务。现在的渲染技术已经能够将各种物体，包括皮肤、树木、花草、水、烟雾、毛发等渲染得非常逼真。一些商业化软件也提供了强大的真实感渲染功能。</p>
+</li>
+<li><p>人机交互</p>
+<p>人机交互是指人与计算机之间以一定的交互方式或交互界面，来完成确定任务的人与计算机之间的信息交换过程。简单来讲，就是人如何通过一定的交互方式告诉计算机来完成他所希望完成的任务。</p>
+<p>近年来，以用户为中心的系统设计思想，增进人机交互的自然性，提高人机交互的效率是用户界面的主要研究方向。陆续提出了多通道用户界面的思想，它包括语言、姿势输入、头部跟踪、视觉跟踪、立体显示、三维交互技术、感觉反馈及自然语言界面等。</p>
+</li>
+</ul>
+<h2 id="1-3-计算机图形学的发展历史"><a href="#1-3-计算机图形学的发展历史" class="headerlink" title="1.3 计算机图形学的发展历史"></a>1.3 计算机图形学的发展历史</h2><ul>
+<li><p>20世纪50年代（酝酿期）</p>
+<p>1950年，美国麻省理工学院（MIT）的旋风1号计算机配备了阴极射线管（CRT）来显示一些简单的图形。</p>
+</li>
+<li><p>20世纪60年代（萌芽期）</p>
+<ul>
+<li>1962年，MIT林肯实验室的I</li>
+</ul>
+</li>
+</ul>
+<h1 id="第四章-图形的表示与数据结构"><a href="#第四章-图形的表示与数据结构" class="headerlink" title="第四章 图形的表示与数据结构"></a>第四章 图形的表示与数据结构</h1><ul>
+<li>基本概念<ul>
+<li>把研究如何在计算机中建立恰当的模型表示不同图形对象的技术称为造型技术。</li>
+<li>有两类图形对象：<ul>
+<li>规则对象：几何造型</li>
+<li></li>
+</ul>
+</li>
+<li>基本图形元素：图素或图元、体素</li>
+<li>图素是指可以用一定</li>
+<li>段是指具有逻辑意义的有限个图素（或体素）及其附加属性</li>
+<li>图形信息与非图形信息<ul>
+<li>几何信息：形体在欧式空间中的位置和大小。</li>
+<li>拓扑信息：形体各分量（点、线、面）的数目及其相互间的连接关系。</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2021/03/14/Java基础/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -400,6 +705,10 @@
 <li>分辨率越高，图像越锐化、越清晰。</li>
 </ul>
 </li>
+</ul>
+</li>
+<li>通讯设备<ul>
+<li>常见的设备有：拨号调制解调器、DSL（数字用户线）、电缆调制解调器、网络接口卡（NIC）、无线网络</li>
 </ul>
 </li>
 </ul>
@@ -4201,159 +4510,6 @@ hexo d -g #生成并上传
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2020/04/06/杭电oj-1004/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alice's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/06/杭电oj-1004/" itemprop="url">杭电oj-1004</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-06T12:43:21+08:00">
-                2020-04-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/刷题/" itemprop="url" rel="index">
-                    <span itemprop="name">刷题</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="杭电oj-1004"><a href="#杭电oj-1004" class="headerlink" title="杭电oj-1004"></a>杭电oj-1004</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> max = a[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (a[i] &gt; max)</span><br><span class="line">	&#123;</span><br><span class="line">		max = a[i];</span><br><span class="line">		k = i;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//freopen("C:/Users/19856/Desktop/wakaka.txt","r",stdin );</span></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> k;</span><br><span class="line"><span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> a[<span class="number">1005</span>][<span class="number">17</span>];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> b[<span class="number">17</span>];</span><br><span class="line">	<span class="keyword">int</span> c[<span class="number">1005</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="built_in">memset</span>(a, <span class="number">0</span>, <span class="keyword">sizeof</span>(a));</span><br><span class="line">	<span class="built_in">memset</span>(b, <span class="number">0</span>, <span class="keyword">sizeof</span>(b));</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%s"</span>, &amp;b);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; (j &lt; n)&amp;&amp;(a[j][<span class="number">0</span>]!=<span class="string">'\0'</span>); j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (!<span class="built_in">strcmp</span>(a[j], b))c[j]++;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (a[i][<span class="number">0</span>] == <span class="string">'\0'</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">strcpy</span>(a[i], b);</span><br><span class="line">			c[i]++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	k = max(c, n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%s\n"</span>, a[k]);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -4404,7 +4560,7 @@ hexo d -g #生成并上传
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -4426,7 +4582,7 @@ hexo d -g #生成并上传
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">8</span>
+                  <span class="site-state-item-count">9</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
