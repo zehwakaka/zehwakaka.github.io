@@ -87,7 +87,7 @@
 <meta property="og:site_name" content="Alice&#39;s blog">
 <meta property="og:description" content="第一章 计算机图形学基本概念 纲要 计算机图形学的基本概念 计算机图形学研究对象与内容 计算机图形学的发展历史 计算机图形学的应用与研究动态  1.1 计算机图形学的基本概念 —定义 wiki百科和百度百科的定义  计算机图形学（CG）是一种使用数学算法把二维或三维图形转化为计算机显示器的栅格形式的科学。简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图形、以及利用计算机进行图形的计">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-03-15T14:26:45.780Z">
+<meta property="og:updated_time" content="2021-03-16T12:55:59.293Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图形学">
 <meta name="twitter:description" content="第一章 计算机图形学基本概念 纲要 计算机图形学的基本概念 计算机图形学研究对象与内容 计算机图形学的发展历史 计算机图形学的应用与研究动态  1.1 计算机图形学的基本概念 —定义 wiki百科和百度百科的定义  计算机图形学（CG）是一种使用数学算法把二维或三维图形转化为计算机显示器的栅格形式的科学。简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图形、以及利用计算机进行图形的计">
@@ -447,7 +447,7 @@
 </ul>
 <h2 id="1-2-计算机图形学研究对象与内容-内容体系"><a href="#1-2-计算机图形学研究对象与内容-内容体系" class="headerlink" title="1.2 计算机图形学研究对象与内容-内容体系"></a>1.2 计算机图形学研究对象与内容-内容体系</h2><ul>
 <li><p>基础模块</p>
-<p>软、硬件基础知识：常见图形API如OpengGL、Direct3D等，图形输出设备与输出技术的简单基础知识，如光栅显示器基本原理、颜色处理与颜色模型等。</p>
+<p>软、硬件基础知识：常见图形API如OpenGL、Direct3D等，图形输出设备与输出技术的简单基础知识，如光栅显示器基本原理、颜色处理与颜色模型等。</p>
 </li>
 <li><p>数学基础：</p>
 <p>微积分、线性代数、矩阵计算、微分几何、数值计算和分析、计算方法、偏微分方程、微分方程数值解、最优化、概率、统计、计算几何等。其中重要的：向量、矩阵、齐次坐标和几何变换等。</p>
@@ -493,8 +493,143 @@
 </li>
 <li><p>20世纪60年代（萌芽期）</p>
 <ul>
-<li>1962年，MIT林肯实验室的I</li>
+<li><p>1962年，MIT林肯实验室的I.E.Sutherland发表了一篇题为“Sketchpad：一个人机交互通信的图形系统”的博士论文</p>
+</li>
+<li><p>1962年，雷诺汽车公司的工程师Pierre Bezier提出Bezier曲线、曲面的理论</p>
+</li>
+<li><p>1964年MIT的教授Steven A.Coons提出了超限插值的新思想，通过插值四条任意的边界曲线来构造曲面。</p>
+</li>
+<li><p>20世纪70年代（发展期）</p>
+<ul>
+<li><p>光栅图形学迅速发展</p>
+<p>区域填充、裁剪、消隐等基本图形概念、及其相应算法纷纷诞生</p>
+</li>
+<li><p>图形软件标准化</p>
+<p>1974年，ACM SIGGRAPH的“与机器无关的图形技术”的工作会议</p>
+<p>ACM成立图形标准化委员会，制定“核心图形系统”（Core Graphics System）</p>
+<p>ISO发布CGI、CGM、GKS、PHIGS</p>
+</li>
 </ul>
+</li>
+<li><p>20世纪70年代（发展期）</p>
+<ul>
+<li><p>真实感图形学</p>
+<p>1970年，Bouknight提出了第一个光反射模型</p>
+<p>1971年Gourand提出了“漫反射模型+插值”的思想，被称为Gourand明暗处理</p>
+<p>1975年，Phong提出了著名的简单光照模型-Phong模型</p>
+</li>
+<li><p>实体造型技术</p>
+<p>英国剑桥大小CAD小组的Build系统</p>
+<p>美国罗切斯特大学的PADL-1系统</p>
+</li>
+</ul>
+</li>
+<li><p>20世纪80年代（普及期）</p>
+<p>1980年Whitted提出了一个光透视模型-Whitted模型，并第一次给出光线跟踪算法的范例，实现Whitted模型</p>
+<p>1984年，美国Cornell大学和日本广岛大小的学者分别将热辐射工程中的辐射度方法引入到计算机图形学中</p>
+<p>图形硬件和各个分支均在这个时期飞速发展</p>
+</li>
+<li><p>10世纪90年代（提高增强期）</p>
+<p>标准化、集成化、智能化方向发展。</p>
+<p>近二十年中，国际标准化组织ISO已经批准和正在讨论的与计算机图形有关的标准有：</p>
+<p>GKS、GKS-3D、PHIGS、CGM、CGI、IGES、STEP</p>
+<p>事实标准：</p>
+<p>SGI的OpenGL,微软的Direct X，Adobe的Postscript等。</p>
+</li>
+<li><p>技术发展历程</p>
+<p>诞生：1950—1960</p>
+<p>线框图形学：1960—1970</p>
+<p>光栅图形学：1970—1980</p>
+<p>真实感图形学：1980—1990</p>
+<p>实时图形学：1990—至今</p>
+</li>
+</ul>
+</li>
+</ul>
+<h2 id="1-4-计算机图形学应用与研究动态-应用"><a href="#1-4-计算机图形学应用与研究动态-应用" class="headerlink" title="1.4 计算机图形学应用与研究动态-应用"></a>1.4 计算机图形学应用与研究动态-应用</h2><ul>
+<li><p>（1）计算机辅助设计与制造（CAD/CAM）</p>
+<p>CAD/CAM是计算机图形学在工业界最广泛、最活跃的应用领域。</p>
+<p>二维图形（AutoCAD）-&gt;三维造型（CAE、CAM）</p>
+</li>
+<li><p>应用CAD系统进行设计：1）获得产品的精确表示和显示结果，2）在计算机中建立对象的数据模型，3）进行各种性能分析计算，4）对设计做修改，5）制造过程和设计结果联系起来，设计结果直接传送至后续工艺进行加工。</p>
+</li>
+<li><p>计算机辅助设计（CAD）已广泛应用于飞机、汽车、船舶的外形设计、电路设计，以及建筑、服装、印染、玩具设计等领域。CAD技术使得工程、产品设计和施工涂兆不必再由人工绘制，可大大缩短设计周期。</p>
+</li>
+<li><p>（2）计算机动画与艺术</p>
+<p>动画Animation：利用图像序列，产生物体运动的视觉效果的一种技术。动画片大闹天宫、哪吒脑海、龙猫。</p>
+</li>
+<li><p>动画大师John Halas所讲的，运动是动画的要素。</p>
+</li>
+<li><p>视觉暂留原理：人的眼睛看到一幅画或一个物体后，在0.34秒内不会消失。</p>
+</li>
+<li><p>利用视觉暂留原理，在一幅画还没有消失前播放下一副画，就会给人造成一种流畅的视觉变化效果。</p>
+</li>
+<li><p>计算机动画中的运动</p>
+<ul>
+<li>景物大小和形状的变化</li>
+<li>景物位置、方向的变化</li>
+<li>景物表面纹理、色彩的变化</li>
+<li>虚拟摄像机的运动</li>
+</ul>
+</li>
+<li><p>（3）计算机艺术</p>
+<p>利用图像序列，产生物体运动的视觉效果的一种技术。</p>
+</li>
+<li><p>（4）可视化</p>
+<p>科学计算可视化：科学计算可视化就是利用计算机图形生成技术，将科学及工程计算中的计算数据和测量数据等以图形的形式显示出来，使人们能观察到用常规手段难以观察到的自然规律和自然现象。</p>
+</li>
+<li><p>分析计算可视化</p>
+<p>既可用二维曲线图表和三维模型，也有彩色高维几何表示</p>
+</li>
+<li><p>医学可视化</p>
+</li>
+<li><p>（5）虚拟现实Virtual reality：是指由计算机实时生成一个虚拟的三维空间。用户可在其中自由的运动，随意观察周围的景物，通过一些特殊的设备与虚拟物体进行交互操作。在此环境中，用户看到的是全立体彩色景象，听到的是虚拟环境中的声响，手或脚可以感受到虚拟环境所反馈给它的作用了，从而使用户产生一种身临其境的感觉。</p>
+<p>虚拟现实的技术要点：</p>
+<p>沉浸（Immersion）：全方位投入，使用户产生身临其境的感觉。</p>
+<p>交互（Interaction）：相应用户的各种输入手势、语言命令以及身体动作。</p>
+<p>构想（Imaginnation）：生动形象地反映设计者的思想。</p>
+</li>
+<li><p>虚拟现实的关键技术：</p>
+<p>能以实时的速度生成有逼真感的景物图形。</p>
+<p>能高精度的跟踪用户的头和手。</p>
+<p>头戴显示器能产生高分辨率图象和较大的视角。</p>
+<p>能对用户的动作产生力反馈。</p>
+<p>虚拟现实—沉浸式系统CAVE</p>
+</li>
+<li><p>（5）虚拟现实Virtual reality：飞行等模拟训练</p>
+<p>虚拟现实Virtual reality：虚拟装配。</p>
+</li>
+<li><p>（5）计算机模拟与仿真</p>
+<p>计算机模拟和仿真是利用计算机产生真实（虚拟）场景，模拟场景中对象随时间变化的行为和规律。通过虚拟对象的行为和规律，研究液体流动、热流、核反应、结构有负载时的变形、复杂产品的加工过程和大工程的完工后的效果等。</p>
+</li>
+<li><p>（6）游戏：目前图形硬件发展的动力所在。</p>
+</li>
+<li><p>游戏引擎是指一些已编写好的可编辑计算机游戏系统或者一些交互式实时图像应用程序的核心组件。</p>
+</li>
+<li><p>为游戏设计者提供各种编写游戏所需的各种工具，其目的在于让游戏设计者能容易和快速地做出有效程式而不用由零开始。</p>
+</li>
+<li><p>渲染引擎（即“渲染器”，含二维图像引擎和三维图像引擎）、物理引擎、碰撞检测系统、音效、脚本引擎、电脑动画、人工智能、网络引擎以及场景管理</p>
+</li>
+<li><p>游戏引擎的一些功能。</p>
+<p>光影效果：场景中的光源对处于其中的人和物的影响方式</p>
+<p>动画：骨骼动画系统和模型动画系统</p>
+<p>物理系统：使物体的运动遵循固定的规律</p>
+<p>碰撞检测是物理系统的核心部分，它可以探测游戏中各物体的物理边缘</p>
+<p>渲染：把模型、动画、光影、特效等所有效果实时计算出来并展示在屏幕上</p>
+<p>交互</p>
+</li>
+<li><p>（7）用户图像界面：图文形式相结合的用户图形界面，大大改善了计算机交互操作的用户界面，开辟了计算机应用的很多新领域。</p>
+</li>
+</ul>
+<h2 id="1-4-计算机图形学应用与研究动态-研究热点"><a href="#1-4-计算机图形学应用与研究动态-研究热点" class="headerlink" title="1.4 计算机图形学应用与研究动态-研究热点"></a>1.4 计算机图形学应用与研究动态-研究热点</h2><ul>
+<li><p>真实感图形实时绘制</p>
+<p>物体网格模型的面片简化：对网格面片表示的模型，在一定误差的精度范围内，删除带你、边、面，从而简化所绘制场景的复杂层度，加快图形绘制速度</p>
+<p>基于图象的绘制：完全掘弃传统的先建模，然后确定光源的绘制的方法。它直接从一系列已知的图象中生成未知视角的图象，适用于野外极其复杂场景的生成和漫游</p>
+</li>
+<li><p>野外自然景物的模拟</p>
+<p>野外场景远远复杂于室内场景，绘制难度更大，方法更趋多样化。</p>
+<p>主要绘制山、水、云、树、草、火等等。</p>
+<p>绘制火的粒子系统，基于生理模型的绘制植物的方法，绘制云的细胞自动机方法等</p>
 </li>
 </ul>
 <h1 id="第四章-图形的表示与数据结构"><a href="#第四章-图形的表示与数据结构" class="headerlink" title="第四章 图形的表示与数据结构"></a>第四章 图形的表示与数据结构</h1><ul>
@@ -516,7 +651,7 @@
 </ul>
 </li>
 </ul>
-
+<h1 id="第五章-基本图形生成算法"><a href="#第五章-基本图形生成算法" class="headerlink" title="第五章 基本图形生成算法"></a>第五章 基本图形生成算法</h1>
       
     </div>
     
@@ -686,7 +821,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-计算机图形学基本概念"><span class="nav-number">1.</span> <span class="nav-text">第一章 计算机图形学基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#纲要"><span class="nav-number">1.1.</span> <span class="nav-text">纲要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-—定义"><span class="nav-number">1.2.</span> <span class="nav-text">1.1 计算机图形学的基本概念 —定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-目标"><span class="nav-number">1.3.</span> <span class="nav-text">1.1 计算机图形学的基本概念-目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-任务"><span class="nav-number">1.4.</span> <span class="nav-text">1.1 计算机图形学的基本概念-任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-相关学科"><span class="nav-number">1.5.</span> <span class="nav-text">1.1 计算机图形学的基本概念-相关学科</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-计算机图形学研究对象与内容-研究对象"><span class="nav-number">1.6.</span> <span class="nav-text">1.2 计算机图形学研究对象与内容-研究对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-计算机图形学研究对象与内容-图形表示"><span class="nav-number">1.7.</span> <span class="nav-text">1.2 计算机图形学研究对象与内容-图形表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-计算机图形学研究对象与内容-内容体系"><span class="nav-number">1.8.</span> <span class="nav-text">1.2 计算机图形学研究对象与内容-内容体系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-计算机图形学的发展历史"><span class="nav-number">1.9.</span> <span class="nav-text">1.3 计算机图形学的发展历史</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-图形的表示与数据结构"><span class="nav-number">2.</span> <span class="nav-text">第四章 图形的表示与数据结构</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-计算机图形学基本概念"><span class="nav-number">1.</span> <span class="nav-text">第一章 计算机图形学基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#纲要"><span class="nav-number">1.1.</span> <span class="nav-text">纲要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-—定义"><span class="nav-number">1.2.</span> <span class="nav-text">1.1 计算机图形学的基本概念 —定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-目标"><span class="nav-number">1.3.</span> <span class="nav-text">1.1 计算机图形学的基本概念-目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-任务"><span class="nav-number">1.4.</span> <span class="nav-text">1.1 计算机图形学的基本概念-任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-相关学科"><span class="nav-number">1.5.</span> <span class="nav-text">1.1 计算机图形学的基本概念-相关学科</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-计算机图形学研究对象与内容-研究对象"><span class="nav-number">1.6.</span> <span class="nav-text">1.2 计算机图形学研究对象与内容-研究对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-计算机图形学研究对象与内容-图形表示"><span class="nav-number">1.7.</span> <span class="nav-text">1.2 计算机图形学研究对象与内容-图形表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-计算机图形学研究对象与内容-内容体系"><span class="nav-number">1.8.</span> <span class="nav-text">1.2 计算机图形学研究对象与内容-内容体系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-计算机图形学的发展历史"><span class="nav-number">1.9.</span> <span class="nav-text">1.3 计算机图形学的发展历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-计算机图形学应用与研究动态-应用"><span class="nav-number">1.10.</span> <span class="nav-text">1.4 计算机图形学应用与研究动态-应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-计算机图形学应用与研究动态-研究热点"><span class="nav-number">1.11.</span> <span class="nav-text">1.4 计算机图形学应用与研究动态-研究热点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-图形的表示与数据结构"><span class="nav-number">2.</span> <span class="nav-text">第四章 图形的表示与数据结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第五章-基本图形生成算法"><span class="nav-number">3.</span> <span class="nav-text">第五章 基本图形生成算法</span></a></li></ol></div>
             
 
           </div>
