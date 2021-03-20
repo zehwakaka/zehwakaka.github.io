@@ -79,18 +79,18 @@
 
 
 
-<meta name="description" content="第一章 计算机图形学基本概念 纲要 计算机图形学的基本概念 计算机图形学研究对象与内容 计算机图形学的发展历史 计算机图形学的应用与研究动态  1.1 计算机图形学的基本概念 —定义 wiki百科和百度百科的定义  计算机图形学（CG）是一种使用数学算法把二维或三维图形转化为计算机显示器的栅格形式的科学。简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图形、以及利用计算机进行图形的计">
+<meta name="description" content="李陶深老师课件，版权所有  第一章 计算机图形学基本概念 纲要 计算机图形学的基本概念 计算机图形学研究对象与内容 计算机图形学的发展历史 计算机图形学的应用与研究动态  1.1 计算机图形学的基本概念 —定义 wiki百科和百度百科的定义  计算机图形学（CG）是一种使用数学算法把二维或三维图形转化为计算机显示器的栅格形式的科学。简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图">
 <meta name="keywords" content="图形学学习笔记">
 <meta property="og:type" content="article">
 <meta property="og:title" content="图形学">
 <meta property="og:url" content="http://zehwakaka.github.io/2021/03/15/图形学/index.html">
 <meta property="og:site_name" content="Alice&#39;s blog">
-<meta property="og:description" content="第一章 计算机图形学基本概念 纲要 计算机图形学的基本概念 计算机图形学研究对象与内容 计算机图形学的发展历史 计算机图形学的应用与研究动态  1.1 计算机图形学的基本概念 —定义 wiki百科和百度百科的定义  计算机图形学（CG）是一种使用数学算法把二维或三维图形转化为计算机显示器的栅格形式的科学。简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图形、以及利用计算机进行图形的计">
+<meta property="og:description" content="李陶深老师课件，版权所有  第一章 计算机图形学基本概念 纲要 计算机图形学的基本概念 计算机图形学研究对象与内容 计算机图形学的发展历史 计算机图形学的应用与研究动态  1.1 计算机图形学的基本概念 —定义 wiki百科和百度百科的定义  计算机图形学（CG）是一种使用数学算法把二维或三维图形转化为计算机显示器的栅格形式的科学。简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2021-03-19T05:00:07.603Z">
+<meta property="og:updated_time" content="2021-03-20T11:26:51.085Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="图形学">
-<meta name="twitter:description" content="第一章 计算机图形学基本概念 纲要 计算机图形学的基本概念 计算机图形学研究对象与内容 计算机图形学的发展历史 计算机图形学的应用与研究动态  1.1 计算机图形学的基本概念 —定义 wiki百科和百度百科的定义  计算机图形学（CG）是一种使用数学算法把二维或三维图形转化为计算机显示器的栅格形式的科学。简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图形、以及利用计算机进行图形的计">
+<meta name="twitter:description" content="李陶深老师课件，版权所有  第一章 计算机图形学基本概念 纲要 计算机图形学的基本概念 计算机图形学研究对象与内容 计算机图形学的发展历史 计算机图形学的应用与研究动态  1.1 计算机图形学的基本概念 —定义 wiki百科和百度百科的定义  计算机图形学（CG）是一种使用数学算法把二维或三维图形转化为计算机显示器的栅格形式的科学。简单地说，计算机图形学的主要研究内容就是研究如何在计算机中表示图">
 
 
 
@@ -330,7 +330,10 @@
       
 
       
-        <h1 id="第一章-计算机图形学基本概念"><a href="#第一章-计算机图形学基本概念" class="headerlink" title="第一章 计算机图形学基本概念"></a>第一章 计算机图形学基本概念</h1><hr>
+        <hr>
+<p><strong><em>李陶深老师课件，版权所有</em></strong></p>
+<hr>
+<h1 id="第一章-计算机图形学基本概念"><a href="#第一章-计算机图形学基本概念" class="headerlink" title="第一章 计算机图形学基本概念"></a>第一章 计算机图形学基本概念</h1><hr>
 <h2 id="纲要"><a href="#纲要" class="headerlink" title="纲要"></a>纲要</h2><ul>
 <li>计算机图形学的基本概念</li>
 <li>计算机图形学研究对象与内容</li>
@@ -883,23 +886,115 @@
 <li>显示器上每个像素的亮度由它在各个位面中对应额值共同决定，把各个位面上与当前像素对应的0，1值读入寄存器相应的位，最终得到的二进制数就是像素的灰度等级，其范围在0—2的n次方-1之间。</li>
 <li>为避免帧缓存的增加，可使用颜色查找表来获得更多的灰度的级别，下表是三个帧缓存位面对应的颜色表。从帧缓存位面中读出的数是颜色查找表的索引，通过该索引值从颜色表中取得真正的颜色值。</li>
 <li>颜色查找表必须有2N项，每一项具有W位字宽。当W大于N时，可以有2W个灰度等级，但一次只能同时使用其中的2N个。如果要使用2N种以外的灰度等级，需要改变颜色查找表中的内容。下图中，W=4，N=3，通过设置颜色查找表可以产生16种灰度。</li>
-<li>由于只有三种原色，所以可以用三个位面实现一个简单的彩色帧缓冲存储器。</li>
+<li>由于只有三种原色，所以可以用三个位面实现一个简单的彩色帧缓冲存储器。下图为简单的彩色帧缓冲存储器。下图为简单的彩色光栅显示器，由分别对应红（R）、绿（G）、蓝（B）三原色的三个位面的帧缓存、DAC，三个电子枪和CRT光栅组成。</li>
+<li>可通过增加每个颜色的电子枪所对应的帧缓存位面，来提高颜色种类的灰度等级。如下图，每种原色电子枪有8个位面的帧缓存和8位的DAC，每种原色有29种灰度等级，三种原色的组合有224种颜色。这种显示器称为全色光栅扫描图形显示器，其帧缓存称为全色缓存。</li>
+<li>若各组位面存放的不是直接的颜色值而是颜色查找表的地址索引，则全色帧缓存的颜色还可进一步丰富。</li>
 </ul>
+</li>
+<li>光栅扫描式的图形显示器——主要性能参数<ul>
+<li>分辨率：指显示器在屏幕水平（垂直）方向可显示多少像素。分辨率越高，显示的字符或图像越清晰。</li>
+<li>刷新频率：即屏幕刷新的速度。刷新频率越低，图像闪烁和抖动的就越厉害，眼睛疲劳的就越快。过低的刷新频率，会产生令人难受的频闪效应。</li>
+<li>水平扫描频率：又称为行频，是指电子枪每秒在屏幕上扫描过的水平点数，以KHz为单位。行频越大越好，至少要达到50KHz。</li>
+<li>亮度等级数目和色彩：亮度等级数目主要指单种颜色亮度可变化的数目，亮度等级范围的提升可以使图像看上去更加柔和自然。色彩包括可选择显示颜色的数目以及一帧画面可同时显示的颜色数，与荧光屏的质量有关，并受显示存储器VRAM大小的影响。</li>
+<li>点矩：指同一像素中两个颜色相近的荧光体间的距离，与图像分辨率有关。点矩越小，显示出来的图像越细腻，当然其成本也越高。</li>
+<li>显示速度：显示字母、图像，特别是动态图像的速度，与显示器的分辨率及扫描频率有关。可用最大带宽（即水平像素数*垂直像素数*最大刷新频率）来表示。</li>
+</ul>
+</li>
+<li>喷墨打印机<ul>
+<li>是一种光栅设备，特别适合于低开销的彩色打印输出，基本原理是将小墨点喷射到介质上，形成文字和图形。</li>
+<li>分为连续喷墨和即用即喷两种类型。前者的墨汁是连续喷射的，射速较快，但需要墨水泵和墨水回收装置，结构比较复杂。后者只有在需要写点的时候才喷射墨汁，射速较低，不需墨水瓶和墨水回收装置。</li>
+</ul>
+</li>
+<li>激光打印机<ul>
+<li>激光打印机是一种光栅扫描设备，即可用于打印字符又可用于绘图。</li>
+</ul>
+</li>
+<li>主要由感光鼓、粉盒、打底电晕丝、清洁器和高温溶凝部件等组成。</li>
+<li>笔式绘图仪</li>
+<li>笔式绘图机是矢量型设备，绘图笔相对纸作随意移动。<ul>
+<li>笔式绘图机分为滚筒式和平板式两种。</li>
+</ul>
+</li>
+<li>滚筒式绘图仪结构简单，价格便宜，但绘图精度比平板式绘图机低，而且所绘的图形卷在滚筒上面，绘图过程不易看清，并对纸张的大小有一定的要求。<ul>
+<li>平板式绘图仪又分为机械传动绘图仪和平面电机驱动绘图仪。前者速度低、精度低、寿命短，但价格相对便宜。后者精度高，但体积大、笨重、不灵活且价格较昂贵。</li>
+</ul>
+</li>
+</ul>
+<h2 id="2-3-图形软件系统-图形支撑软件"><a href="#2-3-图形软件系统-图形支撑软件" class="headerlink" title="2.3 图形软件系统-图形支撑软件"></a>2.3 图形软件系统-图形支撑软件</h2><ul>
+<li><p>图形支撑软件：可分为三个层次：</p>
+<ul>
+<li>第一层次面向系统</li>
+</ul>
+</li>
+<li><p>第二层既面向系统又面向用户，如CGI</p>
+<ul>
+<li>第三层次面向用户，如OpenGL，DirectX</li>
+</ul>
+</li>
+<li><p>功能子程序是图形支撑软件第三层次的重要部分</p>
+<ul>
+<li>图形应用接口API：图形库</li>
+</ul>
+</li>
+<li><p>OpenGL：由若干个函数库组成，提供了数百条图形命令，包括基本图形元素的生成，封闭边界内的填色、纹理、反走样等；基本图形元素的几何变换、投影变换、窗口裁剪等；自由曲线、曲面处理、隐藏线、隐藏面消除以及具有光照颜色效果的真实图形显示；自然界效果（如云彩、薄雾、烟霭）的景象生成等。</p>
+</li>
+<li><p>DirectX：是一种图形应用程序接口API，包含DirectDraw，Direct3D，DirectSound，DirectInput，DirectPlay等多个组件。</p>
+<ul>
+<li>一组低级“应用程序编程接口（API）”，可为Windows程序提供高性能硬件加速多媒体支持。</li>
+<li>DirectX直接访问显卡与声卡功能，确保多媒体程序能够充分利用高性能硬件，从而提供逼真的三维图形与声音效果</li>
+<li>DirectX由很多API组成，可以分为四大部分，显示、声音、输入和网络部分DirectDraw，Direct3D，DirectSound，Direct Input，DirectPlay</li>
+</ul>
+</li>
+<li><p>OpenGL与DirectX的比较</p>
+<ul>
+<li>OpenGL是跨平台标准，且有各个平台实现；DirectX仅应用于Windows，由Microsoft独立开发。</li>
+<li>OpenGL仅提供图形绘制功能，甚至没有交互功能；DirectX则提供了多媒体程序开发所需的全部API。</li>
+<li>OpenGL是函数库；DirectX则是组件库</li>
+<li>教学、科研方面OpenGL是主流，游戏开发、商业应用则基本采用DirectX。</li>
+</ul>
+</li>
+<li><p>Java3D：</p>
+<ul>
+<li>是一种功能完备、通用性强的编程语言。作为一种面向对象的高层API，具有高度的移植性。</li>
+<li>Java3D API是Sun定义的用于实现3D显示接口。3D技术是底层的显示技术，Java3D提供了基于Java的上层接口。</li>
+<li>Java3D把OpenGL和DirectX这些底层技术包装在Java接口中。</li>
+<li>加入到J2SE、J2EE的整套架构，这些特性保证了Java3D技术强大的扩展性。</li>
+</ul>
+</li>
+<li><p>Java3D：</p>
+<ul>
+<li>生成简单或复杂的形体</li>
+<li>使形体具有颜色、透明效果、贴图</li>
+<li>在三维环境中生成灯光、移动灯光</li>
+<li>具有行为的处理判断能力（键盘、鼠标、定时等）</li>
+<li>生成雾、背景、声音</li>
+<li>使形体变形、移动、生成三维动画</li>
+<li>编写非常复杂的应用程序，用于各种领域如VR（虚拟现实）</li>
+</ul>
+</li>
+<li><p>图形API对比：</p>
+<p>| 技术    | 实现层次         | 开发难度     | 扩展性            | 应用领域     |<br>| ——- | —————- | ———— | —————– | ———— |<br>| OpenGL  | 底层（显卡）     | C/C++（难）  | 多平台（较好）    | 三维设计软件 |<br>| DirectX | 底层（操作系统） | C++（较难）  | Windows平台（差） | 三维游戏     |<br>| Java3D  | 中层（JVM）      | Java（较易） | 多平台（好）      | 网络三维显示 |</p>
 </li>
 </ul>
 </li>
 </ul>
-<h1 id="第四章-图形的表示与数据结构"><a href="#第四章-图形的表示与数据结构" class="headerlink" title="第四章 图形的表示与数据结构"></a>第四章 图形的表示与数据结构</h1><ul>
+<h1 id="第四章-图形的表示与数据结构"><a href="#第四章-图形的表示与数据结构" class="headerlink" title="第四章 图形的表示与数据结构"></a>第四章 图形的表示与数据结构</h1><h2 id="纲要-2"><a href="#纲要-2" class="headerlink" title="纲要"></a>纲要</h2><ul>
+<li>基本概念</li>
+<li>三维形体的表示</li>
+<li>非规则对象的表示</li>
+<li>层次建模</li>
+</ul>
+<h2 id="4-1-基本概念-造型技术"><a href="#4-1-基本概念-造型技术" class="headerlink" title="4.1 基本概念-造型技术"></a>4.1 基本概念-造型技术</h2><ul>
 <li>基本概念<ul>
 <li>把研究如何在计算机中建立恰当的模型表示不同图形对象的技术称为造型技术。</li>
 <li>有两类图形对象：<ul>
-<li>规则对象：几何造型</li>
-<li></li>
+<li>规则对象：几何造型、几何模型</li>
+<li>不规则对象：过程式模拟。</li>
 </ul>
 </li>
-<li>基本图形元素：图素或图元、体素</li>
-<li>图素是指可以用一定</li>
-<li>段是指具有逻辑意义的有限个图素（或体素）及其附加属性</li>
+<li>基本图形元素：图素或图元、体素。</li>
+<li>图素是指可以用一定的几何参数和属性参数描述的最基本的图形输出元素。</li>
+<li>段是指具有逻辑意义的有限个图素（或体素）及其附加属性的集合。</li>
 <li>图形信息与非图形信息<ul>
 <li>几何信息：形体在欧式空间中的位置和大小。</li>
 <li>拓扑信息：形体各分量（点、线、面）的数目及其相互间的连接关系。</li>
@@ -907,6 +1002,139 @@
 </li>
 </ul>
 </li>
+</ul>
+<h2 id="4-1-基本概念-几何信息与拓扑信息"><a href="#4-1-基本概念-几何信息与拓扑信息" class="headerlink" title="4.1 基本概念-几何信息与拓扑信息"></a>4.1 基本概念-几何信息与拓扑信息</h2><ul>
+<li>刚体运动：不改变图形上任意两点间的距离，也不改变图形的几何性质的运动。</li>
+<li>拓扑运动：允许形体作弹性运动，即在拓扑关系中，对图形可随意地伸张扭曲。但在图上各个点仍为不同的点，绝不允许把不同的点合并成一个点。</li>
+</ul>
+<h2 id="4-1-基本概念-实体"><a href="#4-1-基本概念-实体" class="headerlink" title="4.1 基本概念-实体"></a>4.1 基本概念-实体</h2><ul>
+<li><p>点的领域：如果P是点集S的一个元素，那么点P的以R（R&gt;0）为半径的领域指的是围绕点P的半径为R的小球（二维情况下为小圆）。</p>
+</li>
+<li><p>开集的闭包：是指该开集与其所有边界点的集合并集，本身是一个闭集。</p>
+</li>
+<li><p>正则集：由内部点构成的点集的闭包就是正则集，三维空间的正则集就是正则形体。</p>
+</li>
+<li><p>组成三维物体的点的集合可以分为两类：</p>
+<ul>
+<li>内点为点集中的这样一些点，它们具有完全包含于该点集的充分小的领域。</li>
+<li>边界点：不具备此性质的点集中的点。</li>
+</ul>
+</li>
+<li><p>定义点集的正则运算r运算为：</p>
+<p>​                     r·A=c·i·A</p>
+</li>
+<li><p>正则运算即为先对物体取内点再取闭包的运算。</p>
+<p>r·A称为A的正则集。</p>
+</li>
+<li><p>二维流形指的是对于实体表面上的任意一点，都可以找到一个围绕着它的任意小的领域，该领域与平面上的一个圆盘是拓扑等价的。</p>
+</li>
+<li><p>实体：对于一个占据有限空间的正则形体，如果其表面是二维流形，则该正则形体为实体。</p>
+</li>
+</ul>
+<h2 id="4-1-基本概念-正则集合运算"><a href="#4-1-基本概念-正则集合运算" class="headerlink" title="4.1 基本概念-正则集合运算"></a>4.1 基本概念-正则集合运算</h2><ul>
+<li>运算条件：有效实体的封闭性。</li>
+<li>把能够产生正则形体的集合运算称为正则集合运算。</li>
+</ul>
+<h2 id="4-2-三维形体表示-规则对象的表示方法"><a href="#4-2-三维形体表示-规则对象的表示方法" class="headerlink" title="4.2 三维形体表示-规则对象的表示方法"></a>4.2 三维形体表示-规则对象的表示方法</h2><ul>
+<li>线框模型与实体模型（实体造型技术）</li>
+<li>可以将实体模型的表示大致分为三类：<ul>
+<li>边界表示</li>
+<li>构造实体几何表示</li>
+<li>空间分割表示</li>
+</ul>
+</li>
+<li>多边形表面模型</li>
+<li>扫描表示</li>
+<li>构造实体几何法</li>
+<li>空间位置枚举表示</li>
+<li>八叉树</li>
+</ul>
+<h2 id="4-2-三维形体表示-多边形表面模型"><a href="#4-2-三维形体表示-多边形表面模型" class="headerlink" title="4.2 三维形体表示-多边形表面模型"></a>4.2 三维形体表示-多边形表面模型</h2><ul>
+<li><p>边界表示的最普遍方式是多边形表面模型，它使用一组包围物体内部的平面多边形，也即平面多面体，来描述实体。</p>
+</li>
+<li><p>数据结构</p>
+</li>
+<li><p>几何信息</p>
+<ul>
+<li>建立3张表：顶点表、边表和多边形表来存储几何数据。</li>
+<li>实体模型中，用多边形顶点坐标值以及多边形所在平面方程方式保存实体单个表面部分的空间方向信息。</li>
+</ul>
+</li>
+<li><p>数据结构</p>
+</li>
+<li><p>拓扑信息：翼边结构表示</p>
+</li>
+<li><p>属性信息</p>
+<p>用属性表来存储多边形面的属性，指明物体透明度及表面反射度的参数和纹理特征等等。</p>
+</li>
+</ul>
+<h2 id="4-2-三维形体表示-多边形网格"><a href="#4-2-三维形体表示-多边形网格" class="headerlink" title="4.2 三维形体表示-多边形网格"></a>4.2 三维形体表示-多边形网格</h2><ul>
+<li>多边形网格：三维形体的边界通常用多边形网格的拼接来模拟</li>
+</ul>
+<h2 id="4-2-三维形体表示-扫描表示法"><a href="#4-2-三维形体表示-扫描表示法" class="headerlink" title="4.2 三维形体表示-扫描表示法"></a>4.2 三维形体表示-扫描表示法</h2><ul>
+<li>扫描表示法可以利用简单的运动规则生成有效实体。</li>
+<li>包含两个要素<ul>
+<li>一是作扫描运动的基本图形（截面）；</li>
+<li>二是扫描运动的方式</li>
+</ul>
+</li>
+</ul>
+<h2 id="4-2-三维形体表示-构造实体几何法"><a href="#4-2-三维形体表示-构造实体几何法" class="headerlink" title="4.2 三维形体表示-构造实体几何法"></a>4.2 三维形体表示-构造实体几何法</h2><ul>
+<li>构造实体几何法由两个实体间的并、交或差操作生成新的实体。</li>
+<li>早构造实体几何法中，集合运算的实现过程可以用一棵二叉树（称为CSG树）来描述。<ul>
+<li>树的叶子是基本体素或是几何变换参数；</li>
+<li>树的非终端结点是施加于其子结点的正则集合算子（正则并、正则交和正则差）或几何变换的定义。</li>
+</ul>
+</li>
+<li>优点：如果体素设置比较齐全，通过集合运算就可以构造出多种不同的符合需要的实体</li>
+<li>缺点一：集合运算的中间结果难以用简单的代数方程表示，求交困难。</li>
+<li>缺点二：CSG树不能显式地表示形体的边界，因而无法直接显示CSG树表示的形体。</li>
+<li>解决：光投影算法。</li>
+</ul>
+<h2 id="4-2-三维形体表示-空间位置枚举表示法"><a href="#4-2-三维形体表示-空间位置枚举表示法" class="headerlink" title="4.2 三维形体表示-空间位置枚举表示法"></a>4.2 三维形体表示-空间位置枚举表示法</h2><ul>
+<li>空间位置枚举表示法将包含实体的空间分割为大小相同、形状规则（正方形或立方体）的体素，然后，以体素的集合来表示图形对象。</li>
+<li>二维情况，常用二维数组存放。</li>
+<li>三维情况下，常用三维数组p[i][j][k]来存放。</li>
+<li>八叉树又称为分层树结构，它对空间进行自适应划分，采用具有层次结构的八叉树来表示实体。</li>
+</ul>
+<h2 id="4-3-非规则对象的表示-基本概念"><a href="#4-3-非规则对象的表示-基本概念" class="headerlink" title="4.3 非规则对象的表示-基本概念"></a>4.3 非规则对象的表示-基本概念</h2><ul>
+<li>分形几何</li>
+<li>形状语法</li>
+<li>微粒系统</li>
+<li>基于物理的建模</li>
+</ul>
+<h2 id="4-3-非规则对象的表示-分形几何"><a href="#4-3-非规则对象的表示-分形几何" class="headerlink" title="4.3 非规则对象的表示-分形几何"></a>4.3 非规则对象的表示-分形几何</h2><ul>
+<li>分形几何物体具有一个基本特征：无限的自相似性。</li>
+<li>无限的自相似性的是指物体的整体和局部之间细节的无限重现。</li>
+<li>分形维数，又称分数维数<ul>
+<li>4 = 2的2次方</li>
+<li>8 = 2的3次方</li>
+<li>N = K的D次方</li>
+<li>D = lgN/lgK</li>
+<li>K为边长缩小倍速；N为边长缩小后产生的新形体个数。</li>
+</ul>
+</li>
+<li>生成过程：初始生成元、生成元。</li>
+</ul>
+<h2 id="4-3-非规则对象的表示-形状语法"><a href="#4-3-非规则对象的表示-形状语法" class="headerlink" title="4.3 非规则对象的表示-形状语法"></a>4.3 非规则对象的表示-形状语法</h2><ul>
+<li>形状语法：给定一组产生式规则，形状设计者可以在从给定初始物体到最终物体结构的每一次变换中应用不同的规则。</li>
+<li>产生式规则可以用具有图形运算能力的数学式或其他过程性方法结合实现。</li>
+</ul>
+<h2 id="4-3-非规则对象的表示-微粒系统"><a href="#4-3-非规则对象的表示-微粒系统" class="headerlink" title="4.3 非规则对象的表示-微粒系统"></a>4.3 非规则对象的表示-微粒系统</h2><ul>
+<li>用于模拟自然景物或模拟其它非规则形状物体展示“流体”性质的一个方法是微粒系统。</li>
+<li>这一方法尤其擅长描述随时间变化的物体。</li>
+<li>微粒运动的模拟方式：随机过程模拟、运动路径模拟、力学模拟。</li>
+</ul>
+<h2 id="4-3-非规则对象的表示-基于物理的建模"><a href="#4-3-非规则对象的表示-基于物理的建模" class="headerlink" title="4.3 非规则对象的表示-基于物理的建模"></a>4.3 非规则对象的表示-基于物理的建模</h2><ul>
+<li>基于物理的建模方法：描述了物体在内外力相互作用下的行为。通常用一组网格结点逼近物体。网格结点间取为柔性连接，再考虑贯穿物体网格的力传递。</li>
+</ul>
+<h2 id="4-4-图形的层次结构-基本概念"><a href="#4-4-图形的层次结构-基本概念" class="headerlink" title="4.4 图形的层次结构-基本概念"></a>4.4 图形的层次结构-基本概念</h2><ul>
+<li>段的层次模型</li>
+<li>存储简单：一个段虽然再图中各处出现，但他的几何和拓扑信息只要保存一次。</li>
+<li>编辑简单：删除、移动及缩放操作都可以以段为单位。、</li>
+<li>系统的层次模型可以通过将一个图段嵌套到另一个图段中形成图段树来创建。不同的段和基本图形元素在各自的建模坐标系中定义。</li>
+<li>图层。通过把功能相同的部分归类，并将它们绘制在同一层上，有助于图形的理解和管理。</li>
+<li>一般图层不再嵌套。</li>
 </ul>
 <h1 id="第五章-基本图形生成算法"><a href="#第五章-基本图形生成算法" class="headerlink" title="第五章 基本图形生成算法"></a>第五章 基本图形生成算法</h1>
       
@@ -1082,7 +1310,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-计算机图形学基本概念"><span class="nav-number">1.</span> <span class="nav-text">第一章 计算机图形学基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#纲要"><span class="nav-number">1.1.</span> <span class="nav-text">纲要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-—定义"><span class="nav-number">1.2.</span> <span class="nav-text">1.1 计算机图形学的基本概念 —定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-目标"><span class="nav-number">1.3.</span> <span class="nav-text">1.1 计算机图形学的基本概念-目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-任务"><span class="nav-number">1.4.</span> <span class="nav-text">1.1 计算机图形学的基本概念-任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-相关学科"><span class="nav-number">1.5.</span> <span class="nav-text">1.1 计算机图形学的基本概念-相关学科</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-计算机图形学研究对象与内容-研究对象"><span class="nav-number">1.6.</span> <span class="nav-text">1.2 计算机图形学研究对象与内容-研究对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-计算机图形学研究对象与内容-图形表示"><span class="nav-number">1.7.</span> <span class="nav-text">1.2 计算机图形学研究对象与内容-图形表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-计算机图形学研究对象与内容-内容体系"><span class="nav-number">1.8.</span> <span class="nav-text">1.2 计算机图形学研究对象与内容-内容体系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-计算机图形学的发展历史"><span class="nav-number">1.9.</span> <span class="nav-text">1.3 计算机图形学的发展历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-计算机图形学应用与研究动态-应用"><span class="nav-number">1.10.</span> <span class="nav-text">1.4 计算机图形学应用与研究动态-应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-计算机图形学应用与研究动态-研究热点"><span class="nav-number">1.11.</span> <span class="nav-text">1.4 计算机图形学应用与研究动态-研究热点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-计算机图形系统简介"><span class="nav-number">2.</span> <span class="nav-text">第二章 计算机图形系统简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#纲要-1"><span class="nav-number">2.1.</span> <span class="nav-text">纲要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-计算机图形系统功能结构"><span class="nav-number">2.2.</span> <span class="nav-text">2.1 计算机图形系统功能结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图形硬件系统-输入设备"><span class="nav-number">2.3.</span> <span class="nav-text">2.2 图形硬件系统-输入设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图形硬件系统-液晶显示器"><span class="nav-number">2.4.</span> <span class="nav-text">2.2 图形硬件系统-液晶显示器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图形硬件系统-未来显示器"><span class="nav-number">2.5.</span> <span class="nav-text">2.2 图形硬件系统-未来显示器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图形硬件系统-三维显示器"><span class="nav-number">2.6.</span> <span class="nav-text">2.2 图形硬件系统- 三维显示器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图形硬件系统-三维观察设备"><span class="nav-number">2.7.</span> <span class="nav-text">2.2 图形硬件系统- 三维观察设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图形硬件系统-图形显示子系统"><span class="nav-number">2.8.</span> <span class="nav-text">2.2 图形硬件系统-图形显示子系统</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-图形的表示与数据结构"><span class="nav-number">3.</span> <span class="nav-text">第四章 图形的表示与数据结构</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第五章-基本图形生成算法"><span class="nav-number">4.</span> <span class="nav-text">第五章 基本图形生成算法</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-计算机图形学基本概念"><span class="nav-number">1.</span> <span class="nav-text">第一章 计算机图形学基本概念</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#纲要"><span class="nav-number">1.1.</span> <span class="nav-text">纲要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-—定义"><span class="nav-number">1.2.</span> <span class="nav-text">1.1 计算机图形学的基本概念 —定义</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-目标"><span class="nav-number">1.3.</span> <span class="nav-text">1.1 计算机图形学的基本概念-目标</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-任务"><span class="nav-number">1.4.</span> <span class="nav-text">1.1 计算机图形学的基本概念-任务</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-1-计算机图形学的基本概念-相关学科"><span class="nav-number">1.5.</span> <span class="nav-text">1.1 计算机图形学的基本概念-相关学科</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-计算机图形学研究对象与内容-研究对象"><span class="nav-number">1.6.</span> <span class="nav-text">1.2 计算机图形学研究对象与内容-研究对象</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-计算机图形学研究对象与内容-图形表示"><span class="nav-number">1.7.</span> <span class="nav-text">1.2 计算机图形学研究对象与内容-图形表示</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-2-计算机图形学研究对象与内容-内容体系"><span class="nav-number">1.8.</span> <span class="nav-text">1.2 计算机图形学研究对象与内容-内容体系</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-3-计算机图形学的发展历史"><span class="nav-number">1.9.</span> <span class="nav-text">1.3 计算机图形学的发展历史</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-计算机图形学应用与研究动态-应用"><span class="nav-number">1.10.</span> <span class="nav-text">1.4 计算机图形学应用与研究动态-应用</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#1-4-计算机图形学应用与研究动态-研究热点"><span class="nav-number">1.11.</span> <span class="nav-text">1.4 计算机图形学应用与研究动态-研究热点</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-计算机图形系统简介"><span class="nav-number">2.</span> <span class="nav-text">第二章 计算机图形系统简介</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#纲要-1"><span class="nav-number">2.1.</span> <span class="nav-text">纲要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-1-计算机图形系统功能结构"><span class="nav-number">2.2.</span> <span class="nav-text">2.1 计算机图形系统功能结构</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图形硬件系统-输入设备"><span class="nav-number">2.3.</span> <span class="nav-text">2.2 图形硬件系统-输入设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图形硬件系统-液晶显示器"><span class="nav-number">2.4.</span> <span class="nav-text">2.2 图形硬件系统-液晶显示器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图形硬件系统-未来显示器"><span class="nav-number">2.5.</span> <span class="nav-text">2.2 图形硬件系统-未来显示器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图形硬件系统-三维显示器"><span class="nav-number">2.6.</span> <span class="nav-text">2.2 图形硬件系统- 三维显示器</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图形硬件系统-三维观察设备"><span class="nav-number">2.7.</span> <span class="nav-text">2.2 图形硬件系统- 三维观察设备</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-2-图形硬件系统-图形显示子系统"><span class="nav-number">2.8.</span> <span class="nav-text">2.2 图形硬件系统-图形显示子系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-3-图形软件系统-图形支撑软件"><span class="nav-number">2.9.</span> <span class="nav-text">2.3 图形软件系统-图形支撑软件</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第四章-图形的表示与数据结构"><span class="nav-number">3.</span> <span class="nav-text">第四章 图形的表示与数据结构</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#纲要-2"><span class="nav-number">3.1.</span> <span class="nav-text">纲要</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-基本概念-造型技术"><span class="nav-number">3.2.</span> <span class="nav-text">4.1 基本概念-造型技术</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-基本概念-几何信息与拓扑信息"><span class="nav-number">3.3.</span> <span class="nav-text">4.1 基本概念-几何信息与拓扑信息</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-基本概念-实体"><span class="nav-number">3.4.</span> <span class="nav-text">4.1 基本概念-实体</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-1-基本概念-正则集合运算"><span class="nav-number">3.5.</span> <span class="nav-text">4.1 基本概念-正则集合运算</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-三维形体表示-规则对象的表示方法"><span class="nav-number">3.6.</span> <span class="nav-text">4.2 三维形体表示-规则对象的表示方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-三维形体表示-多边形表面模型"><span class="nav-number">3.7.</span> <span class="nav-text">4.2 三维形体表示-多边形表面模型</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-三维形体表示-多边形网格"><span class="nav-number">3.8.</span> <span class="nav-text">4.2 三维形体表示-多边形网格</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-三维形体表示-扫描表示法"><span class="nav-number">3.9.</span> <span class="nav-text">4.2 三维形体表示-扫描表示法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-三维形体表示-构造实体几何法"><span class="nav-number">3.10.</span> <span class="nav-text">4.2 三维形体表示-构造实体几何法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-2-三维形体表示-空间位置枚举表示法"><span class="nav-number">3.11.</span> <span class="nav-text">4.2 三维形体表示-空间位置枚举表示法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-非规则对象的表示-基本概念"><span class="nav-number">3.12.</span> <span class="nav-text">4.3 非规则对象的表示-基本概念</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-非规则对象的表示-分形几何"><span class="nav-number">3.13.</span> <span class="nav-text">4.3 非规则对象的表示-分形几何</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-非规则对象的表示-形状语法"><span class="nav-number">3.14.</span> <span class="nav-text">4.3 非规则对象的表示-形状语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-非规则对象的表示-微粒系统"><span class="nav-number">3.15.</span> <span class="nav-text">4.3 非规则对象的表示-微粒系统</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-3-非规则对象的表示-基于物理的建模"><span class="nav-number">3.16.</span> <span class="nav-text">4.3 非规则对象的表示-基于物理的建模</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#4-4-图形的层次结构-基本概念"><span class="nav-number">3.17.</span> <span class="nav-text">4.4 图形的层次结构-基本概念</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第五章-基本图形生成算法"><span class="nav-number">4.</span> <span class="nav-text">第五章 基本图形生成算法</span></a></li></ol></div>
             
 
           </div>
