@@ -259,6 +259,615 @@
   
   
   <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2021/03/14/Java基础/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alice's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2021/03/14/Java基础/" itemprop="url">Java基础</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2021-03-14T20:14:45+08:00">
+                2021-03-14
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="Java"><a href="#Java" class="headerlink" title="Java"></a>Java</h1><ul>
+<li><p>基础语法</p>
+</li>
+<li><p>面向对象</p>
+</li>
+<li><p>高级应用</p>
+</li>
+</ul>
+<hr>
+<h2 id="第一节-资料文件结构"><a href="#第一节-资料文件结构" class="headerlink" title="第一节 资料文件结构"></a>第一节 资料文件结构</h2><ul>
+<li>概述</li>
+<li>计算机硬件介绍</li>
+<li>计算机发展史上的鼻祖</li>
+<li>操作系统</li>
+<li>万维网</li>
+<li>职业发展与提升</li>
+<li>学习经验探讨</li>
+</ul>
+<h2 id="第二节-入门概述"><a href="#第二节-入门概述" class="headerlink" title="第二节 入门概述"></a>第二节 入门概述</h2><blockquote>
+<p><strong>计算机包括硬件和软件两部分。</strong>硬件包括计算机中可以看得见的物理部分。而软件提供看不见的指令。这些指令控制硬件并且使得硬件完成特定的任务。</p>
+<p><strong>程序设计</strong></p>
+<p><strong>定义：</strong>创建（或开发）软件。软件包含了指令，告诉计算机做什么。</p>
+<p><strong>应用场景：</strong>软件遍布我们周围。除了个人计算机，飞机、汽车、手机甚至烤面包机中，同样运行着软件。</p>
+<p><strong>程序设计语言</strong></p>
+<p>软件开发人员在称为程序设计语言的强大工具的帮助下创建软件。</p>
+</blockquote>
+<h3 id="计算机硬件介绍"><a href="#计算机硬件介绍" class="headerlink" title="计算机硬件介绍"></a>计算机硬件介绍</h3><blockquote>
+<p>中央处理器（CPU）、内存（主存）、存储设备、输入设备、输出设备、通信设备。总线（bus）</p>
+<p><strong>冯·诺依曼体系结构</strong>是现代计算机的基础，现在大多计算机仍是冯·诺伊曼计算机的组织结构，只是作了一些改进而已，并没有从根本上突破冯体系结构的束缚。冯·诺伊曼也因此被人们称为“计算机之父”。</p>
+<p><strong>中央处理器（CPU）</strong>是计算机的大脑。它从内存中获取指令，然后执行这些指令。</p>
+<p>包括：控制单元和算术/逻辑单元。</p>
+<p><strong>控制单元：</strong>用于控制和协调其他组件的动作。</p>
+<p><strong>算术/逻辑单元：</strong>用于完成数值运算（+、-、*、/）和逻辑运算（比较）。</p>
+<p>每台计算机都有一个内部时钟，该时钟以固定速度发射电子脉冲。时钟速度越快，在给定的时间段内执行的指令就越多。速度的计量单位是赫兹（Hz），1Hz相当于每秒1个脉冲。随着CPU速度不断提高，目前以千兆赫（GHz）来表述。</p>
+<p>最初一个CPU只有一个核（core）。核是处理器中实现指令读取和执行的部分。一个多核CPU是一个具有两个或者更多独立核的组件。可提高CPU的处理能力。</p>
+</blockquote>
+<p><strong>IT定律之计算机行业发展规律</strong></p>
+<ul>
+<li>摩尔定律</li>
+<li>安迪-比尔定律</li>
+<li>反摩尔定律</li>
+</ul>
+<blockquote>
+<ul>
+<li>内存中的信息在断电时会丢失。那我们可以考虑将程序和数据永久的保存在存储设备上。当计算机确实需要这些数据时，再移入内存，因为从内存中读取比从存储设备读取要快得多。</li>
+<li>存储设备主要有以下三种：<ul>
+<li>磁盘驱动器</li>
+<li>光盘驱动器</li>
+<li>USB闪存驱动器</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+<p><strong>内存</strong></p>
+<blockquote>
+<p><strong>比特（bit）和字节（byte）</strong></p>
+<ul>
+<li>一个0或者一个1存储为一个比特（bit），是计算机中最小的存储单位。</li>
+<li>计算机中最基本的存储单元是字节（byte）。每个字节由8个比特构成。</li>
+<li>内存（RAM）：由一个有序的字节序列组成，用于存储程序及程序需要的数据。</li>
+<li>一个程序和它的数据在被CPU执行前必须移到计算机的内存中。</li>
+<li>但内存是带电存储的（一旦断电数据就会消失），而且容量有限，所以要长时间存储程序或数据就需要使用硬盘。</li>
+<li>输入和输出设备<ul>
+<li>常见的输入设备：键盘和鼠标</li>
+<li>常见的输出设备：显示器和打印机</li>
+<li>显示器屏幕分辨率：是指显示设备水平和垂直方向上显示的像素（px）数。<ul>
+<li>分辨率可以手工设置</li>
+<li>分辨率越高，图像越锐化、越清晰。</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>通讯设备<ul>
+<li>常见的设备有：拨号调制解调器、DSL（数字用户线）、电缆调制解调器、网络接口卡（NIC）、无线网络</li>
+</ul>
+</li>
+</ul>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2020/12/26/银河-夜/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alice's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/12/26/银河-夜/" itemprop="url">夜</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-12-26T15:20:14+08:00">
+                2020-12-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/文学/" itemprop="url" rel="index">
+                    <span itemprop="name">文学</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>银河空旷、坦荡，列车奔驰在夜的星空，似乎没有方向，也无法预测终点将在何时何地到来。<br>生命，就像这遥远无依的茫然，充满了未知，有过光明与黑暗、挚爱与哀愁，然后脆弱得好似<br>掉进银河的一颗星，瞬间沉没于无垠的浩瀚。忧伤的少年啊，在人生虚妄而伤感的旅途中，就<br>这样缓慢悲伤地成长。也许你想要的，仅是些许的幸福和被这个世界所认同，却无奈地总被排<br>斥在外。但不要哭泣，你所搭乘的列车，终点不会是伤感的归宿，而是银河最深处幸福恬静的<br>天堂。<br>                                                                                 《银河铁道之夜》 — 〔日〕宫泽贤治</p>
+</blockquote>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2020/10/20/常用dos命令/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alice's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/10/20/常用dos命令/" itemprop="url">常用dos命令</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-10-20T19:14:11+08:00">
+                2020-10-20
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 盘符切换</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span>  /d 地址</span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看当前目录下的所有文件</span></span><br><span class="line"></span><br><span class="line">dir</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换目录</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> change directory</span><br><span class="line"></span><br><span class="line"><span class="built_in">cd</span> ..</span><br><span class="line"></span><br><span class="line"><span class="comment"># 清理屏幕</span></span><br><span class="line"></span><br><span class="line">cls	(clear screen)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 退出终端</span></span><br><span class="line"></span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 查看电脑ip</span></span><br><span class="line"></span><br><span class="line">ipconfig</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打开应用</span></span><br><span class="line"></span><br><span class="line"><span class="string">''</span><span class="string">'</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">calc</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">mspaint</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">notepad</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># ping 命令</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">&gt; ping www.baidu.com</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string"># 文件操作</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">md 目录名</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">rd 目录名</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">cd&gt; 文件名</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">del 文件名</span></span><br></pre></td></tr></table></figure>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2020/10/13/IT专业英语/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content>
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Alice's blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/10/13/IT专业英语/" itemprop="url">IT专业英语</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-10-13T17:15:23+08:00">
+                2020-10-13
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h1 id="单词"><a href="#单词" class="headerlink" title="单词"></a>单词</h1><ul>
+<li>hosted service <strong>托管服务</strong></li>
+<li>deliver <strong>接生、传送</strong></li>
+<li>pervasive computing <strong>普适计算</strong></li>
+<li>threshold <strong>阈值</strong></li>
+<li>dissertation defense <strong>毕业答辩</strong></li>
+<li>take many forms <strong>以多种形式</strong></li>
+<li>expertise <strong>专业技能</strong></li>
+<li>disciplines <strong>学科</strong></li>
+<li>categorize <strong>分类</strong></li>
+<li>entail <strong>牵涉</strong></li>
+<li>distinct <strong>明显的</strong></li>
+<li>namely <strong>表示穷举</strong></li>
+<li>can be defined as <strong>被定义</strong></li>
+<li>utilization <strong>使用</strong></li>
+<li>much more than <strong>不仅仅</strong></li>
+<li>infrastructure <strong>基础设施</strong></li>
+<li>leverage <strong>利用、杠杆</strong></li>
+<li>employ <strong>利用</strong></li>
+<li>apply <strong>利用</strong></li>
+<li>objective <strong>目标</strong></li>
+<li>encompass <strong>包含</strong></li>
+<li>macro <strong>宏观的</strong></li>
+<li>feature <strong>以…为特色</strong></li>
+<li>up one‘s game <strong>升级游戏</strong></li>
+<li>buzz word <strong>流行行话</strong></li>
+<li>channel firms <strong>公司</strong></li>
+<li>access <strong>评估</strong></li>
+</ul>
+
+          
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+      
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
     <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2020/09/21/随记/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
@@ -3740,575 +4349,6 @@ hexo d -g #生成并上传
 
 
     
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2020/04/06/杭电oj-1004/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alice's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/06/杭电oj-1004/" itemprop="url">杭电oj-1004</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-06T12:43:21+08:00">
-                2020-04-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/刷题/" itemprop="url" rel="index">
-                    <span itemprop="name">刷题</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="杭电oj-1004"><a href="#杭电oj-1004" class="headerlink" title="杭电oj-1004"></a>杭电oj-1004</h1><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;stdio.h&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">include</span><span class="meta-string">&lt;string.h&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">max</span><span class="params">(<span class="keyword">int</span> a[], <span class="keyword">int</span> n)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="keyword">int</span> max = a[<span class="number">0</span>];</span><br><span class="line"><span class="keyword">int</span> k = <span class="number">0</span>;</span><br><span class="line"><span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">&#123;</span><br><span class="line">	<span class="keyword">if</span> (a[i] &gt; max)</span><br><span class="line">	&#123;</span><br><span class="line">		max = a[i];</span><br><span class="line">		k = i;</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">return</span> k;</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line"><span class="comment">//freopen("C:/Users/19856/Desktop/wakaka.txt","r",stdin );</span></span><br><span class="line"><span class="keyword">int</span> n;</span><br><span class="line"><span class="keyword">int</span> k;</span><br><span class="line"><span class="keyword">while</span> (<span class="number">1</span>)</span><br><span class="line">&#123;</span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> a[<span class="number">1005</span>][<span class="number">17</span>];</span><br><span class="line"></span><br><span class="line">	<span class="keyword">char</span> b[<span class="number">17</span>];</span><br><span class="line">	<span class="keyword">int</span> c[<span class="number">1005</span>] = &#123;<span class="number">0</span>&#125;;</span><br><span class="line">	<span class="built_in">memset</span>(a, <span class="number">0</span>, <span class="keyword">sizeof</span>(a));</span><br><span class="line">	<span class="built_in">memset</span>(b, <span class="number">0</span>, <span class="keyword">sizeof</span>(b));</span><br><span class="line">	<span class="built_in">scanf</span>(<span class="string">"%d"</span>, &amp;n);</span><br><span class="line">	<span class="keyword">if</span> (n == <span class="number">0</span>)<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; n; i++)</span><br><span class="line">	&#123;</span><br><span class="line">		</span><br><span class="line">		<span class="built_in">scanf</span>(<span class="string">"%s"</span>, &amp;b);</span><br><span class="line">		<span class="keyword">for</span> (<span class="keyword">int</span> j = <span class="number">0</span>; (j &lt; n)&amp;&amp;(a[j][<span class="number">0</span>]!=<span class="string">'\0'</span>); j++)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="keyword">if</span> (!<span class="built_in">strcmp</span>(a[j], b))c[j]++;</span><br><span class="line">			</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">if</span> (a[i][<span class="number">0</span>] == <span class="string">'\0'</span>)</span><br><span class="line">		&#123;</span><br><span class="line">			<span class="built_in">strcpy</span>(a[i], b);</span><br><span class="line">			c[i]++;</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	k = max(c, n);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">"%s\n"</span>, a[k]);</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2020/04/06/blog写作之旅启程/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alice's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/06/blog写作之旅启程/" itemprop="url">blog写作之旅启程</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-06T12:06:27+08:00">
-                2020-04-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/" itemprop="url" rel="index">
-                    <span itemprop="name">技术</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/技术/汇编/" itemprop="url" rel="index">
-                    <span itemprop="name">汇编</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h1 id="十分抱歉"><a href="#十分抱歉" class="headerlink" title="十分抱歉"></a>十分抱歉</h1><p>个人于19年搭建主页，由于学业繁忙，再没去触碰，近期将边学习边写blog，内容包括不局限于 计算机网络，汇编语言，Java学习，希望能强迫自己output，也希望自己能熟练掌握markdown写作。</p>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2020/04/06/hello-hexo-markdown/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alice's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2020/04/06/hello-hexo-markdown/" itemprop="url">hello hexo markdown</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-04-06T03:58:17+08:00">
-                2020-04-06
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://zehwakaka.github.io/2019/06/09/银河-夜/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="John Doe">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Alice's blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2019/06/09/银河-夜/" itemprop="url">夜</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">Posted on</span>
-              
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-09T01:27:12+08:00">
-                2019-06-09
-              </time>
-            
-
-            
-
-            
-          </span>
-
-          
-            <span class="post-category">
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">In</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/文学/" itemprop="url" rel="index">
-                    <span itemprop="name">文学</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
-          
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <blockquote>
-<p>银河空旷、坦荡，列车奔驰在夜的星空，似乎没有方向，也无法预测终点将在何时何地到来。<br>生命，就像这遥远无依的茫然，充满了未知，有过光明与黑暗、挚爱与哀愁，然后脆弱得好似<br>掉进银河的一颗星，瞬间沉没于无垠的浩瀚。忧伤的少年啊，在人生虚妄而伤感的旅途中，就<br>这样缓慢悲伤地成长。也许你想要的，仅是些许的幸福和被这个世界所认同，却无奈地总被排<br>斥在外。但不要哭泣，你所搭乘的列车，终点不会是伤感的归宿，而是银河最深处幸福恬静的<br>天堂。<br>                                                                                 《银河铁道之夜》 — 〔日〕宫泽贤治</p>
-</blockquote>
-
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
   </section>
 
   
@@ -4359,7 +4399,7 @@ hexo d -g #生成并上传
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">21</span>
+                  <span class="site-state-item-count">24</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
@@ -4381,7 +4421,7 @@ hexo d -g #生成并上传
               
               <div class="site-state-item site-state-tags">
                 
-                  <span class="site-state-item-count">13</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">tags</span>
                 
               </div>
@@ -4418,7 +4458,7 @@ hexo d -g #生成并上传
 
     <footer id="footer" class="footer">
       <div class="footer-inner">
-        <div class="copyright">&copy; <span itemprop="copyrightYear">2021</span>
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2023</span>
   <span class="with-love">
     <i class="fa fa-user"></i>
   </span>
